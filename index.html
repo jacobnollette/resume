@@ -56,7 +56,7 @@
       return false;
     }
 
-async function formatHeader(target) {
+    async function formatHeader(target) {
       const name = target.querySelector(":scope > h1:first-child");
       if (!name) {
         return;
@@ -72,49 +72,6 @@ async function formatHeader(target) {
           image = imageTag.cloneNode(true);
           // Remove only the image paragraph, not the following content
           firstPara.remove();
-        }
-      }
-
-      const contact = name.nextElementSibling && name.nextElementSibling.tagName === "P"
-        ? name.nextElementSibling
-        : null;
-
-      const header = document.createElement("header");
-      header.className = "resume-header";
-
-      const info = document.createElement("div");
-      info.className = "resume-header-info";
-      info.append(name);
-
-      if (contact) {
-        contact.classList.add("resume-contact");
-        info.append(contact);
-      }
-
-      header.append(info);
-
-      if (image) {
-        const hasSource = await resolveHeadshotSource(image);
-        if (hasSource) {
-          image.classList.add("resume-headshot");
-          image.loading = "eager";
-          image.decoding = "async";
-          header.prepend(image);
-        }
-      }
-
-      target.prepend(header);
-    }
-
-      // Check if there's a paragraph with only an image (headshot)
-      const firstPara = name.nextElementSibling;
-      let image = null;
-      
-      if (firstPara && firstPara.tagName === "P") {
-        const imageTag = firstPara.querySelector("img");
-        if (imageTag && firstPara.textContent.trim() === "") {
-          image = imageTag.cloneNode(true);
-          // Don't remove the paragraph to preserve the horizontal rule that comes after
         }
       }
 
