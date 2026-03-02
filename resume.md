@@ -4,7 +4,7 @@ Minneapolis, MN • jacob@jacobnollette.com • 952‑428‑9199
 
 ![Headshot](headshot.png)
 
-I work at the intersection of DevOps, Site Reliability, Platform Engineering, and Linux administration, with a focus on CI/CD pipelines, Kubernetes, Terraform, and developer tooling. I administer and automate mixed Unix-like environments including Ubuntu, Debian, Darwin/macOS, and BSD systems, alongside virtualization and network platforms such as Proxmox, UniFi OS, pfSense, and TrueNAS. At TSI, my mission is to turn complex infrastructure into reliable, scalable systems that make software delivery faster, safer, and more predictable. I’m a strong believer in supported golden paths, shared ownership, and collaboration as the foundation for sustainable engineering and real innovation.
+I work at the intersection of DevOps, Site Reliability, Platform Engineering, and Linux administration, with a focus on CI/CD pipelines, Kubernetes, Terraform, and developer tooling. I administer and automate mixed Unix-like environments, including Ubuntu, Debian, Darwin/macOS, and BSD systems, as well as virtualization and network platforms such as Proxmox, UniFi OS, pfSense, and TrueNAS. At TSI, my mission is to turn complex infrastructure into reliable, scalable systems that make software delivery faster, safer, and more predictable. I’m a strong believer in supported golden paths, shared ownership, and collaboration as the foundation for sustainable engineering and real innovation.
 
 ## CORE COMPETENCIES
 
@@ -72,7 +72,7 @@ At LuminFire, I introduced and operationalized modern Agile and CI practices, in
 
 * Automated migration from Bitbucket Cloud → self‑hosted GitLab (bash), including object storage and OpenSearch/Elastic for deep code search.
 
-* Scaled GitLab by moving assets to object storage, and instance sizing / IOPS tuning..
+* Scaled GitLab by moving assets to object storage and instance sizing / IOPS tuning.
 
 * Authored AWS CloudFormation templates to assemble “build boxes” from native services (CodeCommit, Secrets Manager, Session Manager, EC2, RDS, S3) and a standardized Ubuntu/PHP/Bash stack.
 
@@ -86,7 +86,7 @@ At LuminFire, I introduced and operationalized modern Agile and CI practices, in
 
 Minneapolis, MN • 2005 (Jan) – Present
 
-I run jacobnollette.com LLC and the Self Hosting Lab as one continuous practice. From 2011–2018, this was primarily full-time client consulting focused on WordPress development, front-end engineering, and CMS/platform delivery. Since 2018, it has continued as a professional side practice and R&D platform for production-grade DevOps, infrastructure, and reliability engineering patterns that I apply in enterprise environments.
+I run jacobnollette.com LLC and the Self-Hosting Lab as one continuous practice. From 2011–2018, this was primarily full-time client consulting focused on WordPress development, front-end engineering, and CMS/platform delivery. Since 2018, it has continued as a professional side practice and R&D platform for production-grade DevOps, infrastructure, and reliability engineering patterns that I apply in enterprise environments.
 
 * Delivered SEO- and metadata-driven WordPress marketing sites; built custom themes/modules and performant CSS/JavaScript implementations in close collaboration with design teams.
 
@@ -110,7 +110,7 @@ I run jacobnollette.com LLC and the Self Hosting Lab as one continuous practice.
 
 Dorset, MN • 2018 (April) – Present
 
-For the Little Sand Lake Area Association, I modernized and expanded the organization’s web and technical infrastructure to significantly reduce the manual effort required to operate the nonprofit. I designed and built a member portal that supports recurring subscriptions, eliminating the need for annual manual dues collection. I onboarded approximately 150 properties using county records and created a searchable, map-based GIS directory to support membership management and lake stewardship.
+For the Little Sand Lake Area Association, I modernized and expanded the organization’s web and technical infrastructure, significantly reducing the manual effort required to operate the nonprofit. I designed and built a member portal that supports recurring subscriptions, eliminating the need for annual manual dues collection. I onboarded approximately 150 properties using county records and created a searchable, map-based GIS directory to support membership management and lake stewardship.
 
 I led a full redesign of the website using open-source themes to reduce ongoing costs while improving usability and maintainability. I secured nonprofit hosting and productivity grants, including Azure credits for web hosting and Google Workspace for collaboration, archiving, and object storage of official board materials. Since 2019, I have attended, recorded, transcribed, and summarized quarterly board and annual meetings, applying AI tooling to document and archive the organization’s technical and operational history.
 
