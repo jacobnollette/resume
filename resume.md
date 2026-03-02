@@ -8,7 +8,6 @@ I work at the intersection of DevOps, Site Reliability, Platform Engineering, an
 
 ---
 
-
 ## CORE COMPETENCIES
 
 CI/CD & Automation: Jenkins \- automated modular pipelines and shared Groovy libs, lots of experience with GitLab Runners, significant experience with GitHub Actions. Built and maintained Kubernetes projects with Terraform and Docker. Created virtual machines with Packer. Deployed to GCP with Terraform; Deployed to AWS with Terraform and CloudFormation. Docker, Bash, PowerShell.
