@@ -2,7 +2,7 @@
 
 Minneapolis, MN • jacob@jacobnollette.com • 952‑428‑9199
 
-I work at the intersection of DevOps, Site Reliability, and Platform Engineering, with a focus on CI/CD pipelines, Kubernetes, Terraform, and developer tooling. At TSI, my mission is to turn complex infrastructure into reliable, scalable systems that make software delivery faster, safer, and more predictable. I’m a strong believer in supported golden paths, shared ownership, and collaboration as the foundation for sustainable engineering and real innovation.
+I work at the intersection of DevOps, Site Reliability, Platform Engineering, and Linux administration, with a focus on CI/CD pipelines, Kubernetes, Terraform, and developer tooling. I administer and automate mixed Unix-like environments including Ubuntu, Debian, Darwin/macOS, and BSD systems, alongside virtualization and network platforms such as Proxmox, UniFi OS, pfSense, and TrueNAS. At TSI, my mission is to turn complex infrastructure into reliable, scalable systems that make software delivery faster, safer, and more predictable. I’m a strong believer in supported golden paths, shared ownership, and collaboration as the foundation for sustainable engineering and real innovation.
 
 ---
 
