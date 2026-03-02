@@ -6,8 +6,6 @@ Minneapolis, MN • jacob@jacobnollette.com • 952‑428‑9199
 
 I work at the intersection of DevOps, Site Reliability, Platform Engineering, and Linux administration, with a focus on CI/CD pipelines, Kubernetes, Terraform, and developer tooling. I administer and automate mixed Unix-like environments including Ubuntu, Debian, Darwin/macOS, and BSD systems, alongside virtualization and network platforms such as Proxmox, UniFi OS, pfSense, and TrueNAS. At TSI, my mission is to turn complex infrastructure into reliable, scalable systems that make software delivery faster, safer, and more predictable. I’m a strong believer in supported golden paths, shared ownership, and collaboration as the foundation for sustainable engineering and real innovation.
 
----
-
 ## CORE COMPETENCIES
 
 CI/CD & Automation: Jenkins \- automated modular pipelines and shared Groovy libs, lots of experience with GitLab Runners, significant experience with GitHub Actions. Built and maintained Kubernetes projects with Terraform and Docker. Created virtual machines with Packer. Deployed to GCP with Terraform; Deployed to AWS with Terraform and CloudFormation. Docker, Bash, PowerShell.
@@ -23,8 +21,6 @@ Storage & Data: Ceph (CRUSH rules), ZFS (ARC/log/meta tuning), MinIO (S3/IAM), M
 Programming & Scripting: Bash, Groovy, Powershell, PHP, Javascript, Go
 
 Tooling & Platforms: Docker, Jira, Bitbucket, Confluence, GitLab, GitHub, Retool, WordPress, FFmpeg, Rclone, Nextcloud, Notion, VS Code, Vim, TMUX, Ubuntu/Debian, Scratch containers
-
----
 
 ## PROFESSIONAL EXPERIENCE
 
@@ -68,8 +64,6 @@ Industrial/IoT & Data Segmentation (selected)
 
 * Enabled Retool to safely interface with an air‑gapped IoT monitoring network (Linux/Postgres): parallel subnet design, egress via VPN, and strict ACLs, preserving isolation while allowing controlled read operations.
 
----
-
 ### Systems Engineer — LuminFire
 
 Minneapolis, MN • 2018 (Jan) – 2022 (Feb)
@@ -87,8 +81,6 @@ At LuminFire, I introduced and operationalized modern Agile and CI practices, in
 * Rolled out Duo MFA, Jamf MDM, and VPN to enable zero‑trust remote work (2020).
 
 * Built custom WordPress/front‑end components (CSS/JS) with an emphasis on performance and pixel accuracy.
-
----
 
 ### Principal — [jacobnollette.com](http://jacobnollette.com) LLC / Self Hosting Lab
 
@@ -112,8 +104,6 @@ I run jacobnollette.com LLC and the Self Hosting Lab as one continuous practice.
 
 * Ran GPU-accelerated workloads for AI/agent experimentation (n8n, Ollama), plus multi-node media ingest/transcoding with NVENC and Tdarr.
 
----
-
 ### Webmaster & Tech Consultant to the Board of Directors — Little Sand Lake Area Association
 
 ### (Limited hours / Side projects)
@@ -128,8 +118,6 @@ I led a full redesign of the website using open-source themes to reduce ongoing 
 
 * Secured hyperscale grant credits, driving hosting costs near zero; implemented multi‑cloud DR for critical assets and real‑time canary/availability monitoring.
 
----
-
 ### Webmaster — Steiger Heritage Club
 
 ### (Limited hours / Side projects)
@@ -142,15 +130,11 @@ For the Steiger Heritage Club, I provided end-to-end technical administration ac
 
 * Remediated DDoS and tuned WAF to stabilize public‑facing endpoints.
 
----
-
 ### Creative Developer — Clear Software for Good
 
 Minnesota • 2010 (April) \- 2012 (May)
 
 At Clear Software for Good, I worked as a WordPress developer delivering front-end implementations and graphics-heavy interfaces in collaboration with Ruby on Rails teams. This role introduced me to Git-based workflows and automated deployments, including operating Capistrano-driven deployment pipelines. I customized the WordPress CMS, built interactive front-end components, and supported Rails applications with CSS and shared UI patterns. I also designed visual interface assets using Adobe Creative Cloud to ensure consistency between design and implementation.
-
----
 
 ## SELECTED DEEP‑DIVE HIGHLIGHTS
 
@@ -159,8 +143,6 @@ At Clear Software for Good, I worked as a WordPress developer delivering front-e
 * Air‑gapped data access with Retool: designed for bastion host access; gated VPN‑gated egress; enforced principle‑of‑least‑privilege with role‑scoped queries.
 
 * Ceph reliability engineering: corrected an OSD identity/FSID collision; re‑laid BlueStore with a 250 GB block.db on NVMe to move RocksDB off HDDs; updated CRUSH to respect host/device‑class failure domains; restored healthy PG states and improved tail latency.
-
----
 
 ## EDUCATION
 
