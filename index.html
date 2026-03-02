@@ -24,6 +24,85 @@
   </main>
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <script>
+    async function resolveHeadshotSource(image) {
+      const candidates = [
+        image.getAttribute("src"),
+        "./headshot.png",
+        "./headshot.jpg",
+        "./headshot.jpeg",
+        "./headshot.webp",
+        "./Headshot.png"
+      ].filter(Boolean);
+
+      const checked = new Set();
+
+      for (const candidate of candidates) {
+        if (checked.has(candidate)) {
+          continue;
+        }
+        checked.add(candidate);
+
+        try {
+          const response = await fetch(candidate, { method: "HEAD", cache: "no-store" });
+          if (response.ok) {
+            image.src = candidate;
+            return true;
+          }
+        } catch (error) {
+          console.error("Unable to check headshot source", candidate, error);
+        }
+      }
+
+      return false;
+    }
+
+    async function formatHeader(target) {
+      const name = target.querySelector(":scope > h1:first-child");
+      if (!name) {
+        return;
+      }
+
+      let image = null;
+      const possibleImage = name.nextElementSibling;
+      if (possibleImage && possibleImage.tagName === "P") {
+        const imageTag = possibleImage.querySelector("img");
+        if (imageTag && possibleImage.textContent.trim() === "") {
+          image = imageTag.cloneNode(true);
+          possibleImage.remove();
+        }
+      }
+
+      const contact = name.nextElementSibling && name.nextElementSibling.tagName === "P"
+        ? name.nextElementSibling
+        : null;
+
+      const header = document.createElement("header");
+      header.className = "resume-header";
+
+      const info = document.createElement("div");
+      info.className = "resume-header-info";
+      info.append(name);
+
+      if (contact) {
+        contact.classList.add("resume-contact");
+        info.append(contact);
+      }
+
+      header.append(info);
+
+      if (image) {
+        const hasSource = await resolveHeadshotSource(image);
+        if (hasSource) {
+          image.classList.add("resume-headshot");
+          image.loading = "eager";
+          image.decoding = "async";
+          header.prepend(image);
+        }
+      }
+
+      target.prepend(header);
+    }
+
     async function loadResume() {
       const target = document.getElementById("resume-content");
 
@@ -39,6 +118,7 @@
           breaks: true
         });
         target.innerHTML = marked.parse(markdown);
+        await formatHeader(target);
         document.title = "Jacob Nollette | Resume";
       } catch (error) {
         target.innerHTML =

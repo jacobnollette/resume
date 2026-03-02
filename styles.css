@@ -62,36 +62,37 @@ body {
   margin: 0 0 0.45rem;
 }
 
-/* Style for headshot image */
-.markdown-body > h1:first-child + p img {
+.resume-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.35rem;
+}
+
+.resume-header-info {
+  min-width: 0;
+}
+
+.resume-headshot {
   border-radius: 50%;
   border: 3px solid var(--bg-paper);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   width: 120px;
   height: 120px;
   object-fit: cover;
-  float: left;
-  margin-right: 20px;
-  margin-bottom: 15px;
-  display: inline-block;
+  flex-shrink: 0;
+  display: block;
 }
 
-/* Clear floats after headshot */
-.markdown-body > h1:first-child + p {
-  clear: both;
+.resume-contact {
   margin-top: 0;
-  margin-bottom: 1rem;
-}
-
-.markdown-body > p:nth-of-type(1) {
+  margin-bottom: 0.3rem;
   color: var(--text-muted);
   font-size: 0.98rem;
-  margin-top: 0;
-  margin-bottom: 1.1rem;
   font-weight: 500;
 }
 
-.markdown-body > p:nth-of-type(2) {
+.resume-header + p {
   font-size: 1.02rem;
   margin-bottom: 1.35rem;
 }
@@ -193,6 +194,15 @@ body {
     margin-top: 1.25rem;
     padding-top: 0.85rem;
   }
+
+  .resume-header {
+    align-items: flex-start;
+  }
+
+  .resume-headshot {
+    width: 88px;
+    height: 88px;
+  }
 }
 
 @media print {
@@ -215,6 +225,12 @@ body {
     border: 0;
     border-radius: 0;
     padding: 0;
+  }
+
+  .resume-headshot {
+    width: 80px;
+    height: 80px;
+    box-shadow: none;
   }
 
   .markdown-body a {
