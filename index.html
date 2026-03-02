@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jacob Nollette | Resume</title>
+  <meta name="description" content="Resume of Jacob Nollette - DevOps, SRE, and Platform Engineering.">
+  <meta name="theme-color" content="#f5f4ef">
+  <link rel="canonical" href="https://resume.jacobnollette.com/">
+  <meta property="og:title" content="Jacob Nollette | Resume">
+  <meta property="og:description" content="DevOps, SRE, and Platform Engineering resume.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://resume.jacobnollette.com/">
+  <meta property="og:site_name" content="Jacob Nollette Resume">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;700&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="bg"></div>
+  <main class="page">
+    <article class="resume markdown-body" id="resume-content" aria-live="polite"></article>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script>
+    async function loadResume() {
+      const target = document.getElementById("resume-content");
+
+      try {
+        const response = await fetch("./resume.md", { cache: "no-store" });
+        if (!response.ok) {
+          throw new Error("Unable to load resume.md");
+        }
+
+        const markdown = await response.text();
+        marked.setOptions({
+          gfm: true,
+          breaks: true
+        });
+        target.innerHTML = marked.parse(markdown);
+        document.title = "Jacob Nollette | Resume";
+      } catch (error) {
+        target.innerHTML =
+          "<h1>Jacob Nollette</h1><p>Unable to load resume content. Confirm <code>resume.md</code> is present at the project root.</p>";
+        console.error(error);
+      }
+    }
+
+    loadResume();
+  </script>
+</body>
+</html>
