@@ -88,26 +88,29 @@ At LuminFire, I introduced and operationalized modern Agile and CI practices, in
 
 ---
 
-### Principal — Self Hosting Lab
+### Principal — [jacobnollette.com](http://jacobnollette.com) LLC / Self Hosting Lab
 
 Minneapolis, MN • 2005 (Jan) – Present
 
-I design and operate a self-hosted lab spanning on-premises and public cloud infrastructure, running a mesh of virtual machines and container-based workloads. The platform provides on-site and off-site storage, secure SDWAN access, and dedicated workstation instances for software development and DevOps prototyping. I also run several clustered services, including GPU-accelerated agentic workloads using n8n and Ollama, and a multi-node media ingest and transcoding pipeline leveraging NVENC and Tdarr, and realtime PIT snapshots with ZFS and Syncthing.
+I run jacobnollette.com LLC and the Self Hosting Lab as one continuous practice. From 2011–2018, this was primarily full-time client consulting focused on WordPress development, front-end engineering, and CMS/platform delivery. Since 2018, it has continued as a professional side practice and R&D platform for production-grade DevOps, infrastructure, and reliability engineering patterns that I apply in enterprise environments.
 
-Modern homelab → private cloud with production‑grade practices
+* Delivered SEO- and metadata-driven WordPress marketing sites; built custom themes/modules and performant CSS/JavaScript implementations in close collaboration with design teams.
 
-* Kubernetes (GPU‑accelerated) via KubeSpray/Ansible; Ceph backing (CephFS/RBD) with custom CRUSH rules.
+* Introduced Docker- and NGINX-based deployment patterns into client projects, helping shift delivery from traditional web development toward DevOps/platform engineering practices.
 
-* BlueStore/OSD deep‑dive: improved CephFS configuration; recreated OSD with Ceph-volumes LVMs from DB Disk, restored quorum, and rebalanced placement groups.
+* Designed and operated a private-cloud homelab spanning Proxmox virtualization, Kubernetes (KubeSpray/Ansible), and Ceph-backed storage (CephFS/RBD) with custom CRUSH rules.
 
-* MinIO on CephFS; S3 IAM policies for scoped access; lifecycle/retention rules.
+* Improved Ceph reliability via BlueStore/OSD recovery and reconfiguration; restored quorum and healthy PG balance after storage topology issues.
 
-* Zero‑exposure networking: eliminated port‑forwards by combining Cloudflare Tunnels for WAN access with Tailscale for private mesh; HAProxy for L4/L7 load balancing.
+* Built secure data/storage services with MinIO on CephFS, scoped S3 IAM policies, lifecycle/retention automation, and real-time sync pipelines (Syncthing/Resilio/RClone CronJobs).
 
-* Real‑time data pipelines: SyncThing/Resilio \+ RClone (K8s CronJobs) for real time syncing;
+* Implemented zero-exposure networking patterns using Cloudflare Tunnels, Tailscale mesh access, and HAProxy L4/L7 load balancing.
 
-* Proxmox cluster \+ Proxmox Backup Server with deduplicated backups and scheduled verify/scrub; migrated backups from S3 to Hetzner dedicated storage to materially reduce spend.  
-  ---
+* Operated Proxmox Backup Server with deduplicated backups, scheduled verify/scrub, and cost-optimized off-site retention (S3 to Hetzner migration).
+
+* Ran GPU-accelerated workloads for AI/agent experimentation (n8n, Ollama), plus multi-node media ingest/transcoding with NVENC and Tdarr.
+
+---
 
 ### Webmaster & Tech Consultant to the Board of Directors — Little Sand Lake Area Association
 
@@ -136,14 +139,6 @@ For the Steiger Heritage Club, I provided end-to-end technical administration ac
 * Stood up WordPress hosting stack; designed identity design (visual) system and launched assets; configured mailing list automations.
 
 * Remediated DDoS and tuned WAF to stabilize public‑facing endpoints.
-
----
-
-### Principle — [jacobnollette.com](http://jacobnollette.com) llc
-
-Minnesota • 2011 \- 2018
-
-I freelanced as a WordPress developer building SEO- and metadata-driven marketing sites, collaborating closely with detail-oriented designers to deliver precise, performant front-end implementations using CSS and JavaScript. Over time, my work expanded into custom module development and deeper backend CMS customization. As projects grew in complexity, I became increasingly involved in systems integration, introducing Docker- and NGINX-based deployments—an inflection point that ultimately led me into DevOps and platform engineering.
 
 ---
 
