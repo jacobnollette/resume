@@ -62,13 +62,15 @@
         return;
       }
 
+      // Check if there's a paragraph with only an image (headshot)
+      const firstPara = name.nextElementSibling;
       let image = null;
-      const possibleImage = name.nextElementSibling;
-      if (possibleImage && possibleImage.tagName === "P") {
-        const imageTag = possibleImage.querySelector("img");
-        if (imageTag && possibleImage.textContent.trim() === "") {
+      
+      if (firstPara && firstPara.tagName === "P") {
+        const imageTag = firstPara.querySelector("img");
+        if (imageTag && firstPara.textContent.trim() === "") {
           image = imageTag.cloneNode(true);
-          possibleImage.remove();
+          // Don't remove the paragraph to preserve the horizontal rule that comes after
         }
       }
 
