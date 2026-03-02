@@ -62,22 +62,32 @@
         return;
       }
 
-      // Find and remove the image paragraph only if it's immediately after the header
-      const firstPara = name.nextElementSibling;
       let image = null;
-      
-      if (firstPara && firstPara.tagName === "P") {
-        const imageTag = firstPara.querySelector("img");
-        if (imageTag && firstPara.textContent.trim() === "") {
-          image = imageTag.cloneNode(true);
-          // Remove only the image paragraph, not the following content
-          firstPara.remove();
-        }
-      }
+      let contact = null;
+      let node = name.nextElementSibling;
 
-      const contact = name.nextElementSibling && name.nextElementSibling.tagName === "P"
-        ? name.nextElementSibling
-        : null;
+      while (node) {
+        if (node.tagName === "HR" || node.tagName === "H2") {
+          break;
+        }
+
+        if (node.tagName === "P") {
+          const imageTag = node.querySelector("img");
+          if (!image && imageTag && node.textContent.trim() === "") {
+            image = imageTag.cloneNode(true);
+            const toRemove = node;
+            node = node.nextElementSibling;
+            toRemove.remove();
+            continue;
+          }
+
+          if (!contact && node.textContent.trim() !== "") {
+            contact = node;
+          }
+        }
+
+        node = node.nextElementSibling;
+      }
 
       const header = document.createElement("header");
       header.className = "resume-header";
