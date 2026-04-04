@@ -58,12 +58,12 @@ body {
 .resume-logo {
   display: flex;
   justify-content: center;
-  margin-bottom: 1.5rem;
+  padding: 0.75rem 0 1.25rem;
 }
 
 .resume-logo img {
-  height: 64px;
-  width: auto;
+  width: 125px;
+  height: auto;
   display: block;
 }
 
@@ -209,7 +209,7 @@ body {
   }
 
   .resume-logo img {
-    height: 48px;
+    width: 96px;
   }
 
   .markdown-body h2 {
@@ -249,7 +249,7 @@ body {
   }
 
   .resume-logo img {
-    height: 48px;
+    width: 100px;
   }
 
   .resume-headshot {
