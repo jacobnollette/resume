@@ -63,7 +63,7 @@ body {
 }
 
 .resume-logo {
-  width: 72px;
+  width: 120px;
   height: auto;
   flex-shrink: 0;
   display: block;
@@ -203,7 +203,7 @@ body {
   }
 
   .resume-logo {
-    width: 52px;
+    width: 88px;
   }
 
   .markdown-body h2 {
@@ -243,7 +243,7 @@ body {
   }
 
   .resume-logo {
-    width: 56px;
+    width: 88px;
   }
 
   .resume-headshot {
