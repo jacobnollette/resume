@@ -89,19 +89,27 @@
         node = node.nextElementSibling;
       }
 
-      // Logo — top center
-      const logoWrap = document.createElement("div");
-      logoWrap.className = "resume-logo";
+      // Header row — logo | headshot | name + contact
+      const header = document.createElement("header");
+      header.className = "resume-header";
+
       const logoImg = document.createElement("img");
       logoImg.src = "./logo.png";
       logoImg.alt = "Jacob Nollette";
+      logoImg.className = "resume-logo";
       logoImg.loading = "eager";
       logoImg.decoding = "async";
-      logoWrap.append(logoImg);
+      header.append(logoImg);
 
-      // Header row — headshot left, name + contact right
-      const header = document.createElement("header");
-      header.className = "resume-header";
+      if (image) {
+        const hasSource = await resolveHeadshotSource(image);
+        if (hasSource) {
+          image.classList.add("resume-headshot");
+          image.loading = "eager";
+          image.decoding = "async";
+          header.append(image);
+        }
+      }
 
       const info = document.createElement("div");
       info.className = "resume-header-info";
@@ -113,19 +121,7 @@
       }
 
       header.append(info);
-
-      if (image) {
-        const hasSource = await resolveHeadshotSource(image);
-        if (hasSource) {
-          image.classList.add("resume-headshot");
-          image.loading = "eager";
-          image.decoding = "async";
-          header.prepend(image);
-        }
-      }
-
       target.prepend(header);
-      target.prepend(logoWrap);
     }
 
     async function loadResume() {

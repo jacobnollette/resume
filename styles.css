@@ -54,25 +54,19 @@ body {
   animation: fadeIn 420ms ease-out;
 }
 
-/* Logo */
-.resume-logo {
-  display: flex;
-  justify-content: center;
-  padding: 0.75rem 0 1.25rem;
-}
-
-.resume-logo img {
-  width: 125px;
-  height: auto;
-  display: block;
-}
-
-/* Header row: headshot left, name + contact right */
+/* Header row: logo | headshot | name + contact */
 .resume-header {
   display: flex;
   align-items: center;
   gap: 1.25rem;
   margin-bottom: 0.35rem;
+}
+
+.resume-logo {
+  width: 72px;
+  height: auto;
+  flex-shrink: 0;
+  display: block;
 }
 
 .resume-header-info {
@@ -208,8 +202,8 @@ body {
     box-shadow: 0 14px 32px rgba(16, 32, 26, 0.12);
   }
 
-  .resume-logo img {
-    width: 96px;
+  .resume-logo {
+    width: 52px;
   }
 
   .markdown-body h2 {
@@ -248,8 +242,8 @@ body {
     padding: 0;
   }
 
-  .resume-logo img {
-    width: 100px;
+  .resume-logo {
+    width: 56px;
   }
 
   .resume-headshot {
