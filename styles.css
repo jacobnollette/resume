@@ -6,6 +6,7 @@
   --text-muted: #5b6663;
   --line: #d8ddd9;
   --link: #0f5c51;
+  --accent: #e85d00;
   --shadow: 0 22px 50px rgba(16, 32, 26, 0.14);
 }
 
@@ -33,7 +34,7 @@ body {
   inset: 0;
   background:
     radial-gradient(circle at 15% 10%, rgba(20, 95, 83, 0.1) 0%, rgba(20, 95, 83, 0) 36%),
-    radial-gradient(circle at 88% 90%, rgba(123, 145, 80, 0.1) 0%, rgba(123, 145, 80, 0) 32%),
+    radial-gradient(circle at 88% 90%, rgba(232, 93, 0, 0.06) 0%, rgba(232, 93, 0, 0) 32%),
     linear-gradient(170deg, #f5f4ef 0%, #ecebe2 100%);
   z-index: -1;
 }
@@ -53,19 +54,24 @@ body {
   animation: fadeIn 420ms ease-out;
 }
 
-.markdown-body > h1:first-child {
-  font-family: "Source Serif 4", Georgia, serif;
-  color: var(--bg-ink);
-  font-size: clamp(2rem, 4vw, 2.8rem);
-  line-height: 1.03;
-  letter-spacing: -0.02em;
-  margin: 0 0 0.45rem;
+/* Logo */
+.resume-logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
 }
 
+.resume-logo img {
+  height: 64px;
+  width: auto;
+  display: block;
+}
+
+/* Header row: headshot left, name + contact right */
 .resume-header {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 1.25rem;
   margin-bottom: 0.35rem;
 }
 
@@ -77,44 +83,55 @@ body {
   border-radius: 50%;
   border: 3px solid var(--bg-paper);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  width: 150px;
-  height: 150px;
+  width: 110px;
+  height: 110px;
   object-fit: cover;
   flex-shrink: 0;
   display: block;
+}
+
+.markdown-body > h1:first-child {
+  font-family: "Source Serif 4", Georgia, serif;
+  color: var(--bg-ink);
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  line-height: 1.03;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.35rem;
 }
 
 .resume-contact {
   margin-top: 0;
   margin-bottom: 0.3rem;
   color: var(--text-muted);
-  font-size: 0.98rem;
+  font-size: 0.95rem;
   font-weight: 500;
 }
 
 .resume-header + p {
-  font-size: 1.02rem;
-  margin-bottom: 1.35rem;
+  font-size: 0.98rem;
+  margin-top: 1rem;
+  margin-bottom: 1.2rem;
 }
 
+/* Section headings */
 .markdown-body h2 {
   font-family: "Source Serif 4", Georgia, serif;
-  font-size: 1.3rem;
-  letter-spacing: 0.02em;
+  font-size: 1.15rem;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: #15382f;
+  color: var(--accent);
   margin-top: 1.85rem;
   margin-bottom: 0.65rem;
-  border-top: 0;
-  padding-top: 0;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid var(--line);
 }
 
 .markdown-body h3 {
   font-family: "Source Serif 4", Georgia, serif;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   color: #143229;
   margin-top: 1.2rem;
-  margin-bottom: 0.28rem;
+  margin-bottom: 0.25rem;
 }
 
 .markdown-body h4,
@@ -127,17 +144,17 @@ body {
 
 .markdown-body p,
 .markdown-body li {
-  font-size: 0.98rem;
+  font-size: 0.97rem;
 }
 
 .markdown-body ul {
-  margin-top: 0.45rem;
-  margin-bottom: 0.9rem;
+  margin-top: 0.4rem;
+  margin-bottom: 0.85rem;
   padding-left: 1.2rem;
 }
 
 .markdown-body li {
-  margin-bottom: 0.38rem;
+  margin-bottom: 0.35rem;
 }
 
 .markdown-body strong {
@@ -158,7 +175,8 @@ body {
 }
 
 .markdown-body a:hover {
-  border-bottom-color: var(--link);
+  color: var(--accent);
+  border-bottom-color: var(--accent);
 }
 
 .markdown-body hr {
@@ -190,9 +208,12 @@ body {
     box-shadow: 0 14px 32px rgba(16, 32, 26, 0.12);
   }
 
+  .resume-logo img {
+    height: 48px;
+  }
+
   .markdown-body h2 {
     margin-top: 1.25rem;
-    padding-top: 0.85rem;
   }
 
   .resume-header {
@@ -200,8 +221,8 @@ body {
   }
 
   .resume-headshot {
-    width: 96px;
-    height: 96px;
+    width: 80px;
+    height: 80px;
   }
 }
 
@@ -227,9 +248,13 @@ body {
     padding: 0;
   }
 
+  .resume-logo img {
+    height: 48px;
+  }
+
   .resume-headshot {
-    width: 84px;
-    height: 84px;
+    width: 80px;
+    height: 80px;
     box-shadow: none;
   }
 
