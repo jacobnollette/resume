@@ -50,7 +50,7 @@ body {
   border: 1px solid rgba(18, 35, 28, 0.08);
   box-shadow: var(--shadow);
   border-radius: 16px;
-  padding: 2.5rem;
+  padding: 2.5rem 7rem 2.5rem 2.5rem;
   animation: fadeIn 420ms ease-out;
 }
 
@@ -204,7 +204,7 @@ body {
 
   .resume {
     border-radius: 10px;
-    padding: 1rem;
+    padding: 1rem 1.5rem 1rem 1rem;
     box-shadow: 0 14px 32px rgba(16, 32, 26, 0.12);
   }
 
