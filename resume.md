@@ -24,7 +24,7 @@ Tooling & Platforms: Docker, Jira, Bitbucket, Confluence, GitLab, GitHub, Retool
 
 ## PROFESSIONAL EXPERIENCE
 
-### Principal — [jacobnollette.com](http://jacobnollette.com) LLC / Self Hosting Lab
+### Principal — [jacobnollette.com](http://jacobnollette.com) LLC
 
 Minneapolis, MN • 2005 (Jan) – Present
 
