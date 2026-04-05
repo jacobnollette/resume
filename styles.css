@@ -62,10 +62,14 @@ body {
   margin-bottom: 0.35rem;
 }
 
+#resume-logo-block,
+#resume-headshot-block {
+  flex-shrink: 0;
+}
+
 .resume-logo {
   width: 120px;
   height: auto;
-  flex-shrink: 0;
   display: block;
 }
 
@@ -80,7 +84,6 @@ body {
   width: 110px;
   height: 110px;
   object-fit: cover;
-  flex-shrink: 0;
   display: block;
 }
 
@@ -204,22 +207,30 @@ body {
     padding: 1.25rem 1.25rem 1rem;
   }
 
-  .resume-logo {
-    width: 88px;
-  }
-
   .markdown-body h2 {
     margin-top: 1.25rem;
   }
 
   .resume-header {
-    flex-direction: column;
-    align-items: center;
-    gap: 0.85rem;
+    display: block;
+    text-align: center;
+    margin-bottom: 0.75rem;
   }
 
+  #resume-logo-block,
+  #resume-headshot-block,
   .resume-header-info {
-    text-align: center;
+    display: block;
+    margin-bottom: 0.75rem;
+  }
+
+  .resume-logo,
+  .resume-headshot {
+    margin: 0 auto;
+  }
+
+  .resume-logo {
+    width: 88px;
   }
 
   .resume-headshot {
