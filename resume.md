@@ -114,6 +114,26 @@ At LuminFire, I introduced and operationalized modern Agile and CI practices, in
 
 * Built custom WordPress/front‑end components (CSS/JS) with an emphasis on performance and pixel accuracy.
 
+### DevOps Consultant — North Shore Automation
+
+### (Limited hours / Side projects)
+
+Los Angeles, CA • 2022 (Jan) – Present
+
+* Diagnosed SWE bottlenecks and modernized CI/CD; rewrote pipelines to be vendor-agnostic for GitLab ↔ GitHub Actions, then orchestrated a company-wide migration to GitHub Actions.
+
+  * *How:* Consolidated downstream repos into monorepos/monopipelines where appropriate; improved artifact traceability and failure debuggability.
+
+* Built a Bash + Docker appliance & CLI for on-prem media-management stacks (multiple DB flavors supported); packaged ops tasks including backup/restore, blue-green upgrades, health checks, and safe power cycles.
+
+* Hardened NGINX load balancers against the OWASP Top 10 (rate-limiting, strict TLS, header sanitation) to improve external posture.
+
+* Authored a Go-based n8n webhook load-tester, generating controlled RPS to benchmark scaling behavior and quantify database backend trade-offs.
+
+* Terraformed AWS for turn-key DAM environments.
+
+* Produced Rocky Linux/Ubuntu VMDKs for VMware, Proxmox, and AWS EC2 consumption.
+
 ### Webmaster & Tech Consultant to the Board of Directors — Little Sand Lake Area Association
 
 ### (Limited hours / Side projects)
