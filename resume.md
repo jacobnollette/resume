@@ -24,6 +24,38 @@ Tooling & Platforms: Docker, Jira, Bitbucket, Confluence, GitLab, GitHub, Retool
 
 ## PROFESSIONAL EXPERIENCE
 
+### Principal — [jacobnollette.com](http://jacobnollette.com) LLC / Self Hosting Lab
+
+Minneapolis, MN • 2005 (Jan) – Present
+
+I run jacobnollette.com LLC and the Self-Hosting Lab as one continuous practice. From 2011–2018, this was primarily full-time client consulting focused on WordPress development, front-end engineering, and CMS/platform delivery. Since 2018, it has continued as a professional side practice and R&D platform for production-grade DevOps, infrastructure, AI/agent tooling, and reliability engineering patterns that I apply in enterprise environments.
+
+AI, Agents & Agentic Orchestration
+
+* Orchestrate multi-agent software development workflows using Gas Town (`gt`), coordinating concurrent Claude Code, Gemini, and Codex agents across projects via the Mayor-Enhanced Orchestration Workflow (MEOW); work state persists in git-worktree-backed Hooks, enabling agents to resume across sessions without losing context.
+
+* Built an agentic web scraper using Playwright (browser automation), Crawl4AI (pipeline orchestration), and Ollama (local LLM inference) for structured data extraction; validated output with Pydantic schemas.
+
+* Deployed and administered high-performance n8n for AI assistant automation; built compound RAG pipelines, structured agent inputs with JavaScript, and webhook/agent load-tested with a custom Go tool.
+
+Infrastructure & Platform
+
+* Delivered SEO- and metadata-driven WordPress marketing sites; built custom themes/modules and performant CSS/JavaScript implementations in close collaboration with design teams.
+
+* Introduced Docker- and NGINX-based deployment patterns into client projects, helping shift delivery from traditional web development toward DevOps/platform engineering practices.
+
+* Designed and operated a private-cloud homelab spanning Proxmox virtualization, Kubernetes (KubeSpray/Ansible), and Ceph-backed storage (CephFS/RBD) with custom CRUSH rules.
+
+* Improved Ceph reliability via BlueStore/OSD recovery and reconfiguration; restored quorum and healthy PG balance after storage topology issues.
+
+* Built secure data/storage services with MinIO on CephFS, scoped S3 IAM policies, lifecycle/retention automation, and real-time sync pipelines (Syncthing/Resilio/RClone CronJobs).
+
+* Implemented zero-exposure networking patterns using Cloudflare Tunnels, Tailscale mesh access, and HAProxy L4/L7 load balancing.
+
+* Operated Proxmox Backup Server with deduplicated backups, scheduled verify/scrub, and cost-optimized off-site retention (S3 to Hetzner migration).
+
+* Ran GPU-accelerated workloads for AI/agent experimentation (n8n, Ollama), plus multi-node media ingest/transcoding with NVENC and Tdarr.
+
 ### DevOps Engineer — TSI Inc.
 
 Shoreview, MN • 2022 (Feb) – 2026 (Mar)
@@ -81,28 +113,6 @@ At LuminFire, I introduced and operationalized modern Agile and CI practices, in
 * Rolled out Duo MFA, Jamf MDM, and VPN to enable zero‑trust remote work (2020).
 
 * Built custom WordPress/front‑end components (CSS/JS) with an emphasis on performance and pixel accuracy.
-
-### Principal — [jacobnollette.com](http://jacobnollette.com) LLC / Self Hosting Lab
-
-Minneapolis, MN • 2005 (Jan) – Present
-
-I run jacobnollette.com LLC and the Self-Hosting Lab as one continuous practice. From 2011–2018, this was primarily full-time client consulting focused on WordPress development, front-end engineering, and CMS/platform delivery. Since 2018, it has continued as a professional side practice and R&D platform for production-grade DevOps, infrastructure, and reliability engineering patterns that I apply in enterprise environments.
-
-* Delivered SEO- and metadata-driven WordPress marketing sites; built custom themes/modules and performant CSS/JavaScript implementations in close collaboration with design teams.
-
-* Introduced Docker- and NGINX-based deployment patterns into client projects, helping shift delivery from traditional web development toward DevOps/platform engineering practices.
-
-* Designed and operated a private-cloud homelab spanning Proxmox virtualization, Kubernetes (KubeSpray/Ansible), and Ceph-backed storage (CephFS/RBD) with custom CRUSH rules.
-
-* Improved Ceph reliability via BlueStore/OSD recovery and reconfiguration; restored quorum and healthy PG balance after storage topology issues.
-
-* Built secure data/storage services with MinIO on CephFS, scoped S3 IAM policies, lifecycle/retention automation, and real-time sync pipelines (Syncthing/Resilio/RClone CronJobs).
-
-* Implemented zero-exposure networking patterns using Cloudflare Tunnels, Tailscale mesh access, and HAProxy L4/L7 load balancing.
-
-* Operated Proxmox Backup Server with deduplicated backups, scheduled verify/scrub, and cost-optimized off-site retention (S3 to Hetzner migration).
-
-* Ran GPU-accelerated workloads for AI/agent experimentation (n8n, Ollama), plus multi-node media ingest/transcoding with NVENC and Tdarr.
 
 ### Webmaster & Tech Consultant to the Board of Directors — Little Sand Lake Area Association
 
