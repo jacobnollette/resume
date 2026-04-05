@@ -26,9 +26,9 @@ Tooling & Platforms: Docker, Jira, Bitbucket, Confluence, GitLab, GitHub, Retool
 
 ### DevOps Engineer — TSI Inc.
 
-Shoreview, MN • 2022 (Feb) – Present
+Shoreview, MN • 2022 (Feb) – 2026 (Mar)
 
-At TSI Incorporated, I design and maintain CI/CD pipelines using Jenkins and Git, and provision Kubernetes platforms with Terraform. I build and operate a range of custom environments, including no-code/low-code appliances, QA infrastructure, mobile device emulation systems, and secure code-signing services. I deploy Kubernetes applications declaratively with Terraform and orchestrate their build and release workflows using Docker and Jenkins.
+At TSI Incorporated, I designed and maintained CI/CD pipelines using Jenkins and Git, and provisioned Kubernetes platforms with Terraform. I built and operated a range of custom environments, including no-code/low-code appliances, QA infrastructure, mobile device emulation systems, and secure code-signing services. I deployed Kubernetes applications declaratively with Terraform and orchestrated their build and release workflows using Docker and Jenkins.
 
 CI/CD & Release Engineering
 
