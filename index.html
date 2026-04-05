@@ -20,134 +20,35 @@
 <body>
   <div class="bg"></div>
   <main class="page">
-    <article class="resume markdown-body" id="resume-content" aria-live="polite"></article>
+    <article class="resume">
+      <header class="resume-header">
+        <img src="./logo.png" alt="Jacob Nollette" class="resume-logo" loading="eager" decoding="async">
+        <img src="./headshot.png" alt="Jacob Nollette" class="resume-headshot" loading="eager" decoding="async">
+        <div class="resume-header-info">
+          <h1>Jacob Nollette</h1>
+          <p class="resume-contact">Minneapolis, MN &bull; jacob@jacobnollette.com &bull; 952&#8209;428&#8209;9199</p>
+        </div>
+      </header>
+      <div class="resume-body markdown-body" id="resume-content" aria-live="polite"></div>
+    </article>
   </main>
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <script>
-    async function resolveHeadshotSource(image) {
-      const candidates = [
-        image.getAttribute("src"),
-        "./headshot.png",
-        "./headshot.jpg",
-        "./headshot.jpeg",
-        "./headshot.webp",
-        "./Headshot.png"
-      ].filter(Boolean);
-
-      const checked = new Set();
-
-      for (const candidate of candidates) {
-        if (checked.has(candidate)) {
-          continue;
-        }
-        checked.add(candidate);
-
-        try {
-          const response = await fetch(candidate, { method: "HEAD", cache: "no-store" });
-          if (response.ok) {
-            image.src = candidate;
-            return true;
-          }
-        } catch (error) {
-          console.error("Unable to check headshot source", candidate, error);
-        }
-      }
-
-      return false;
-    }
-
-    async function formatHeader(target) {
-      const name = target.querySelector(":scope > h1:first-child");
-      if (!name) {
-        return;
-      }
-
-      let image = null;
-      let contact = null;
-      let node = name.nextElementSibling;
-
-      while (node) {
-        if (node.tagName === "HR" || node.tagName === "H2") {
-          break;
-        }
-
-        if (node.tagName === "P") {
-          const imageTag = node.querySelector("img");
-          if (!image && imageTag && node.textContent.trim() === "") {
-            image = imageTag.cloneNode(true);
-            const toRemove = node;
-            node = node.nextElementSibling;
-            toRemove.remove();
-            continue;
-          }
-
-          if (!contact && node.textContent.trim() !== "") {
-            contact = node;
-          }
-        }
-
-        node = node.nextElementSibling;
-      }
-
-      // Header row — logo | headshot | name + contact
-      const header = document.createElement("header");
-      header.className = "resume-header";
-
-      const logoImg = document.createElement("img");
-      logoImg.src = "./logo.png";
-      logoImg.alt = "Jacob Nollette";
-      logoImg.className = "resume-logo";
-      logoImg.loading = "eager";
-      logoImg.decoding = "async";
-      header.append(logoImg);
-
-      if (image) {
-        const hasSource = await resolveHeadshotSource(image);
-        if (hasSource) {
-          image.classList.add("resume-headshot");
-          image.loading = "eager";
-          image.decoding = "async";
-          header.append(image);
-        }
-      }
-
-      const info = document.createElement("div");
-      info.className = "resume-header-info";
-      info.append(name);
-
-      if (contact) {
-        contact.classList.add("resume-contact");
-        info.append(contact);
-      }
-
-      header.append(info);
-      target.prepend(header);
-    }
-
     async function loadResume() {
       const target = document.getElementById("resume-content");
-
       try {
         const response = await fetch("./resume.md", { cache: "no-store" });
         if (!response.ok) {
           throw new Error("Unable to load resume.md");
         }
-
         const markdown = await response.text();
-        marked.setOptions({
-          gfm: true,
-          breaks: true
-        });
+        marked.setOptions({ gfm: true, breaks: true });
         target.innerHTML = marked.parse(markdown);
-        await formatHeader(target);
-        document.title = "Jacob Nollette | Resume";
       } catch (error) {
-        target.innerHTML =
-          "<h1>Jacob Nollette</h1><p>Unable to load resume content. Confirm <code>resume.md</code> is present at the project root.</p>";
+        target.innerHTML = "<p>Unable to load resume content.</p>";
         console.error(error);
       }
     }
-
     loadResume();
   </script>
 </body>
