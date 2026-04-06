@@ -120,6 +120,8 @@ Los Angeles, CA • 2022 (Jan) – Present
 
 * Built a Bash + Docker appliance & CLI for on-prem media-management stacks (multiple DB flavors supported); packaged ops tasks including backup/restore, blue-green upgrades, health checks, and safe power cycles.
 
+* Built a CLI toolset for deploying studio/media workflow microservices with Docker Compose across compute and NAS nodes, backed by build artifacts produced in CI (originally GitLab, migrated to GitHub Actions); deployment engineers use the CLI to install, upgrade, administer cron-based backups, and manage runtime dependencies without needing to understand the underlying compose topology.
+
 * Hardened NGINX load balancers against the OWASP Top 10 (rate-limiting, strict TLS, header sanitation) to improve external posture.
 
 * Authored a Go-based n8n webhook load-tester, generating controlled RPS to benchmark scaling behavior and quantify database backend trade-offs.
@@ -165,6 +167,8 @@ At Clear Software for Good, I worked as a WordPress developer delivering front-e
 * Trunk‑based multi‑project deploys (GCP): single Jenkins pipeline orchestrated builds for 15+ services across 4 projects; Groovy DRY code → staged Docker build → unit test → X‑Ray/SonarQube → artifact publish → Terraform apply; per‑env promotion with guarded approvals; 13‑minute full rollout.
 
 * Air‑gapped data access with Retool: designed for bastion host access; gated VPN‑gated egress; enforced principle‑of‑least‑privilege with role‑scoped queries.
+
+* Studio/media workflow deployment CLI (North Shore Automation): designed a Bash + Docker Compose CLI toolkit spanning compute and NAS nodes that consumes versioned build artifacts from GitHub Actions; deployment engineers run declarative commands to install services, perform blue-green upgrades, schedule cron-based backups, and manage dependencies — abstracting compose topology so operators never touch raw manifests.
 
 * Ceph reliability engineering: corrected an OSD identity/FSID collision; re‑laid BlueStore with a 250 GB block.db on NVMe to move RocksDB off HDDs; updated CRUSH to respect host/device‑class failure domains; restored healthy PG states and improved tail latency.
 
