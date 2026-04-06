@@ -170,7 +170,7 @@ At Clear Software for Good, I worked as a WordPress developer delivering front-e
 
 * Studio/media workflow deployment CLI (North Shore Automation): designed a Bash + Docker Compose CLI toolkit spanning compute and NAS nodes that consumes versioned build artifacts from GitHub Actions; deployment engineers run declarative commands to install services, perform blue-green upgrades, schedule cron-based backups, and manage dependencies — abstracting compose topology so operators never touch raw manifests.
 
-* Ceph reliability engineering: corrected an OSD identity/FSID collision; re‑laid BlueStore with a 250 GB block.db on NVMe to move RocksDB off HDDs; updated CRUSH to respect host/device‑class failure domains; restored healthy PG states and improved tail latency.
+* Ceph reliability engineering (Proxmox): managed a multi-node Ceph cluster across failure domains using CRUSH rules and device-class separation; recovered from OSD/FSID collisions and restored healthy PG states; built observability and monitoring around cluster health, recovery events, and capacity planning.
 
 ## EDUCATION
 
