@@ -1,181 +1,149 @@
-I work at the intersection of DevOps, Site Reliability, Platform Engineering, and Linux administration, with a focus on CI/CD pipelines, Kubernetes, Terraform, and developer tooling. I administer and automate mixed Unix-like environments, including Ubuntu, Debian, Darwin/macOS, and BSD systems, as well as virtualization and network platforms such as Proxmox, UniFi OS, pfSense, and TrueNAS. At TSI, my mission is to turn complex infrastructure into reliable, scalable systems that make software delivery faster, safer, and more predictable. I’m a strong believer in supported golden paths, shared ownership, and collaboration as the foundation for sustainable engineering and real innovation.
+# Jacob Nollette
+Minneapolis, MN • jacob@jacobnollette.com • 952-428-9199 • jacobnollette.com
+
+Platform Engineer and DevOps specialist with 5+ years of production experience building internal developer platforms, CI/CD pipelines, and cloud infrastructure. Reduced deployment time by 96% (full days → 13 minutes) across 15+ microservices at TSI. Deep background in Kubernetes, Terraform, GitHub Actions, GitLab CI, and developer experience tooling. Hands-on with AI/agent infrastructure — running Ollama, n8n, and RAG pipelines in production. Remote-first, immediately available.
+
+---
 
 ## CORE COMPETENCIES
 
-CI/CD & Automation: Jenkins \- automated modular pipelines and shared Groovy libs, lots of experience with GitLab Runners, significant experience with GitHub Actions. Built and maintained Kubernetes projects with Terraform and Docker. Created virtual machines with Packer. Deployed to GCP with Terraform; Deployed to AWS with Terraform and CloudFormation. Docker, Bash, PowerShell.
+**CI/CD & Developer Experience:** GitHub Actions, GitLab CI/CD, Jenkins (MPL Shared Library/Groovy), Docker, trunk-based development, parameterized pipelines, containerized build agents, artifact management (JFrog Artifactory), Packer VM builds.
 
-Cloud & Virtualization: GCP, AWS, Azure, Kubernetes, Hyper‑V, Proxmox, DigitalOcean, Hetzner
+**Cloud & Infrastructure:** GCP (primary), AWS, Azure, Terraform, CloudFormation, Kubernetes (GKE, EKS, KubeSpray/bare-metal), Proxmox, Hyper-V, DigitalOcean, Hetzner.
 
-Networking & Security: Supply‑chain scanning (Artifactory/X‑Ray), Sonarqube build blocking, UniFi networking, pfSense, Tailscale, HAProxy, NGINX, IAM/SSO/MFA (Duo/TOTP), OWASP hardening.
+**Platform Engineering:** Internal developer platforms, Go CLI tooling, standardized dev environments, GitOps (ArgoCD), IaC-first deployments, VM appliance packaging (multi-hypervisor targets), self-service infrastructure patterns.
 
-AI & Agents: Github Copilot, ChatGPT (RAG), Claude, Gemini, Ollama (Open WebUI), high‑performance n8n hosting, Go‑based agent/webhook load testing, API scripting (curl \+ jq), structured agent inputs (JavaScript), compounded RAG inputs in n8n
+**Networking & Security:** IAM/SSO/MFA (Okta, Duo, TOTP), supply-chain scanning (JFrog X-Ray), SonarQube SAST, zero-trust networking (Tailscale, Cloudflare Tunnels), HAProxy, NGINX/WAF, pfSense, OWASP hardening, Vault.
 
-Storage & Data: Ceph (CRUSH rules), ZFS (ARC/log/meta tuning), MinIO (S3/IAM), MySQL/Postgres/MSSQL orchestration & backups, DR automation, retention policies, tiered storage, P2P/real‑time sync
+**AI & Agents:** Ollama (Open WebUI), n8n (RAG pipelines, multi-agent orchestration), Claude, Gemini, GitHub Copilot, Playwright/Crawl4AI web automation, Go-based webhook load testing, Pydantic-validated structured outputs.
 
-Programming & Scripting: Bash, Groovy, Powershell, PHP, Javascript, Go
+**Storage & Data:** Ceph (CRUSH rules, BlueStore/OSD tuning), ZFS (ARC/log/meta tuning), MinIO (S3/IAM), MySQL/Postgres/MSSQL orchestration, DR automation, tiered storage, real-time sync pipelines.
 
-Tooling & Platforms: Docker, Jira, Bitbucket, Confluence, GitLab, GitHub, Retool, WordPress, FFmpeg, Rclone, Nextcloud, Notion, VS Code, Vim, TMUX, Ubuntu/Debian, Scratch containers
+**Programming & Scripting:** Go, Bash, Groovy, Python, JavaScript, PowerShell, PHP.
+
+**Observability & SRE:** Prometheus, Grafana, Loki, SLOs, structured alerting, DR automation, blameless incident response.
+
+---
 
 ## PROFESSIONAL EXPERIENCE
 
-### Principal — [jacobnollette.com](http://jacobnollette.com) LLC
+### Platform / DevOps Engineer — North Shore Automation
+*Los Angeles, CA (Remote) • 2022 (Jan) – Present*
 
-Minneapolis, MN • 2005 (Jan) – Present
+Fractional DevOps consultant modernizing CI/CD and platform infrastructure for media and studio workflow clients.
 
-I run jacobnollette.com LLC and the Self-Hosting Lab as one continuous practice. From 2011–2018, this was primarily full-time client consulting focused on WordPress development, front-end engineering, and CMS/platform delivery. Since 2018, it has continued as a professional side practice and R&D platform for production-grade DevOps, infrastructure, AI/agent tooling, and reliability engineering patterns that I apply in enterprise environments.
+- Diagnosed SWE bottlenecks and rewrote pipelines to be vendor-agnostic (GitLab ↔ GitHub Actions); orchestrated company-wide migration to GitHub Actions, consolidating downstream repos into monorepos/monopipelines for improved artifact traceability.
+- Built a CLI toolset for deploying studio/media workflow microservices with Docker Compose across compute and NAS nodes, backed by versioned CI artifacts (GitHub Actions); deployment engineers install, upgrade, backup, and manage dependencies without touching raw manifests.
+- Built a Bash + Docker appliance and CLI for on-prem media-management stacks; packaged ops tasks including backup/restore, blue-green upgrades, health checks, and safe power cycles.
+- Hardened NGINX load balancers against OWASP Top 10 (rate-limiting, strict TLS, header sanitation).
+- Authored a Go-based n8n webhook load-tester to benchmark scaling behavior and quantify database backend trade-offs under controlled RPS.
+- Terraformed AWS for turn-key DAM environments; produced Rocky Linux/Ubuntu VMDKs for VMware, Proxmox, and AWS EC2.
 
-AI, Agents & Agentic Orchestration
-
-* Orchestrate multi-agent software development workflows using Gas Town (`gt`), coordinating concurrent Claude Code, Gemini, and Codex agents across projects via the Mayor-Enhanced Orchestration Workflow (MEOW); work state persists in git-worktree-backed Hooks, enabling agents to resume across sessions without losing context.
-
-* Built an agentic web scraper using Playwright (browser automation), Crawl4AI (pipeline orchestration), and Ollama (local LLM inference) for structured data extraction; validated output with Pydantic schemas.
-
-* Deployed and administered high-performance n8n for AI assistant automation; built compound RAG pipelines, structured agent inputs with JavaScript, and webhook/agent load-tested with a custom Go tool.
-
-Infrastructure & Platform
-
-* Delivered SEO- and metadata-driven WordPress marketing sites; built custom themes/modules and performant CSS/JavaScript implementations in close collaboration with design teams.
-
-* Introduced Docker- and NGINX-based deployment patterns into client projects, helping shift delivery from traditional web development toward DevOps/platform engineering practices.
-
-* Designed and operated a private-cloud homelab spanning Proxmox virtualization, Kubernetes (KubeSpray/Ansible), and Ceph-backed storage (CephFS/RBD) with custom CRUSH rules.
-
-* Improved Ceph reliability via BlueStore/OSD recovery and reconfiguration; restored quorum and healthy PG balance after storage topology issues.
-
-* Built secure data/storage services with MinIO on CephFS, scoped S3 IAM policies, lifecycle/retention automation, and real-time sync pipelines (Syncthing/Resilio/RClone CronJobs).
-
-* Implemented zero-exposure networking patterns using Cloudflare Tunnels, Tailscale mesh access, and HAProxy L4/L7 load balancing.
-
-* Operated Proxmox Backup Server with deduplicated backups, scheduled verify/scrub, and cost-optimized off-site retention (S3 to Hetzner migration).
-
-* Ran GPU-accelerated workloads for AI/agent experimentation (n8n, Ollama), plus multi-node media ingest/transcoding with NVENC and Tdarr.
+---
 
 ### DevOps Engineer — TSI Inc.
+*Shoreview, MN • 2022 (Feb) – 2026 (Mar)*
 
-Shoreview, MN • 2022 (Feb) – 2026 (Mar)
+Owned platform engineering and CI/CD for a cloud-native SaaS company. Built and maintained internal developer tooling, Kubernetes infrastructure, and security-first deployment pipelines across four GCP projects.
 
-At TSI Incorporated, I designed and maintained CI/CD pipelines using Jenkins and Git, and provisioned Kubernetes platforms with Terraform. I built and operated a range of custom environments, including no-code/low-code appliances, QA infrastructure, mobile device emulation systems, and secure code-signing services. I deployed Kubernetes applications declaratively with Terraform and orchestrated their build and release workflows using Docker and Jenkins.
+**CI/CD & Release Engineering**
 
-CI/CD & Release Engineering
+- **Cut deployment time 96%** — rebuilt CI/CD for 15+ microservices using GitHub Actions, Jenkins, Docker, and Bash; converged 15 discrete pipelines into a single trunk-based pipeline spanning four GCP projects. Full rollout: 13 minutes end-to-end.
+  - *How:* Jenkins MPL Shared Library (Groovy) for DRY stages (build → test → scan → artifact → deploy); containerized build agents; parameterized pipelines for env-specific promotion with guarded approvals.
+  - *Security/Quality gates:* JFrog X-Ray supply-chain scanning + SonarQube SAST; build-blocking on critical findings.
+- Built a **Go-based CLI** to spin up a standardized Docker development shell with baked-in env/creds — enabling reproducible local deploys that mirror CI environments exactly.
 
-* Rebuilt CI/CD for 15+ microservices (Kubernetes & cloud‑native) using Jenkins \+ Docker \+ Bash, converging 15 discrete pipelines into a single trunk‑based deployment pipeline spanning four GCP projects.
+**Platform Engineering & Kubernetes**
 
-  * *How:* Jenkins MPL Shared Library (Groovy) for DRY stages (build → test → scan → artifact → deploy). Containerized build agents; parameterized pipelines for env‑specific deploys.
+- Provisioned Kubernetes microservices and CronJobs via Terraform and OCI images; standardized image baselines and deployment variables to eliminate environment drift.
+- Delivered Retool as a version-controlled VM appliance: Git-synced read-only config, CI/CD image baking, and runbooks for tenant-specific deployments.
+- Enabled Retool to safely interface with an air-gapped IoT monitoring network (Linux/Postgres): parallel subnet design, VPN-gated egress, and strict ACLs preserving isolation.
+- Managed Windows dev/QA fleets: patch management, always-on stability, and deprecation coordination across rolling software cycles.
+- Hyper-V/VMware/Proxmox packaging for internal appliances — build once, publish to multiple hypervisor targets.
 
-  * *Security/Quality gates:* JFrog X‑Ray supply‑chain scanning and SonarQube; build‑blocking on critical findings.
+**Security, SSO/MFA & SRE**
 
-  * *Impact:* Cut deployment time from half/full days → 13 minutes for the entire service set.
+- Launched MFA across all cloud vendors and enforced SSO via domain controller; reduced access-review and termination effort significantly.
+- Hunted and reduced supply-chain vulnerabilities with Artifactory/X-Ray; formalized recurring maintenance jobs to prevent drift.
+- Owned disaster-recovery automation for Jira/Confluence/Bitbucket: scheduled exports, tested restores, and infrastructure runbooks.
 
-* Built a Go‑based CLI to spin up a standardized Docker development shell with baked‑in env/creds, enabling reproducible local deploys that mirror CI environments.
-
-Kubernetes, Cloud Infra & VM Appliances
-
-* Provisioned microservices & CronJobs via Terraform and OCI images; standardized image baselines and deployment variables to reduce drift between environments.
-
-* Delivered Retool as a version‑controlled VM appliance: read‑only configuration sync from Git, CI/CD to bake and ship images, and runbooks to automate tenant‑specific deployment tasks.
-
-* Managed Windows dev/QA fleets: patch management, always‑on stability for developers, and coordinated deprecations across rolling software cycles.
-
-* Hyper‑V/VMware/Proxmox packaging for internal appliances; build once, publish to multiple hypervisor targets.
-
-Security, SSO/MFA & SRE
-
-* Launched MFA across cloud vendors and enforced SSO via domain controller, shrinking access‑review/termination effort and tightening IAM posture.
-
-* Hunted and reduced supply‑chain vulnerabilities with Artifactory/X‑Ray; formalized recurring maintenance jobs to prevent drift.
-
-* Disaster‑recovery automation and platform ownership for Jira/Confluence/Bitbucket: scheduled exports, tested restores, and infra runbooks.
-
-Industrial/IoT & Data Segmentation (selected)
-
-* Enabled Retool to safely interface with an air‑gapped IoT monitoring network (Linux/Postgres): parallel subnet design, egress via VPN, and strict ACLs, preserving isolation while allowing controlled read operations.
+---
 
 ### Systems Engineer — LuminFire
+*Minneapolis, MN • 2018 (Jan) – 2022 (Feb)*
 
-Minneapolis, MN • 2018 (Jan) – 2022 (Feb)
+Introduced modern CI/DevOps practices at a Minneapolis agency; owned GitLab platform and AWS infrastructure for the company's full WordPress portfolio.
 
-At LuminFire, I introduced and operationalized modern Agile and CI practices, including migrating teams to GitLab and maintaining the platform for over half of my tenure. I served as the primary maintainer for the company’s WordPress portfolio, architecting and hardening the hosting stack while implementing customizations to improve performance, reliability, and security. Over time, I introduced tooling and best practices that reduced friction in the monthly maintenance cycle and improved operational consistency. I also developed infrastructure-as-code solutions on AWS using Systems Manager and CloudFormation to standardize environments and automate deployments.
+- Led migration from Bitbucket Cloud → self-hosted GitLab (Bash automation); integrated object storage and OpenSearch/Elastic for deep code search.
+- Scaled GitLab via object storage migration, instance right-sizing, and IOPS tuning.
+- Authored AWS CloudFormation templates to assemble standardized "build boxes" from native services (CodeCommit, Secrets Manager, Session Manager, EC2, RDS, S3).
+- Implemented TrueNAS (ZFS) with automated DR snapshots/scrubs to protect creative assets from bit-rot.
+- Rolled out Duo MFA, Jamf MDM, and VPN to enable zero-trust remote work (2020).
+- Built custom WordPress/front-end components (CSS/JS) with emphasis on performance and pixel accuracy.
 
-* Automated migration from Bitbucket Cloud → self‑hosted GitLab (bash), including object storage and OpenSearch/Elastic for deep code search.
+---
 
-* Scaled GitLab by moving assets to object storage and instance sizing / IOPS tuning.
+### Principal — jacobnollette.com LLC / Self-Hosting Lab
+*Minneapolis, MN • 2005 (Jan) – Present*
 
-* Authored AWS CloudFormation templates to assemble “build boxes” from native services (CodeCommit, Secrets Manager, Session Manager, EC2, RDS, S3) and a standardized Ubuntu/PHP/Bash stack.
+20-year practice spanning client consulting (2011–2018: WordPress, front-end, CMS delivery) and an ongoing R&D homelab for production-grade DevOps, AI/agent infrastructure, and reliability engineering patterns.
 
-* Implemented TrueNAS (ZFS) with automated DR snapshots/scrubs to protect creative assets from bit‑rot.
+**AI, Agents & Agentic Orchestration**
 
-* Rolled out Duo MFA, Jamf MDM, and VPN to enable zero‑trust remote work (2020).
+- Orchestrate multi-agent development workflows coordinating concurrent Claude, Gemini, and Codex agents across projects; work state persists in git-worktree-backed hooks enabling agents to resume across sessions.
+- Built an agentic web scraper using Playwright (browser automation), Crawl4AI (pipeline orchestration), and Ollama (local LLM inference) for structured data extraction; validated with Pydantic schemas.
+- Deployed and administered high-performance n8n for AI assistant automation; built compound RAG pipelines, structured agent inputs with JavaScript, and webhook/agent load-tested with a custom Go tool.
 
-* Built custom WordPress/front‑end components (CSS/JS) with an emphasis on performance and pixel accuracy.
+**Infrastructure & Platform**
 
-### DevOps Consultant — North Shore Automation
+- Designed and operated a private-cloud homelab: Proxmox virtualization, Kubernetes (KubeSpray/Ansible), and Ceph-backed storage (CephFS/RBD) with custom CRUSH rules.
+- Ceph reliability engineering: corrected OSD/FSID collision; re-laid BlueStore with 250GB block.db on NVMe (moving RocksDB off HDDs); updated CRUSH for host/device-class failure domains; restored healthy PG states and improved tail latency.
+- Built secure data/storage services with MinIO on CephFS: scoped S3 IAM policies, lifecycle/retention automation, and real-time sync pipelines (Syncthing/Resilio/RClone CronJobs).
+- Implemented zero-exposure networking: Cloudflare Tunnels, Tailscale mesh, HAProxy L4/L7 load balancing.
+- Ran GPU-accelerated AI/agent workloads (n8n, Ollama) and multi-node media ingest/transcoding (NVENC, Tdarr).
 
-### (Limited hours / Side projects)
+---
 
-Los Angeles, CA • 2022 (Jan) – Present
+### Webmaster & Tech Consultant — Little Sand Lake Area Association
+*Dorset, MN (Side project) • 2018 (Apr) – Present*
 
-* Diagnosed SWE bottlenecks and modernized CI/CD; rewrote pipelines to be vendor-agnostic for GitLab ↔ GitHub Actions, then orchestrated a company-wide migration to GitHub Actions.
+- Designed and built a WordPress member portal with Gravity Forms/GravityKit + Stripe recurring subscriptions; eliminated manual annual dues collection for ~150 properties.
+- Secured hyperscale nonprofit cloud grants; drove hosting costs near zero; implemented multi-cloud DR and real-time canary/availability monitoring.
+- Created searchable, map-based GIS directory from county records; applied AI tooling to transcribe and archive quarterly board meetings.
 
-  * *How:* Consolidated downstream repos into monorepos/monopipelines where appropriate; improved artifact traceability and failure debuggability.
-
-* Built a Bash + Docker appliance & CLI for on-prem media-management stacks (multiple DB flavors supported); packaged ops tasks including backup/restore, blue-green upgrades, health checks, and safe power cycles.
-
-* Built a CLI toolset for deploying studio/media workflow microservices with Docker Compose across compute and NAS nodes, backed by build artifacts produced in CI (originally GitLab, migrated to GitHub Actions); deployment engineers use the CLI to install, upgrade, administer cron-based backups, and manage runtime dependencies without needing to understand the underlying compose topology.
-
-* Hardened NGINX load balancers against the OWASP Top 10 (rate-limiting, strict TLS, header sanitation) to improve external posture.
-
-* Authored a Go-based n8n webhook load-tester, generating controlled RPS to benchmark scaling behavior and quantify database backend trade-offs.
-
-* Terraformed AWS for turn-key DAM environments.
-
-* Produced Rocky Linux/Ubuntu VMDKs for VMware, Proxmox, and AWS EC2 consumption.
-
-### Webmaster & Tech Consultant to the Board of Directors — Little Sand Lake Area Association
-
-### (Limited hours / Side projects)
-
-Dorset, MN • 2018 (April) – Present
-
-For the Little Sand Lake Area Association, I modernized and expanded the organization’s web and technical infrastructure, significantly reducing the manual effort required to operate the nonprofit. I designed and built a member portal that supports recurring subscriptions, eliminating the need for annual manual dues collection. I onboarded approximately 150 properties using county records and created a searchable, map-based GIS directory to support membership management and lake stewardship.
-
-I led a full redesign of the website using open-source themes to reduce ongoing costs while improving usability and maintainability. I secured nonprofit hosting and productivity grants, including Azure credits for web hosting and Google Workspace for collaboration, archiving, and object storage of official board materials. Since 2019, I have attended, recorded, transcribed, and summarized quarterly board and annual meetings, applying AI tooling to document and archive the organization’s technical and operational history.
-
-* Membership ops \+ directory in WordPress using Gravity Forms/GravityKit with Stripe subscriptions; freed volunteers from manual dues processing.
-
-* Secured hyperscale grant credits, driving hosting costs near zero; implemented multi‑cloud DR for critical assets and real‑time canary/availability monitoring.
+---
 
 ### Webmaster — Steiger Heritage Club
+*Minnesota (Side project) • 2021 (Aug) – Present*
 
-### (Limited hours / Side projects)
+- Stood up WordPress hosting stack on Azure Nonprofit Cloud; designed visual identity system and launched organization's initial web presence.
+- Remediated DDoS attack; tuned WAF to stabilize public-facing endpoints.
 
-Minnesota • 2021 (August) – Present
-
-For the Steiger Heritage Club, I provided end-to-end technical administration across Azure Nonprofit Cloud Hosting, Google Workspace, Mailchimp, and a WordPress VPS environment. I was responsible for hosting, monitoring, security, and ongoing maintenance of the website. I established the organization’s initial online presence by designing the “coming soon” launch pages and defining a foundational brand identity that largely remains in use today. I continue to manage the site under nonprofit cloud grants, ensuring reliable, cost-effective hosting and long-term sustainability.
-
-* Stood up WordPress hosting stack; designed identity design (visual) system and launched assets; configured mailing list automations.
-
-* Remediated DDoS and tuned WAF to stabilize public‑facing endpoints.
+---
 
 ### Creative Developer — Clear Software for Good
+*Minnesota • 2010 (Apr) – 2012 (May)*
 
-Minnesota • 2010 (April) \- 2012 (May)
+WordPress front-end developer collaborating with Ruby on Rails teams; operated Capistrano deployment pipelines; built interactive UI components and visual design assets.
 
-At Clear Software for Good, I worked as a WordPress developer delivering front-end implementations and graphics-heavy interfaces in collaboration with Ruby on Rails teams. This role introduced me to Git-based workflows and automated deployments, including operating Capistrano-driven deployment pipelines. I customized the WordPress CMS, built interactive front-end components, and supported Rails applications with CSS and shared UI patterns. I also designed visual interface assets using Adobe Creative Cloud to ensure consistency between design and implementation.
+---
 
-## SELECTED DEEP‑DIVE HIGHLIGHTS
+## SELECTED DEEP-DIVE HIGHLIGHTS
 
-* Trunk‑based multi‑project deploys (GCP): single Jenkins pipeline orchestrated builds for 15+ services across 4 projects; Groovy DRY code → staged Docker build → unit test → X‑Ray/SonarQube → artifact publish → Terraform apply; per‑env promotion with guarded approvals; 13‑minute full rollout.
+**13-minute trunk-based multi-project deploy (GCP):** Single pipeline orchestrating 15+ microservices across 4 GCP projects — Groovy DRY stages → Docker build → unit test → X-Ray/SonarQube → artifact publish → Terraform apply; per-env promotion with guarded approvals.
 
-* Air‑gapped data access with Retool: designed for bastion host access; gated VPN‑gated egress; enforced principle‑of‑least‑privilege with role‑scoped queries.
+**Developer environment standardization (Go CLI):** Built a Go CLI that spins up a standardized Docker dev shell with baked-in env/creds — any engineer on any machine gets a reproducible environment that mirrors CI exactly. Eliminated onboarding environment drift.
 
-* Studio/media workflow deployment CLI (North Shore Automation): designed a Bash + Docker Compose CLI toolkit spanning compute and NAS nodes that consumes versioned build artifacts from GitHub Actions; deployment engineers run declarative commands to install services, perform blue-green upgrades, schedule cron-based backups, and manage dependencies — abstracting compose topology so operators never touch raw manifests.
+**Studio workflow deployment CLI (North Shore Automation):** Bash + Docker Compose CLI toolkit spanning compute and NAS nodes, consuming versioned GitHub Actions build artifacts. Deployment engineers run declarative commands for install, blue-green upgrades, cron backup scheduling, and dependency management — abstracting compose topology entirely.
 
-* Ceph reliability engineering (Proxmox): managed a multi-node Ceph cluster across failure domains using CRUSH rules and device-class separation; recovered from OSD/FSID collisions and restored healthy PG states; built observability and monitoring around cluster health, recovery events, and capacity planning.
+**Ceph cluster reliability engineering:** Multi-node cluster across failure domains with CRUSH rules and device-class separation. Recovered from OSD/FSID collision, re-laid BlueStore with NVMe block.db, restored healthy PG states, improved tail latency. Built observability around cluster health, recovery events, and capacity planning.
+
+**Air-gapped IoT data access (Retool):** Designed network architecture for safe read access to an air-gapped industrial monitoring network — parallel subnet, VPN-gated egress, strict ACLs, principle-of-least-privilege role-scoped queries.
+
+---
 
 ## EDUCATION
 
-B.F.A., Web & Screen Environments — Minneapolis College of Art and Design (Fall 2020\)
+**B.F.A., Web & Screen Environments** — Minneapolis College of Art and Design (2020)
 
-Blended design, typography, and interactive media with full‑stack development; produced new media installations, motion graphics, film/video, photography, and sound design materials; hands‑on fabrication (laminated plywood, machined metals).
-
-Activities and societies: Summer Expressions Session TA and Instructor, produced and engineered student activities events for Radio MCAD, The Audio Lounge, and Schoolgirls & Mobilesuits (national academic anime conference).
+Blended design, typography, and interactive media with full-stack web development. TA and Instructor, Summer Expressions Session.
