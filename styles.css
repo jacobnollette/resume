@@ -8,6 +8,16 @@
   --link: #0f5c51;
   --accent: #e85d00;
   --shadow: 0 22px 50px rgba(16, 32, 26, 0.14);
+
+  /* JSON token roles */
+  --key: #0f5c51;            /* object keys */
+  --key-section: #e85d00;    /* top-level section keys */
+  --punc: #9aaca2;           /* braces, brackets, colons, commas, quotes */
+  --rail: #e4e8e3;           /* indentation gutter */
+
+  --mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --sans: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+  --serif: "Source Serif 4", Georgia, serif;
 }
 
 *,
@@ -23,10 +33,10 @@ body {
 }
 
 body {
-  font-family: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+  font-family: var(--sans);
   color: var(--text-body);
   background: var(--bg-cream);
-  line-height: 1.48;
+  line-height: 1.5;
 }
 
 .bg {
@@ -40,7 +50,7 @@ body {
 }
 
 .page {
-  max-width: 816px;
+  max-width: 860px;
   margin: 2.2rem auto;
   padding: 0 1rem;
 }
@@ -50,16 +60,20 @@ body {
   border: 1px solid rgba(18, 35, 28, 0.08);
   box-shadow: var(--shadow);
   border-radius: 16px;
-  padding: 2.5rem clamp(2.5rem, 7vw, 7rem) 2.5rem 2.5rem;
+  padding: 2.5rem clamp(1.75rem, 5vw, 3.5rem);
   animation: fadeIn 420ms ease-out;
 }
 
-/* Header row: logo | headshot | name + contact */
+/* ---------------------------------------------------------------- *
+ * Header: logo | headshot | name + contact object
+ * ---------------------------------------------------------------- */
 .resume-header {
   display: flex;
   align-items: center;
   gap: 1.25rem;
-  margin-bottom: 0.35rem;
+  margin-bottom: 1.1rem;
+  padding-bottom: 1.1rem;
+  border-bottom: 1px solid var(--line);
 }
 
 #resume-logo-block,
@@ -68,8 +82,19 @@ body {
 }
 
 .resume-logo {
-  width: 120px;
+  width: 116px;
   height: auto;
+  display: block;
+}
+
+.resume-headshot {
+  border-radius: 50%;
+  border: 3px solid var(--bg-paper);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 104px;
+  height: 104px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
   display: block;
 }
 
@@ -77,110 +102,379 @@ body {
   min-width: 0;
 }
 
-.resume-headshot {
-  border-radius: 50%;
-  border: 3px solid var(--bg-paper);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  width: 110px;
-  height: 110px;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  display: block;
-}
-
-.resume-header-info h1 {
-  font-family: "Source Serif 4", Georgia, serif;
+.resume-name {
+  font-family: var(--serif);
   color: var(--bg-ink);
-  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  font-size: clamp(1.8rem, 4vw, 2.35rem);
   line-height: 1.03;
   letter-spacing: -0.02em;
-  margin: 0 0 0.35rem;
+  margin: 0 0 0.2rem;
 }
 
-.resume-contact {
-  margin-top: 0;
-  margin-bottom: 0.3rem;
+.resume-label {
+  font-family: var(--mono);
+  font-size: 0.86rem;
   color: var(--text-muted);
-  font-size: 0.95rem;
+  margin: 0 0 0.55rem;
   font-weight: 500;
 }
 
-.resume-body > p:first-child {
-  font-size: 0.98rem;
-  margin-top: 1rem;
-  margin-bottom: 1.2rem;
+.basics-obj {
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  color: var(--text-body);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.15rem 0.4rem;
 }
 
-/* Section headings */
-.markdown-body h2 {
-  font-family: "Source Serif 4", Georgia, serif;
-  font-size: 1.15rem;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: var(--accent);
-  margin-top: 1.85rem;
-  margin-bottom: 0.65rem;
-  padding-bottom: 0.3rem;
-  border-bottom: 1px solid var(--line);
+.basics-kvs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.1rem 0.95rem;
 }
 
-.markdown-body h3 {
-  font-family: "Source Serif 4", Georgia, serif;
-  font-size: 1.05rem;
-  color: #143229;
-  margin-top: 1.2rem;
-  margin-bottom: 0.25rem;
+.kv {
+  white-space: nowrap;
 }
 
-.markdown-body h4,
-.markdown-body h5,
-.markdown-body h6 {
-  margin-top: 0.75rem;
-  margin-bottom: 0.15rem;
-  color: #1a332e;
+.kv .key {
+  color: var(--key);
 }
 
-.markdown-body p,
-.markdown-body li {
-  font-size: 0.97rem;
-}
-
-.markdown-body ul {
-  margin-top: 0.4rem;
-  margin-bottom: 0.85rem;
-  padding-left: 1.2rem;
-}
-
-.markdown-body li {
-  margin-bottom: 0.35rem;
-}
-
-.markdown-body strong {
-  color: #0f2a24;
-}
-
-.markdown-body code {
-  background: #edf2ee;
-  border-radius: 4px;
-  padding: 0.1rem 0.35rem;
-  font-size: 0.88em;
-}
-
-.markdown-body a {
+.val-link {
   color: var(--link);
   text-decoration: none;
-  border-bottom: 1px solid color-mix(in srgb, var(--link), transparent 55%);
+  border-bottom: 1px solid color-mix(in srgb, var(--link), transparent 60%);
 }
 
-.markdown-body a:hover {
+.val-link:hover {
   color: var(--accent);
   border-bottom-color: var(--accent);
 }
 
-.markdown-body hr {
-  border: 0;
-  border-top: 1px solid var(--line);
-  margin: 1.15rem 0;
+/* ---------------------------------------------------------------- *
+ * JSON token primitives
+ * ---------------------------------------------------------------- */
+.key {
+  font-family: var(--mono);
+  color: var(--key);
+  font-weight: 600;
+}
+
+.key::before,
+.key::after {
+  content: '"';
+  color: var(--punc);
+  font-weight: 400;
+}
+
+.str::before,
+.str::after {
+  content: '"';
+  color: var(--punc);
+  font-weight: 400;
+}
+
+.punc {
+  font-family: var(--mono);
+  color: var(--punc);
+  font-weight: 400;
+}
+
+.punc.at {
+  margin: 0 0.45em;
+}
+
+.punc.sep {
+  margin: 0 0.45em;
+}
+
+.punc.dash {
+  color: var(--accent);
+  font-weight: 600;
+  margin-right: 0.55em;
+}
+
+.punc.subdash {
+  color: var(--key);
+  margin-right: 0.4em;
+}
+
+.punc.comma {
+  margin-left: 0.02em;
+}
+
+/* Top-level document braces frame the whole object */
+.doc-brace {
+  display: block;
+  font-family: var(--mono);
+  font-size: 1.5rem;
+  line-height: 1;
+  color: color-mix(in srgb, var(--punc), transparent 25%);
+}
+
+.doc-open {
+  margin: 0.1rem 0 0.7rem;
+}
+
+.doc-close {
+  margin: 0.6rem 0 0;
+}
+
+/* ---------------------------------------------------------------- *
+ * Blocks (top-level sections) with an indentation gutter
+ * ---------------------------------------------------------------- */
+.block {
+  margin: 0 0 1.4rem;
+  padding-left: 1.15rem;
+  border-left: 1px solid var(--rail);
+}
+
+.block:last-of-type {
+  margin-bottom: 0.4rem;
+}
+
+.block-head {
+  font-family: var(--mono);
+  font-size: 0.95rem;
+  margin-bottom: 0.55rem;
+}
+
+.block > .block-head > .key {
+  color: var(--key-section);
+  font-size: 1.04rem;
+  letter-spacing: 0.01em;
+}
+
+.block-body {
+  padding-left: 0.1rem;
+}
+
+/* Summary -------------------------------------------------------- */
+.block-summary .summary-text {
+  font-size: 1rem;
+  line-height: 1.55;
+  margin: 0.1rem 0 0;
+  color: var(--text-body);
+}
+
+/* Competencies (skills) ----------------------------------------- */
+.skills {
+  margin: 0;
+}
+
+.skill-row {
+  display: grid;
+  grid-template-columns: 230px 1fr;
+  gap: 0.35rem 1rem;
+  padding: 0.5rem 0;
+  align-items: baseline;
+  border-bottom: 1px dotted var(--line);
+}
+
+.skill-row:last-child {
+  border-bottom: 0;
+}
+
+.skill-key {
+  font-family: var(--mono);
+  font-size: 0.86rem;
+  line-height: 1.4;
+}
+
+.skill-vals {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.25rem;
+}
+
+.kw-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem 0.3rem;
+}
+
+.kw {
+  font-family: var(--mono);
+  font-size: 0.81rem;
+  color: var(--text-body);
+  line-height: 1.5;
+}
+
+/* Experience (work) --------------------------------------------- */
+.work-list,
+.project-list,
+.edu-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.job {
+  padding: 0.15rem 0 0.85rem;
+}
+
+.job + .job {
+  border-top: 1px dotted var(--line);
+  padding-top: 0.95rem;
+}
+
+.job > .punc.brace,
+.project > .punc.brace,
+.edu > .punc.brace {
+  display: inline-block;
+  font-size: 0.95rem;
+}
+
+.job-head {
+  margin: 0.05rem 0 0.4rem;
+}
+
+.job-role {
+  font-family: var(--serif);
+  font-size: 1.14rem;
+  font-weight: 600;
+  line-height: 1.22;
+  color: var(--bg-ink);
+  margin: 0 0 0.15rem;
+}
+
+.job-company {
+  font-family: var(--sans);
+  font-weight: 600;
+  color: #143229;
+}
+
+.job-meta {
+  font-family: var(--mono);
+  font-size: 0.79rem;
+  color: var(--text-muted);
+}
+
+.highlights {
+  list-style: none;
+  margin: 0.3rem 0 0.4rem;
+  padding: 0;
+}
+
+.hl {
+  position: relative;
+  padding-left: 1.45rem;
+  margin-bottom: 0.42rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.hl > .punc.dash {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* Nested notes under a highlight */
+.notes {
+  list-style: none;
+  margin: 0.35rem 0 0.25rem;
+  padding: 0;
+}
+
+.note {
+  position: relative;
+  padding-left: 1.3rem;
+  margin: 0.22rem 0;
+  font-size: 0.875rem;
+  line-height: 1.45;
+  color: var(--text-muted);
+}
+
+.note > .punc.subdash {
+  position: absolute;
+  left: 0.1rem;
+  top: 0;
+}
+
+.note-key {
+  font-family: var(--mono);
+  color: var(--key);
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+
+.note-key::before,
+.note-key::after {
+  content: '"';
+  color: var(--punc);
+  font-weight: 400;
+}
+
+/* Sub-headed bullet groups within a role */
+.group {
+  margin: 0.45rem 0 0.55rem;
+}
+
+.group-name {
+  font-family: var(--mono);
+  font-size: 0.92rem;
+  font-weight: 600;
+  margin: 0.5rem 0 0.2rem;
+}
+
+.group-name .key {
+  color: var(--key);
+}
+
+/* Deep-dive projects -------------------------------------------- */
+.project {
+  padding: 0.15rem 0 0.7rem;
+}
+
+.project + .project {
+  border-top: 1px dotted var(--line);
+  padding-top: 0.7rem;
+}
+
+.project-name {
+  font-family: var(--serif);
+  font-size: 1.04rem;
+  font-weight: 600;
+  color: var(--bg-ink);
+  margin: 0.1rem 0 0.2rem;
+  line-height: 1.25;
+}
+
+.project-desc {
+  font-size: 0.92rem;
+  line-height: 1.5;
+  margin: 0;
+  color: var(--text-body);
+}
+
+/* Education ------------------------------------------------------ */
+.edu-degree {
+  font-family: var(--serif);
+  font-size: 1.04rem;
+  font-weight: 600;
+  color: var(--bg-ink);
+  margin: 0.1rem 0 0.12rem;
+}
+
+.edu-meta {
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 0.25rem;
+}
+
+.edu-summary {
+  font-size: 0.92rem;
+  line-height: 1.5;
+  margin: 0;
 }
 
 @keyframes fadeIn {
@@ -194,6 +488,9 @@ body {
   }
 }
 
+/* ---------------------------------------------------------------- *
+ * Mobile
+ * ---------------------------------------------------------------- */
 @media (max-width: 760px) {
   .page {
     margin: 0;
@@ -205,17 +502,12 @@ body {
     box-shadow: none;
     border-left: 0;
     border-right: 0;
-    padding: 1.25rem 1.25rem 1rem;
-  }
-
-  .markdown-body h2 {
-    margin-top: 1.25rem;
+    padding: 1.25rem 1.15rem 1.4rem;
   }
 
   .resume-header {
     display: block;
     text-align: center;
-    margin-bottom: 0.75rem;
   }
 
   #resume-logo-block,
@@ -238,9 +530,31 @@ body {
     width: 80px;
     height: 80px;
   }
+
+  .basics-obj,
+  .basics-kvs {
+    justify-content: center;
+  }
+
+  .skill-row {
+    grid-template-columns: 1fr;
+    gap: 0.15rem;
+    padding: 0.55rem 0;
+  }
+
+  .skill-vals {
+    padding-left: 0.6rem;
+  }
 }
 
+/* ---------------------------------------------------------------- *
+ * Print / PDF export
+ * ---------------------------------------------------------------- */
 @media print {
+  :root {
+    --punc: #8a948d;
+  }
+
   body {
     background: #fff;
   }
@@ -262,19 +576,27 @@ body {
     padding: 0;
   }
 
+  .block {
+    break-inside: avoid;
+  }
+
+  .job,
+  .project {
+    break-inside: avoid;
+  }
+
   .resume-logo {
-    width: 88px;
+    width: 84px;
   }
 
   .resume-headshot {
-    width: 80px;
-    height: 80px;
+    width: 78px;
+    height: 78px;
     box-shadow: none;
   }
 
-  .markdown-body a {
+  .val-link {
     color: inherit;
     border: 0;
-    text-decoration: none;
   }
 }
