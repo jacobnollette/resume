@@ -1,13 +1,13 @@
 # Jacob Nollette
 Minneapolis, MN • jacob@jacobnollette.com • 952-428-9199 • jacobnollette.com
 
-Platform and enterprise tooling engineer with 8+ years implementing, integrating, and administering engineering platforms end to end — GitHub, GitLab (self-hosted), Atlassian (Jira/Confluence/Bitbucket), Retool, JFrog Artifactory, SonarQube, and Grafana. Hands-on across the AI tooling ecosystem: Ollama, n8n, RAG pipelines, and multi-agent orchestration (Claude, Gemini, Copilot) running in production. Measures and improves delivery performance — cut deployment time 96% (full days → 13 minutes) across 15+ microservices at TSI. Strong REST API, webhook, SQL, SSO/SAML, and Terraform integration skills. Minneapolis-based, available for hybrid on-site, immediately available.
+Platform and enterprise tooling engineer with 8+ years implementing, integrating, and administering engineering platforms end to end — GitHub, GitLab (self-hosted), Atlassian (Jira/Confluence/Bitbucket), Retool, JFrog Artifactory, and SonarQube. Hands-on across the AI tooling ecosystem: Ollama, n8n, RAG pipelines, and multi-agent orchestration (Claude, Gemini, Copilot) running in production. Measures and improves delivery performance — cut deployment time 96% (full days → 13 minutes) across 15+ microservices at TSI. Strong REST API, webhook, SQL, SSO/SAML, and Terraform integration skills. Minneapolis-based, available for hybrid on-site, immediately available.
 
 ---
 
 ## CORE COMPETENCIES
 
-**Enterprise Tooling & Integrations:** End-to-end tool implementation & rollout, GitHub / GitHub Actions administration, GitLab administration (self-hosted), Atlassian (Jira, Confluence, Bitbucket), Retool, REST APIs & webhooks, SQL (MySQL, Postgres, MSSQL), SSO/SAML & user access management, dashboards & KPI reporting (Grafana), team onboarding, runbooks & documentation.
+**Enterprise Tooling & Integrations:** End-to-end tool implementation & rollout, GitHub / GitHub Actions administration, GitLab administration (self-hosted), Atlassian (Jira, Confluence, Bitbucket), Retool, REST APIs & webhooks, SQL (MySQL, Postgres, MSSQL), SSO/SAML & user access management, dashboards & KPI reporting, team onboarding, runbooks & documentation.
 
 **CI/CD & Developer Experience:** GitHub Actions, GitLab CI/CD, Jenkins (MPL Shared Library/Groovy), Docker, trunk-based development, parameterized pipelines, containerized build agents, artifact management (JFrog Artifactory), Packer VM builds.
 
@@ -23,7 +23,7 @@ Platform and enterprise tooling engineer with 8+ years implementing, integrating
 
 **Programming & Scripting:** Go, Bash, Groovy, Python, JavaScript, PowerShell, PHP.
 
-**Observability & SRE:** Prometheus, Grafana, Loki, SLOs, structured alerting, DR automation, blameless incident response.
+**Observability & SRE:** Loki, SLOs, structured alerting, DR automation, blameless incident response.
 
 ---
 

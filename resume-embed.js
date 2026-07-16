@@ -8,7 +8,7 @@ window.__RESUME__ = {
     "email": "jacob@jacobnollette.com",
     "phone": "952-428-9199",
     "url": "https://jacobnollette.com",
-    "summary": "Platform and enterprise tooling engineer with 8+ years implementing, integrating, and administering engineering platforms end to end — GitHub, GitLab (self-hosted), Atlassian (Jira/Confluence/Bitbucket), Retool, JFrog Artifactory, SonarQube, and Grafana. Hands-on across the AI tooling ecosystem: Ollama, n8n, RAG pipelines, and multi-agent orchestration (Claude, Gemini, Copilot) running in production. Measures and improves delivery performance — cut deployment time 96% (full days → 13 minutes) across 15+ microservices at TSI. Strong REST API, webhook, SQL, SSO/SAML, and Terraform integration skills. Minneapolis-based, available for hybrid on-site, immediately available.",
+    "summary": "Platform and enterprise tooling engineer with 8+ years implementing, integrating, and administering engineering platforms end to end — GitHub, GitLab (self-hosted), Atlassian (Jira/Confluence/Bitbucket), Retool, JFrog Artifactory, and SonarQube. Hands-on across the AI tooling ecosystem: Ollama, n8n, RAG pipelines, and multi-agent orchestration (Claude, Gemini, Copilot) running in production. Measures and improves delivery performance — cut deployment time 96% (full days → 13 minutes) across 15+ microservices at TSI. Strong REST API, webhook, SQL, SSO/SAML, and Terraform integration skills. Minneapolis-based, available for hybrid on-site, immediately available.",
     "location": {
       "city": "Minneapolis",
       "region": "MN",
@@ -34,7 +34,7 @@ window.__RESUME__ = {
         "REST APIs & webhooks",
         "SQL (MySQL, Postgres, MSSQL)",
         "SSO/SAML & user access management",
-        "Dashboards & KPI reporting (Grafana)",
+        "Dashboards & KPI reporting",
         "Team onboarding, runbooks & documentation"
       ]
     },
@@ -135,8 +135,6 @@ window.__RESUME__ = {
     {
       "name": "Observability & SRE",
       "keywords": [
-        "Prometheus",
-        "Grafana",
         "Loki",
         "SLOs",
         "Structured alerting",
