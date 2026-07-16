@@ -135,7 +135,6 @@ window.__RESUME__ = {
     {
       "name": "Observability & SRE",
       "keywords": [
-        "Loki",
         "SLOs",
         "Structured alerting",
         "DR automation",

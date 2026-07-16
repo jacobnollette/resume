@@ -134,7 +134,6 @@
     {
       "name": "Observability & SRE",
       "keywords": [
-        "Loki",
         "SLOs",
         "Structured alerting",
         "DR automation",
