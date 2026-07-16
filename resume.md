@@ -1,11 +1,13 @@
 # Jacob Nollette
 Minneapolis, MN • jacob@jacobnollette.com • 952-428-9199 • jacobnollette.com
 
-Platform Engineer and DevOps specialist with 5+ years of production experience building internal developer platforms, CI/CD pipelines, and cloud infrastructure. Reduced deployment time by 96% (full days → 13 minutes) across 15+ microservices at TSI. Deep background in Kubernetes, Terraform, GitHub Actions, GitLab CI, and developer experience tooling. Hands-on with AI/agent infrastructure — running Ollama, n8n, and RAG pipelines in production. Remote-first, immediately available.
+Platform and enterprise tooling engineer with 8+ years implementing, integrating, and administering engineering platforms end to end — GitHub, GitLab (self-hosted), Atlassian (Jira/Confluence/Bitbucket), Retool, JFrog Artifactory, SonarQube, and Grafana. Hands-on across the AI tooling ecosystem: Ollama, n8n, RAG pipelines, and multi-agent orchestration (Claude, Gemini, Copilot) running in production. Measures and improves delivery performance — cut deployment time 96% (full days → 13 minutes) across 15+ microservices at TSI. Strong REST API, webhook, SQL, SSO/SAML, and Terraform integration skills. Minneapolis-based, available for hybrid on-site, immediately available.
 
 ---
 
 ## CORE COMPETENCIES
+
+**Enterprise Tooling & Integrations:** End-to-end tool implementation & rollout, GitHub / GitHub Actions administration, GitLab administration (self-hosted), Atlassian (Jira, Confluence, Bitbucket), Retool, REST APIs & webhooks, SQL (MySQL, Postgres, MSSQL), SSO/SAML & user access management, dashboards & KPI reporting (Grafana), team onboarding, runbooks & documentation.
 
 **CI/CD & Developer Experience:** GitHub Actions, GitLab CI/CD, Jenkins (MPL Shared Library/Groovy), Docker, trunk-based development, parameterized pipelines, containerized build agents, artifact management (JFrog Artifactory), Packer VM builds.
 
@@ -13,11 +15,11 @@ Platform Engineer and DevOps specialist with 5+ years of production experience b
 
 **Platform Engineering:** Internal developer platforms, Go CLI tooling, standardized dev environments, GitOps (ArgoCD), IaC-first deployments, VM appliance packaging (multi-hypervisor targets), self-service infrastructure patterns.
 
-**Networking & Security:** IAM/SSO/MFA (Okta, Duo, TOTP), supply-chain scanning (JFrog X-Ray), SonarQube SAST, zero-trust networking (Tailscale, Cloudflare Tunnels), HAProxy, NGINX/WAF, pfSense, OWASP hardening, Vault.
+**Networking & Security:** IAM, SSO/SAML, MFA (Okta, Duo, TOTP), supply-chain scanning (JFrog X-Ray), SonarQube SAST, zero-trust networking (Tailscale, Cloudflare Tunnels), HAProxy, NGINX/WAF, pfSense, OWASP hardening, Vault.
 
-**AI & Agents:** Ollama (Open WebUI), n8n (RAG pipelines, multi-agent orchestration), Claude, Gemini, GitHub Copilot, Playwright/Crawl4AI web automation, Go-based webhook load testing, Pydantic-validated structured outputs.
+**AI & Agents:** Ollama (Open WebUI), n8n (RAG pipelines, multi-agent orchestration), Claude, Gemini, GitHub Copilot, Playwright/Crawl4AI web automation, Go-based webhook load testing, Pydantic-validated structured outputs, AI tooling evaluation & administration.
 
-**Storage & Data:** Ceph (CRUSH rules, BlueStore/OSD tuning), ZFS (ARC/log/meta tuning), MinIO (S3/IAM), MySQL/Postgres/MSSQL orchestration, DR automation, tiered storage, real-time sync pipelines.
+**Storage & Data:** Ceph (CRUSH rules, BlueStore/OSD tuning), ZFS (ARC/log/meta tuning), MinIO (S3/IAM), GCP Cloud SQL DR orchestration (MySQL, SQL Server), MySQL/Postgres/MSSQL, DR automation, tiered storage, real-time sync pipelines.
 
 **Programming & Scripting:** Go, Bash, Groovy, Python, JavaScript, PowerShell, PHP.
 
@@ -32,7 +34,7 @@ Platform Engineer and DevOps specialist with 5+ years of production experience b
 
 Fractional DevOps consultant modernizing CI/CD and platform infrastructure for media and studio workflow clients.
 
-- Diagnosed SWE bottlenecks and rewrote pipelines to be vendor-agnostic (GitLab ↔ GitHub Actions); orchestrated company-wide migration to GitHub Actions, consolidating downstream repos into monorepos/monopipelines for improved artifact traceability.
+- Diagnosed SWE bottlenecks and rewrote pipelines to be vendor-agnostic (GitLab ↔ GitHub Actions); orchestrated company-wide migration to GitHub Actions — org-level repository and Actions administration — consolidating downstream repos into monorepos/monopipelines for improved artifact traceability.
 - Built a CLI toolset for deploying studio/media workflow microservices with Docker Compose across compute and NAS nodes, backed by versioned CI artifacts (GitHub Actions); deployment engineers install, upgrade, backup, and manage dependencies without touching raw manifests.
 - Built a Bash + Docker appliance and CLI for on-prem media-management stacks; packaged ops tasks including backup/restore, blue-green upgrades, health checks, and safe power cycles.
 - Hardened NGINX load balancers against OWASP Top 10 (rate-limiting, strict TLS, header sanitation).
@@ -44,7 +46,7 @@ Fractional DevOps consultant modernizing CI/CD and platform infrastructure for m
 ### DevOps Engineer — TSI Inc.
 *Shoreview, MN • 2022 (Feb) – 2026 (Mar)*
 
-Owned platform engineering and CI/CD for a cloud-native SaaS company. Built and maintained internal developer tooling, Kubernetes infrastructure, and security-first deployment pipelines across four GCP projects.
+Owned platform engineering, CI/CD, and enterprise tooling for a cloud-native SaaS company. Implemented, integrated, and administered developer platforms — GitHub, Jenkins, Atlassian, Retool, Artifactory, SonarQube — plus Kubernetes infrastructure and security-first deployment pipelines across four GCP projects.
 
 **CI/CD & Release Engineering**
 
@@ -53,19 +55,20 @@ Owned platform engineering and CI/CD for a cloud-native SaaS company. Built and 
   - *Security/Quality gates:* JFrog X-Ray supply-chain scanning + SonarQube SAST; build-blocking on critical findings.
 - Built a **Go-based CLI** to spin up a standardized Docker development shell with baked-in env/creds — enabling reproducible local deploys that mirror CI environments exactly.
 
-**Platform Engineering & Kubernetes**
+**Enterprise Tooling & Platform Engineering**
 
-- Provisioned Kubernetes microservices and CronJobs via Terraform and OCI images; standardized image baselines and deployment variables to eliminate environment drift.
-- Delivered Retool as a version-controlled VM appliance: Git-synced read-only config, CI/CD image baking, and runbooks for tenant-specific deployments.
+- Implemented Retool end to end — initial setup through production rollout: version-controlled Git-synced configuration, CI/CD image baking, role-scoped permissions and user access management, and tenant-onboarding runbooks.
 - Enabled Retool to safely interface with an air-gapped IoT monitoring network (Linux/Postgres): parallel subnet design, VPN-gated egress, and strict ACLs preserving isolation.
+- Deployed a database-driven application on GCP end to end: Terraform-orchestrated networking and Cloud SQL (MySQL/SQL Server) provisioning, with automated database snapshots and disaster-recovery orchestration.
+- Provisioned Kubernetes microservices and CronJobs via Terraform and OCI images; standardized image baselines and deployment variables to eliminate environment drift.
 - Managed Windows dev/QA fleets: patch management, always-on stability, and deprecation coordination across rolling software cycles.
 - Hyper-V/VMware/Proxmox packaging for internal appliances — build once, publish to multiple hypervisor targets.
 
-**Security, SSO/MFA & SRE**
+**Security, SSO/SAML & Tool Administration**
 
-- Launched MFA across all cloud vendors and enforced SSO via domain controller; reduced access-review and termination effort significantly.
+- Implemented SSO/SAML and MFA across all cloud vendors, enforced via domain controller; streamlined the user-access lifecycle — provisioning, access reviews, and terminations.
+- Administered the Atlassian ecosystem (Jira, Confluence, Bitbucket): disaster-recovery automation with scheduled exports and tested restores, plus infrastructure runbooks and lifecycle maintenance.
 - Hunted and reduced supply-chain vulnerabilities with Artifactory/X-Ray; formalized recurring maintenance jobs to prevent drift.
-- Owned disaster-recovery automation for Jira/Confluence/Bitbucket: scheduled exports, tested restores, and infrastructure runbooks.
 
 ---
 
@@ -74,7 +77,7 @@ Owned platform engineering and CI/CD for a cloud-native SaaS company. Built and 
 
 Introduced modern CI/DevOps practices at a Minneapolis agency; owned GitLab platform and AWS infrastructure for the company's full WordPress portfolio.
 
-- Led migration from Bitbucket Cloud → self-hosted GitLab (Bash automation); integrated object storage and OpenSearch/Elastic for deep code search.
+- Implemented and administered self-hosted GitLab for the company's full portfolio: led the migration from Bitbucket Cloud (Bash automation); integrated object storage and OpenSearch/Elastic for deep code search.
 - Scaled GitLab via object storage migration, instance right-sizing, and IOPS tuning.
 - Authored AWS CloudFormation templates to assemble standardized "build boxes" from native services (CodeCommit, Secrets Manager, Session Manager, EC2, RDS, S3).
 - Implemented TrueNAS (ZFS) with automated DR snapshots/scrubs to protect creative assets from bit-rot.
@@ -137,6 +140,8 @@ WordPress front-end developer collaborating with Ruby on Rails teams; operated C
 **Studio workflow deployment CLI (North Shore Automation):** Bash + Docker Compose CLI toolkit spanning compute and NAS nodes, consuming versioned GitHub Actions build artifacts. Deployment engineers run declarative commands for install, blue-green upgrades, cron backup scheduling, and dependency management — abstracting compose topology entirely.
 
 **Ceph cluster reliability engineering:** Multi-node cluster across failure domains with CRUSH rules and device-class separation. Recovered from OSD/FSID collision, re-laid BlueStore with NVMe block.db, restored healthy PG states, improved tail latency. Built observability around cluster health, recovery events, and capacity planning.
+
+**Terraform-orchestrated Cloud SQL DR (GCP):** Deployed a database-driven application in Google Cloud with Terraform orchestrating networking and Cloud SQL (MySQL/SQL Server) provisioning; automated database snapshots and disaster-recovery workflows for tested, repeatable restores.
 
 **Air-gapped IoT data access (Retool):** Designed network architecture for safe read access to an air-gapped industrial monitoring network — parallel subnet, VPN-gated egress, strict ACLs, principle-of-least-privilege role-scoped queries.
 
