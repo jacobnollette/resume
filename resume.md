@@ -23,7 +23,7 @@ Platform and enterprise tooling engineer with 8+ years implementing, integrating
 
 **Programming & Scripting:** Go, Bash, Groovy, Python, JavaScript, PowerShell, PHP.
 
-**Observability & SRE:** Loki, SLOs, structured alerting, DR automation, blameless incident response.
+**Observability & SRE:** SLOs, structured alerting, DR automation, blameless incident response.
 
 ---
 
