@@ -159,8 +159,9 @@
           '<dt class="skill-key"><span class="key">' + esc(s.name) + "</span>" +
             punc(":", "colon") + " " + punc("[", "bracket open") + "</dt>" +
           '<dd class="skill-vals"><ul class="kw-list">' + kws + "</ul>" +
-            punc("]", "bracket close") +
-            (i < skills.length - 1 ? COMMA : "") +
+            // Bracket and trailing comma share one span so the flex gap in
+            // .skill-vals never separates them or wraps the comma alone.
+            punc(i < skills.length - 1 ? "]," : "]", "bracket close") +
           "</dd>" +
         "</div>"
       );
@@ -237,12 +238,16 @@
   }
 
   // ---- Header identity object (name + contact basics) ---------------------
-  function kv(k, valHTML) {
+  // The trailing comma stays *inside* the .kv span (which is white-space:
+  // nowrap), so flex wrapping in .basics-kvs can only break between complete
+  // "key": value, units — never between a value and its comma.
+  function kv(k, valHTML, withComma) {
     return (
       '<span class="kv">' +
         '<span class="key">' + esc(k) + "</span>" +
         punc(":", "colon") + " " +
         valHTML +
+        (withComma ? COMMA : "") +
       "</span>"
     );
   }
@@ -253,24 +258,24 @@
       : "";
     var kvs = [];
     if (basics.email) {
-      kvs.push(kv("email",
-        '<a class="str val-link" href="mailto:' + attr(basics.email) + '">' + esc(basics.email) + "</a>"));
+      kvs.push(["email",
+        '<a class="str val-link" href="mailto:' + attr(basics.email) + '">' + esc(basics.email) + "</a>"]);
     }
     if (basics.phone) {
-      kvs.push(kv("phone",
+      kvs.push(["phone",
         '<a class="str val-link" href="tel:' + attr(basics.phone.replace(/[^+\d]/g, "")) + '">' +
-        esc(basics.phone) + "</a>"));
+        esc(basics.phone) + "</a>"]);
     }
     if (loc) {
-      kvs.push(kv("location", '<span class="str">' + esc(loc) + "</span>"));
+      kvs.push(["location", '<span class="str">' + esc(loc) + "</span>"]);
     }
     if (basics.url) {
-      kvs.push(kv("url",
+      kvs.push(["url",
         '<a class="str val-link" href="' + attr(basics.url) + '">' +
-        esc(basics.url.replace(/^https?:\/\//, "")) + "</a>"));
+        esc(basics.url.replace(/^https?:\/\//, "")) + "</a>"]);
     }
-    var joined = kvs.map(function (s, i) {
-      return s + (i < kvs.length - 1 ? COMMA : "");
+    var joined = kvs.map(function (pair, i) {
+      return kv(pair[0], pair[1], i < kvs.length - 1);
     }).join("");
     return (
       '<h1 class="resume-name">' + esc(basics.name) + "</h1>" +
