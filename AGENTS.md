@@ -13,6 +13,10 @@ typographically-typeset, JSON-styled document.
   functions that turn the JSON into HTML. No DOM dependency, so they are unit-testable in Node.
 - Site shell: `index.html` — fetches `resume.json` and injects rendered HTML. No content is
   hardcoded here.
+- No-contact variant: `no-contact/index.html` — same shell served at `/no-contact/`, but strips
+  `basics.email`, `basics.phone`, `basics.url`, and `basics.profiles` client-side before
+  rendering (`stripContact`). Marked `noindex`. Content edits still happen only in `resume.json`;
+  keep this shell's boot script in sync with `index.html` when changing either.
 - Styling: `styles.css`
 - Offline fallback: `resume-embed.js` — AUTO-GENERATED from `resume.json` (`window.__RESUME__`).
   Lets the page work when opened directly from disk (`file://`), where `fetch()` is blocked.
