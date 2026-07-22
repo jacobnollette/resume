@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jacob Nollette | Resume</title>
+  <meta name="description" content="Resume of Jacob Nollette - DevOps, SRE, and Platform Engineering.">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#f5f4ef">
+  <link rel="canonical" href="https://resume.jacobnollette.com/no-contact/">
+  <meta property="og:title" content="Jacob Nollette | Resume">
+  <meta property="og:description" content="DevOps, SRE, and Platform Engineering resume.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://resume.jacobnollette.com/no-contact/">
+  <meta property="og:site_name" content="Jacob Nollette Resume">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <div class="bg"></div>
+  <main class="page">
+    <article class="resume" data-format="json">
+      <header class="resume-header">
+        <div id="resume-logo-block">
+          <img src="../logo.png" alt="Jacob Nollette" class="resume-logo" loading="eager" decoding="async">
+        </div>
+        <div id="resume-headshot-block">
+          <img src="../headshot.png" alt="Jacob Nollette" class="resume-headshot" loading="eager" decoding="async">
+        </div>
+        <div class="resume-header-info" id="resume-header-info" aria-live="polite"></div>
+      </header>
+      <div class="resume-body" id="resume-content" aria-live="polite"></div>
+    </article>
+  </main>
+  <script src="../resume.js"></script>
+  <!-- Fallback copy of resume.json as window.__RESUME__, for opening this file
+       directly from disk (file://), where fetch() is blocked. Generated from
+       resume.json by build-embed.js; ignored when served over http(s). -->
+  <script src="../resume-embed.js"></script>
+  <script>
+    // No-contact variant: same data source as the main page, but direct
+    // contact channels are stripped before rendering. Content edits still
+    // happen only in resume.json.
+    function stripContact(data) {
+      const copy = JSON.parse(JSON.stringify(data));
+      if (copy.basics) {
+        delete copy.basics.email;
+        delete copy.basics.phone;
+        delete copy.basics.url;
+        delete copy.basics.profiles;
+      }
+      return copy;
+    }
+
+    function renderResume(rawData) {
+      const data = stripContact(rawData);
+      const headerEl = document.getElementById("resume-header-info");
+      const bodyEl = document.getElementById("resume-content");
+      if (data.basics) {
+        headerEl.innerHTML = Resume.buildHeaderInfoHTML(data.basics);
+      }
+      bodyEl.innerHTML = Resume.buildResumeHTML(data);
+      if (data.basics && data.basics.name) {
+        document.title = data.basics.name + " | Resume";
+      }
+    }
+
+    async function loadResume() {
+      const bodyEl = document.getElementById("resume-content");
+      // On file:// the browser blocks fetch of a local file — use the embed.
+      if (location.protocol === "file:" && window.__RESUME__) {
+        renderResume(window.__RESUME__);
+        return;
+      }
+      try {
+        const response = await fetch("../resume.json", { cache: "no-store" });
+        if (!response.ok) {
+          throw new Error("Unable to load resume.json (HTTP " + response.status + ")");
+        }
+        renderResume(await response.json());
+      } catch (error) {
+        console.error(error);
+        if (window.__RESUME__) {
+          renderResume(window.__RESUME__);
+          return;
+        }
+        bodyEl.innerHTML =
+          "<p>Unable to load resume content. If you opened this file directly, " +
+          "serve it locally (e.g. <code>python3 -m http.server</code>) or view the deployed site.</p>";
+      }
+    }
+    loadResume();
+  </script>
+</body>
+</html>
