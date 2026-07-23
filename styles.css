@@ -56,12 +56,36 @@ body {
 }
 
 .resume {
+  position: relative;
   background: var(--bg-paper);
   border: 1px solid rgba(18, 35, 28, 0.08);
   box-shadow: var(--shadow);
   border-radius: 16px;
   padding: 2.5rem clamp(1.75rem, 5vw, 3.5rem);
   animation: fadeIn 420ms ease-out;
+}
+
+/* Print-to-PDF hint chip — screen only, hidden in @media print */
+.print-tip {
+  position: absolute;
+  top: 1.05rem;
+  right: 1.15rem;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  line-height: 1;
+  color: var(--text-muted);
+  background: var(--bg-cream);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.38rem 0.75rem;
+  cursor: pointer;
+  transition: color 120ms ease, border-color 120ms ease;
+}
+
+.print-tip:hover,
+.print-tip:focus-visible {
+  color: var(--accent);
+  border-color: var(--accent);
 }
 
 /* ---------------------------------------------------------------- *
@@ -505,6 +529,14 @@ body {
     padding: 1.25rem 1.15rem 1.4rem;
   }
 
+  /* Chip flows above the centered header instead of pinning to a corner */
+  .print-tip {
+    position: static;
+    display: block;
+    width: max-content;
+    margin: 0 auto 0.9rem;
+  }
+
   .resume-header {
     display: block;
     text-align: center;
@@ -553,6 +585,10 @@ body {
 @media print {
   :root {
     --punc: #8a948d;
+  }
+
+  .print-tip {
+    display: none;
   }
 
   body {
