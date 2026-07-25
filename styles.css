@@ -583,7 +583,18 @@ body {
  * Print / PDF export
  * ---------------------------------------------------------------- */
 @media print {
+  /* Print with locally-installed fonts instead of the Google Fonts webfonts.
+     The print/PDF pipeline re-embeds and re-subsets downloaded webfonts, and
+     that is where the email's "@" was dropping out as a missing-glyph box —
+     the character itself is a plain U+0040 and renders fine on screen. System
+     families carry every glyph through to the PDF, so print stays reliable
+     while the on-screen design keeps IBM Plex / Source Serif. */
   :root {
+    --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas,
+            "DejaVu Sans Mono", "Liberation Mono", "Courier New", monospace;
+    --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+            Arial, "Liberation Sans", sans-serif;
+    --serif: Georgia, "Times New Roman", "Liberation Serif", Times, serif;
     --punc: #8a948d;
   }
 

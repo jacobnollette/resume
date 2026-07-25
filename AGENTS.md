@@ -52,3 +52,7 @@ typographically-typeset, JSON-styled document.
 - Optional Node smoke test: `node -e "const R=require('./resume.js');const d=require('./resume.json');if(!R.buildResumeHTML(d).includes('experience'))process.exit(1);console.log('ok')"`.
 - Keep layout readable on both desktop and mobile.
 - Ensure print output remains clean for PDF export.
+- `@media print` deliberately overrides `--mono`/`--sans`/`--serif` to locally-installed font
+  stacks. Downloaded webfonts get re-embedded and re-subset by the print pipeline, which dropped
+  the email's `@` as a missing-glyph box. Keep print on system fonts; screen keeps IBM Plex /
+  Source Serif.
