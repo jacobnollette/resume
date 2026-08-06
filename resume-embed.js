@@ -8,7 +8,7 @@ window.__RESUME__ = {
     "email": "jacob@jacobnollette.com",
     "phone": "952-428-9199",
     "url": "https://jacobnollette.com",
-    "summary": "Platform and enterprise tooling engineer with 8+ years implementing, integrating, and administering engineering platforms end to end — GitHub, GitLab (self-hosted), Atlassian (Jira/Confluence/Bitbucket), Retool, JFrog Artifactory, and SonarQube. Hands-on across the AI tooling ecosystem: Ollama, n8n, RAG pipelines, and multi-agent orchestration (Claude, Gemini, Copilot) running in production. Measures and improves delivery performance — cut deployment time 96% (full days → 13 minutes) across 15+ microservices at TSI. Strong REST API, webhook, SQL, SSO/SAML, and Terraform integration skills. Minneapolis-based, available for hybrid on-site, immediately available.",
+    "summary": "Platform and enterprise tooling engineer with 8+ years implementing, integrating, and administering engineering platforms end to end — GitHub, GitLab (self-hosted), Atlassian (Jira/Confluence/Bitbucket), Retool, JFrog Artifactory, and SonarQube. Builds cloud security engineering into that platform work — automated policy gates that block deployment on critical findings, zero-trust network architecture, and IAM governance that reduces standing access risk. Hands-on across the AI tooling ecosystem: Ollama, n8n, RAG pipelines, and multi-agent orchestration (Claude, Gemini, Copilot) running in production. Measures and improves delivery performance — cut deployment time 96% (full days → 13 minutes) across 15+ microservices at TSI. Strong REST API, webhook, SQL, SSO/SAML, and Terraform integration skills. Actively expanding into policy-as-code and CSPM tooling. Minneapolis-based, available for hybrid on-site, immediately available.",
     "location": {
       "city": "Minneapolis",
       "region": "MN",
@@ -39,6 +39,16 @@ window.__RESUME__ = {
       ]
     },
     {
+      "name": "Cloud Security Engineering",
+      "keywords": [
+        "Zero-trust network architecture (Tailscale, Cloudflare Tunnels, HAProxy, pfSense)",
+        "Automated policy enforcement (JFrog X-Ray, SonarQube SAST — build-blocking on critical findings)",
+        "IAM governance & access risk reduction (SSO/SAML, MFA, access lifecycle)",
+        "NGINX/WAF, OWASP hardening",
+        "Secrets management (Vault)"
+      ]
+    },
+    {
       "name": "CI/CD & Developer Experience",
       "keywords": [
         "GitHub Actions",
@@ -58,7 +68,7 @@ window.__RESUME__ = {
         "GCP (primary)",
         "AWS",
         "Azure",
-        "Terraform",
+        "Terraform (reusable, standardized secure deployment modules)",
         "CloudFormation",
         "Kubernetes (GKE, EKS, KubeSpray/bare-metal)",
         "Proxmox",
@@ -77,20 +87,6 @@ window.__RESUME__ = {
         "IaC-first deployments",
         "VM appliance packaging (multi-hypervisor targets)",
         "Self-service infrastructure patterns"
-      ]
-    },
-    {
-      "name": "Networking & Security",
-      "keywords": [
-        "IAM, SSO/SAML, MFA (Okta, Duo, TOTP)",
-        "Supply-chain scanning (JFrog X-Ray)",
-        "SonarQube SAST",
-        "Zero-trust networking (Tailscale, Cloudflare Tunnels)",
-        "HAProxy",
-        "NGINX/WAF",
-        "pfSense",
-        "OWASP hardening",
-        "Vault"
       ]
     },
     {
@@ -154,7 +150,7 @@ window.__RESUME__ = {
         "Diagnosed SWE bottlenecks and rewrote pipelines to be vendor-agnostic (GitLab ↔ GitHub Actions); orchestrated company-wide migration to GitHub Actions — org-level repository and Actions administration — consolidating downstream repos into monorepos/monopipelines for improved artifact traceability.",
         "Built a CLI toolset for deploying studio/media workflow microservices with Docker Compose across compute and NAS nodes, backed by versioned CI artifacts (GitHub Actions); deployment engineers install, upgrade, backup, and manage dependencies without touching raw manifests.",
         "Built a Bash + Docker appliance and CLI for on-prem media-management stacks; packaged ops tasks including backup/restore, blue-green upgrades, health checks, and safe power cycles.",
-        "Hardened NGINX load balancers against OWASP Top 10 (rate-limiting, strict TLS, header sanitation).",
+        "Cloud security engineering: hardened NGINX load balancers against OWASP Top 10 (rate-limiting, strict TLS, header sanitation).",
         "Authored a Go-based n8n webhook load-tester to benchmark scaling behavior and quantify database backend trade-offs under controlled RPS.",
         "Terraformed AWS for turn-key DAM environments; produced Rocky Linux/Ubuntu VMDKs for VMware, Proxmox, and AWS EC2."
       ]
@@ -174,7 +170,7 @@ window.__RESUME__ = {
               "text": "Cut deployment time 96% — rebuilt CI/CD for 15+ microservices using GitHub Actions, Jenkins, Docker, and Bash; converged 15 discrete pipelines into a single trunk-based pipeline spanning four GCP projects. Full rollout: 13 minutes end-to-end.",
               "notes": [
                 "How: Jenkins MPL Shared Library (Groovy) for DRY stages (build → test → scan → artifact → deploy); containerized build agents; parameterized pipelines for env-specific promotion with guarded approvals.",
-                "Security/Quality gates: JFrog X-Ray supply-chain scanning + SonarQube SAST; build-blocking on critical findings."
+                "Automated security policy enforcement: JFrog X-Ray supply-chain scanning + SonarQube SAST gating deployment on critical findings — a policy-as-code compliance-gate pattern."
               ]
             },
             "Built a Go-based CLI to spin up a standardized Docker development shell with baked-in env/creds — enabling reproducible local deploys that mirror CI environments exactly."
@@ -186,15 +182,15 @@ window.__RESUME__ = {
             "Implemented Retool end to end — initial setup through production rollout: version-controlled Git-synced configuration, CI/CD image baking, role-scoped permissions and user access management, and tenant-onboarding runbooks.",
             "Enabled Retool to safely interface with an air-gapped IoT monitoring network (Linux/Postgres): parallel subnet design, VPN-gated egress, and strict ACLs preserving isolation.",
             "Deployed a database-driven application on GCP end to end: Terraform-orchestrated networking and Cloud SQL (MySQL/SQL Server) provisioning, with automated database snapshots and disaster-recovery orchestration.",
-            "Provisioned Kubernetes microservices and CronJobs via Terraform and OCI images; standardized image baselines and deployment variables to eliminate environment drift.",
+            "Built reusable, standardized Terraform modules to provision Kubernetes microservices and CronJobs with locked-down OCI image baselines — a secure-by-default deployment pattern that eliminated environment drift.",
             "Managed Windows dev/QA fleets: patch management, always-on stability, and deprecation coordination across rolling software cycles.",
             "Hyper-V/VMware/Proxmox packaging for internal appliances — build once, publish to multiple hypervisor targets."
           ]
         },
         {
-          "name": "Security, SSO/SAML & Tool Administration",
+          "name": "Security & IAM Governance",
           "highlights": [
-            "Implemented SSO/SAML and MFA across all cloud vendors, enforced via domain controller; streamlined the user-access lifecycle — provisioning, access reviews, and terminations.",
+            "Led IAM governance and access-risk reduction: implemented SSO/SAML and MFA across all cloud vendors, enforced via domain controller; owned the user-access lifecycle — provisioning, access reviews, and terminations — to minimize standing access risk.",
             "Administered the Atlassian ecosystem (Jira, Confluence, Bitbucket): disaster-recovery automation with scheduled exports and tested restores, plus infrastructure runbooks and lifecycle maintenance.",
             "Hunted and reduced supply-chain vulnerabilities with Artifactory/X-Ray; formalized recurring maintenance jobs to prevent drift."
           ]
@@ -239,7 +235,7 @@ window.__RESUME__ = {
             "Designed and operated a private-cloud homelab: Proxmox virtualization, Kubernetes (KubeSpray/Ansible), and Ceph-backed storage (CephFS/RBD) with custom CRUSH rules.",
             "Ceph reliability engineering: corrected OSD/FSID collision; re-laid BlueStore with 250GB block.db on NVMe (moving RocksDB off HDDs); updated CRUSH for host/device-class failure domains; restored healthy PG states and improved tail latency.",
             "Built secure data/storage services with MinIO on CephFS: scoped S3 IAM policies, lifecycle/retention automation, and real-time sync pipelines (Syncthing/Resilio/RClone CronJobs).",
-            "Implemented zero-exposure networking: Cloudflare Tunnels, Tailscale mesh, HAProxy L4/L7 load balancing.",
+            "Cloud security engineering: zero-trust network architecture (Cloudflare Tunnels, Tailscale mesh) and HAProxy L4/L7 load balancing to eliminate exposed attack surface.",
             "Ran GPU-accelerated AI/agent workloads (n8n, Ollama) and multi-node media ingest/transcoding (NVENC, Tdarr)."
           ]
         }
