@@ -144,7 +144,7 @@ window.__RESUME__ = {
       "position": "Platform / DevOps Engineer",
       "location": "Los Angeles, CA (Remote)",
       "startDate": "2022-01",
-      "endDate": "",
+      "endDate": "2026-01",
       "summary": "Fractional DevOps consultant with a track record of modernizing CI/CD and platform infrastructure for media and studio workflow clients — cutting vendor lock-in, manual ops toil, and deployment risk.",
       "highlights": [
         "Eliminated vendor lock-in and improved artifact traceability: diagnosed SWE delivery bottlenecks, rewrote pipelines to be vendor-agnostic (GitLab ↔ GitHub Actions), and led the company-wide migration to GitHub Actions — org-level repository and Actions administration — consolidating downstream repos into monorepos/monopipelines.",
