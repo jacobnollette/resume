@@ -29,20 +29,6 @@ Platform and enterprise tooling engineer with 8+ years and a proven track record
 
 ## PROFESSIONAL EXPERIENCE
 
-### Platform / DevOps Engineer — North Shore Automation
-*Los Angeles, CA (Remote) • 2022 (Jan) – 2026 (Jan)*
-
-Fractional DevOps consultant with a track record of modernizing CI/CD and platform infrastructure for media and studio workflow clients — cutting vendor lock-in, manual ops toil, and deployment risk.
-
-- Eliminated vendor lock-in and improved artifact traceability: diagnosed SWE delivery bottlenecks, rewrote pipelines to be vendor-agnostic (GitLab ↔ GitHub Actions), and led the company-wide migration to GitHub Actions — org-level repository and Actions administration — consolidating downstream repos into monorepos/monopipelines.
-- Removed manifest-level ops risk from deployments: built a CLI toolset for deploying studio/media workflow microservices with Docker Compose across compute and NAS nodes, backed by versioned CI artifacts (GitHub Actions), so deployment engineers install, upgrade, backup, and manage dependencies without touching raw manifests.
-- Cut recovery time on on-prem media-management stacks to single commands: built a Bash + Docker appliance and CLI packaging backup/restore, blue-green upgrades, health checks, and safe power cycles.
-- Closed OWASP Top 10 exposure on public-facing infrastructure by hardening NGINX load balancers (rate-limiting, strict TLS, header sanitation) — cloud security engineering built into the platform work.
-- Gave clients data-driven scaling decisions by authoring a Go-based n8n webhook load-tester to benchmark scaling behavior and quantify database backend trade-offs under controlled RPS.
-- Delivered turn-key DAM environments on AWS via Terraform; produced Rocky Linux/Ubuntu VMDKs portable across VMware, Proxmox, and AWS EC2.
-
----
-
 ### DevOps Engineer — TSI Inc.
 *Shoreview, MN • 2022 (Feb) – 2026 (Mar)*
 
@@ -69,6 +55,20 @@ Owned platform engineering, CI/CD, and enterprise tooling for a cloud-native Saa
 - Led IAM governance and access-risk reduction: implemented SSO/SAML and MFA across all cloud vendors, enforced via domain controller; owned the user-access lifecycle — provisioning, access reviews, and terminations — to minimize standing access risk.
 - Administered the Atlassian ecosystem (Jira, Confluence, Bitbucket): disaster-recovery automation with scheduled exports and tested restores, plus infrastructure runbooks and lifecycle maintenance.
 - Hunted and reduced supply-chain vulnerabilities with Artifactory/X-Ray; formalized recurring maintenance jobs to prevent drift.
+
+---
+
+### Platform / DevOps Engineer — North Shore Automation
+*Los Angeles, CA (Remote) • 2022 (Jan) – 2026 (Jan)*
+
+Fractional DevOps consultant with a track record of modernizing CI/CD and platform infrastructure for media and studio workflow clients — cutting vendor lock-in, manual ops toil, and deployment risk.
+
+- Eliminated vendor lock-in and improved artifact traceability: diagnosed SWE delivery bottlenecks, rewrote pipelines to be vendor-agnostic (GitLab ↔ GitHub Actions), and led the company-wide migration to GitHub Actions — org-level repository and Actions administration — consolidating downstream repos into monorepos/monopipelines.
+- Removed manifest-level ops risk from deployments: built a CLI toolset for deploying studio/media workflow microservices with Docker Compose across compute and NAS nodes, backed by versioned CI artifacts (GitHub Actions), so deployment engineers install, upgrade, backup, and manage dependencies without touching raw manifests.
+- Cut recovery time on on-prem media-management stacks to single commands: built a Bash + Docker appliance and CLI packaging backup/restore, blue-green upgrades, health checks, and safe power cycles.
+- Closed OWASP Top 10 exposure on public-facing infrastructure by hardening NGINX load balancers (rate-limiting, strict TLS, header sanitation) — cloud security engineering built into the platform work.
+- Gave clients data-driven scaling decisions by authoring a Go-based n8n webhook load-tester to benchmark scaling behavior and quantify database backend trade-offs under controlled RPS.
+- Delivered turn-key DAM environments on AWS via Terraform; produced Rocky Linux/Ubuntu VMDKs portable across VMware, Proxmox, and AWS EC2.
 
 ---
 
