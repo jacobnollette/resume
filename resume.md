@@ -1,7 +1,7 @@
 # Jacob Nollette
 Minneapolis, MN • jacob@jacobnollette.com • 952-428-9199 • jacobnollette.com
 
-Platform and enterprise tooling engineer with 8+ years implementing, integrating, and administering engineering platforms end to end — GitHub, GitLab (self-hosted), Atlassian (Jira/Confluence/Bitbucket), Retool, JFrog Artifactory, and SonarQube. Builds cloud security engineering into that platform work — automated policy gates that block deployment on critical findings, zero-trust network architecture, and IAM governance that reduces standing access risk. Hands-on across the AI tooling ecosystem: Ollama, n8n, RAG pipelines, and multi-agent orchestration (Claude, Gemini, Copilot) running in production. Measures and improves delivery performance — cut deployment time 96% (full days → 13 minutes) across 15+ microservices at TSI. Strong REST API, webhook, SQL, SSO/SAML, and Terraform integration skills. Actively expanding into policy-as-code and CSPM tooling. Minneapolis-based, available for hybrid on-site, immediately available.
+Platform and enterprise tooling engineer with 8+ years and a proven track record of turning slow, manual delivery into fast, secure, self-service platforms — GitHub, GitLab (self-hosted), Atlassian (Jira/Confluence/Bitbucket), Retool, JFrog Artifactory, and SonarQube, implemented and administered end to end. Track record: cut deployment time 96% (full days → 13 minutes) across 15+ microservices at TSI; recovered a production Ceph cluster from an OSD/FSID failure-domain collision with restored healthy PG states and improved tail latency; eliminated manual annual dues collection for ~150 properties with a self-service Stripe-backed member portal. Builds cloud security engineering into every platform delivered — automated policy gates that block deployment on critical findings, zero-trust network architecture, and IAM governance that reduces standing access risk. Hands-on across the AI tooling ecosystem: Ollama, n8n, RAG pipelines, and multi-agent orchestration (Claude, Gemini, Copilot) running in production. Strong REST API, webhook, SQL, SSO/SAML, and Terraform integration skills. Actively expanding into policy-as-code and CSPM tooling. Minneapolis-based, available for hybrid on-site, immediately available.
 
 ---
 
@@ -32,21 +32,21 @@ Platform and enterprise tooling engineer with 8+ years implementing, integrating
 ### Platform / DevOps Engineer — North Shore Automation
 *Los Angeles, CA (Remote) • 2022 (Jan) – Present*
 
-Fractional DevOps consultant modernizing CI/CD and platform infrastructure for media and studio workflow clients.
+Fractional DevOps consultant with a track record of modernizing CI/CD and platform infrastructure for media and studio workflow clients — cutting vendor lock-in, manual ops toil, and deployment risk.
 
-- Diagnosed SWE bottlenecks and rewrote pipelines to be vendor-agnostic (GitLab ↔ GitHub Actions); orchestrated company-wide migration to GitHub Actions — org-level repository and Actions administration — consolidating downstream repos into monorepos/monopipelines for improved artifact traceability.
-- Built a CLI toolset for deploying studio/media workflow microservices with Docker Compose across compute and NAS nodes, backed by versioned CI artifacts (GitHub Actions); deployment engineers install, upgrade, backup, and manage dependencies without touching raw manifests.
-- Built a Bash + Docker appliance and CLI for on-prem media-management stacks; packaged ops tasks including backup/restore, blue-green upgrades, health checks, and safe power cycles.
-- Cloud security engineering: hardened NGINX load balancers against OWASP Top 10 (rate-limiting, strict TLS, header sanitation).
-- Authored a Go-based n8n webhook load-tester to benchmark scaling behavior and quantify database backend trade-offs under controlled RPS.
-- Terraformed AWS for turn-key DAM environments; produced Rocky Linux/Ubuntu VMDKs for VMware, Proxmox, and AWS EC2.
+- Eliminated vendor lock-in and improved artifact traceability: diagnosed SWE delivery bottlenecks, rewrote pipelines to be vendor-agnostic (GitLab ↔ GitHub Actions), and led the company-wide migration to GitHub Actions — org-level repository and Actions administration — consolidating downstream repos into monorepos/monopipelines.
+- Removed manifest-level ops risk from deployments: built a CLI toolset for deploying studio/media workflow microservices with Docker Compose across compute and NAS nodes, backed by versioned CI artifacts (GitHub Actions), so deployment engineers install, upgrade, backup, and manage dependencies without touching raw manifests.
+- Cut recovery time on on-prem media-management stacks to single commands: built a Bash + Docker appliance and CLI packaging backup/restore, blue-green upgrades, health checks, and safe power cycles.
+- Closed OWASP Top 10 exposure on public-facing infrastructure by hardening NGINX load balancers (rate-limiting, strict TLS, header sanitation) — cloud security engineering built into the platform work.
+- Gave clients data-driven scaling decisions by authoring a Go-based n8n webhook load-tester to benchmark scaling behavior and quantify database backend trade-offs under controlled RPS.
+- Delivered turn-key DAM environments on AWS via Terraform; produced Rocky Linux/Ubuntu VMDKs portable across VMware, Proxmox, and AWS EC2.
 
 ---
 
 ### DevOps Engineer — TSI Inc.
 *Shoreview, MN • 2022 (Feb) – 2026 (Mar)*
 
-Owned platform engineering, CI/CD, and enterprise tooling for a cloud-native SaaS company. Implemented, integrated, and administered developer platforms — GitHub, Jenkins, Atlassian, Retool, Artifactory, SonarQube — plus Kubernetes infrastructure and security-first deployment pipelines across four GCP projects.
+Owned platform engineering, CI/CD, and enterprise tooling for a cloud-native SaaS company, with a track record of measurable delivery gains: implemented, integrated, and administered developer platforms — GitHub, Jenkins, Atlassian, Retool, Artifactory, SonarQube — plus Kubernetes infrastructure and security-first deployment pipelines across four GCP projects.
 
 **CI/CD & Release Engineering**
 
@@ -57,12 +57,12 @@ Owned platform engineering, CI/CD, and enterprise tooling for a cloud-native Saa
 
 **Enterprise Tooling & Platform Engineering**
 
-- Implemented Retool end to end — initial setup through production rollout: version-controlled Git-synced configuration, CI/CD image baking, role-scoped permissions and user access management, and tenant-onboarding runbooks.
-- Enabled Retool to safely interface with an air-gapped IoT monitoring network (Linux/Postgres): parallel subnet design, VPN-gated egress, and strict ACLs preserving isolation.
-- Deployed a database-driven application on GCP end to end: Terraform-orchestrated networking and Cloud SQL (MySQL/SQL Server) provisioning, with automated database snapshots and disaster-recovery orchestration.
-- Built reusable, standardized Terraform modules to provision Kubernetes microservices and CronJobs with locked-down OCI image baselines — a secure-by-default deployment pattern that eliminated environment drift.
-- Managed Windows dev/QA fleets: patch management, always-on stability, and deprecation coordination across rolling software cycles.
-- Hyper-V/VMware/Proxmox packaging for internal appliances — build once, publish to multiple hypervisor targets.
+- Took Retool from zero to production rollout end to end: version-controlled Git-synced configuration, CI/CD image baking, role-scoped permissions and user access management, and tenant-onboarding runbooks.
+- Delivered safe Retool access to an air-gapped IoT monitoring network (Linux/Postgres) with zero isolation compromise: parallel subnet design, VPN-gated egress, and strict ACLs.
+- Delivered a production database-driven application on GCP end to end: Terraform-orchestrated networking and Cloud SQL (MySQL/SQL Server) provisioning, with automated database snapshots and disaster-recovery orchestration.
+- Eliminated environment drift across Kubernetes deployments by building reusable, standardized Terraform modules provisioning microservices and CronJobs with locked-down OCI image baselines — a secure-by-default deployment pattern.
+- Kept Windows dev/QA fleets always-on and current: patch management, stability ownership, and deprecation coordination across rolling software cycles.
+- Cut appliance packaging effort to build-once-publish-many across Hyper-V, VMware, and Proxmox for internal appliances.
 
 **Security & IAM Governance**
 
@@ -75,13 +75,13 @@ Owned platform engineering, CI/CD, and enterprise tooling for a cloud-native Saa
 ### Systems Engineer — LuminFire
 *Minneapolis, MN • 2018 (Jan) – 2022 (Feb)*
 
-Introduced modern CI/DevOps practices at a Minneapolis agency; owned GitLab platform and AWS infrastructure for the company's full WordPress portfolio.
+Introduced modern CI/DevOps practices at a Minneapolis agency, with a track record of platform migrations that scaled cleanly — owned GitLab platform and AWS infrastructure for the company's full WordPress portfolio.
 
-- Implemented and administered self-hosted GitLab for the company's full portfolio: led the migration from Bitbucket Cloud (Bash automation); integrated object storage and OpenSearch/Elastic for deep code search.
-- Scaled GitLab via object storage migration, instance right-sizing, and IOPS tuning.
-- Authored AWS CloudFormation templates to assemble standardized "build boxes" from native services (CodeCommit, Secrets Manager, Session Manager, EC2, RDS, S3).
-- Implemented TrueNAS (ZFS) with automated DR snapshots/scrubs to protect creative assets from bit-rot.
-- Rolled out Duo MFA, Jamf MDM, and VPN to enable zero-trust remote work (2020).
+- Led the company's full portfolio onto self-hosted GitLab: migrated off Bitbucket Cloud (Bash automation) and integrated object storage and OpenSearch/Elastic for deep code search.
+- Scaled GitLab to portfolio-wide load via object storage migration, instance right-sizing, and IOPS tuning.
+- Standardized developer onboarding by authoring AWS CloudFormation templates that assemble "build boxes" from native services (CodeCommit, Secrets Manager, Session Manager, EC2, RDS, S3).
+- Protected creative assets from bit-rot by implementing TrueNAS (ZFS) with automated DR snapshots/scrubs.
+- Enabled zero-trust remote work (2020) by rolling out Duo MFA, Jamf MDM, and VPN.
 - Built custom WordPress/front-end components (CSS/JS) with emphasis on performance and pixel accuracy.
 
 ---
@@ -89,12 +89,12 @@ Introduced modern CI/DevOps practices at a Minneapolis agency; owned GitLab plat
 ### Principal — jacobnollette.com LLC / Self-Hosting Lab
 *Minneapolis, MN • 2005 (Jan) – Present*
 
-20-year practice spanning client consulting (2011–2018: WordPress, front-end, CMS delivery) and an ongoing R&D homelab for production-grade DevOps, AI/agent infrastructure, and reliability engineering patterns.
+20-year practice with a track record spanning client consulting (2011–2018: WordPress, front-end, CMS delivery) and an ongoing R&D homelab that proves out production-grade DevOps, AI/agent infrastructure, and reliability engineering patterns.
 
 **AI, Agents & Agentic Orchestration**
 
-- Orchestrate multi-agent development workflows coordinating concurrent Claude, Gemini, and Codex agents across projects; work state persists in git-worktree-backed hooks enabling agents to resume across sessions.
-- Built an agentic web scraper using Playwright (browser automation), Crawl4AI (pipeline orchestration), and Ollama (local LLM inference) for structured data extraction; validated with Pydantic schemas.
+- Run multi-agent development workflows in production, coordinating concurrent Claude, Gemini, and Codex agents across projects; work state persists in git-worktree-backed hooks enabling agents to resume across sessions.
+- Delivered structured data extraction at scale by building an agentic web scraper on Playwright (browser automation), Crawl4AI (pipeline orchestration), and Ollama (local LLM inference); validated with Pydantic schemas.
 - Deployed and administered high-performance n8n for AI assistant automation; built compound RAG pipelines, structured agent inputs with JavaScript, and webhook/agent load-tested with a custom Go tool.
 
 **Infrastructure & Platform**
