@@ -140,22 +140,6 @@ window.__RESUME__ = {
   ],
   "work": [
     {
-      "name": "North Shore Automation",
-      "position": "Platform / DevOps Engineer",
-      "location": "Los Angeles, CA (Remote)",
-      "startDate": "2022-01",
-      "endDate": "2026-01",
-      "summary": "Fractional DevOps consultant with a track record of modernizing CI/CD and platform infrastructure for media and studio workflow clients — cutting vendor lock-in, manual ops toil, and deployment risk.",
-      "highlights": [
-        "Eliminated vendor lock-in and improved artifact traceability: diagnosed SWE delivery bottlenecks, rewrote pipelines to be vendor-agnostic (GitLab ↔ GitHub Actions), and led the company-wide migration to GitHub Actions — org-level repository and Actions administration — consolidating downstream repos into monorepos/monopipelines.",
-        "Removed manifest-level ops risk from deployments: built a CLI toolset for deploying studio/media workflow microservices with Docker Compose across compute and NAS nodes, backed by versioned CI artifacts (GitHub Actions), so deployment engineers install, upgrade, backup, and manage dependencies without touching raw manifests.",
-        "Cut recovery time on on-prem media-management stacks to single commands: built a Bash + Docker appliance and CLI packaging backup/restore, blue-green upgrades, health checks, and safe power cycles.",
-        "Closed OWASP Top 10 exposure on public-facing infrastructure by hardening NGINX load balancers (rate-limiting, strict TLS, header sanitation) — cloud security engineering built into the platform work.",
-        "Gave clients data-driven scaling decisions by authoring a Go-based n8n webhook load-tester to benchmark scaling behavior and quantify database backend trade-offs under controlled RPS.",
-        "Delivered turn-key DAM environments on AWS via Terraform; produced Rocky Linux/Ubuntu VMDKs portable across VMware, Proxmox, and AWS EC2."
-      ]
-    },
-    {
       "name": "TSI Inc.",
       "position": "DevOps Engineer",
       "location": "Shoreview, MN",
@@ -195,6 +179,22 @@ window.__RESUME__ = {
             "Hunted and reduced supply-chain vulnerabilities with Artifactory/X-Ray; formalized recurring maintenance jobs to prevent drift."
           ]
         }
+      ]
+    },
+    {
+      "name": "North Shore Automation",
+      "position": "Platform / DevOps Engineer",
+      "location": "Los Angeles, CA (Remote)",
+      "startDate": "2022-01",
+      "endDate": "2026-01",
+      "summary": "Fractional DevOps consultant with a track record of modernizing CI/CD and platform infrastructure for media and studio workflow clients — cutting vendor lock-in, manual ops toil, and deployment risk.",
+      "highlights": [
+        "Eliminated vendor lock-in and improved artifact traceability: diagnosed SWE delivery bottlenecks, rewrote pipelines to be vendor-agnostic (GitLab ↔ GitHub Actions), and led the company-wide migration to GitHub Actions — org-level repository and Actions administration — consolidating downstream repos into monorepos/monopipelines.",
+        "Removed manifest-level ops risk from deployments: built a CLI toolset for deploying studio/media workflow microservices with Docker Compose across compute and NAS nodes, backed by versioned CI artifacts (GitHub Actions), so deployment engineers install, upgrade, backup, and manage dependencies without touching raw manifests.",
+        "Cut recovery time on on-prem media-management stacks to single commands: built a Bash + Docker appliance and CLI packaging backup/restore, blue-green upgrades, health checks, and safe power cycles.",
+        "Closed OWASP Top 10 exposure on public-facing infrastructure by hardening NGINX load balancers (rate-limiting, strict TLS, header sanitation) — cloud security engineering built into the platform work.",
+        "Gave clients data-driven scaling decisions by authoring a Go-based n8n webhook load-tester to benchmark scaling behavior and quantify database backend trade-offs under controlled RPS.",
+        "Delivered turn-key DAM environments on AWS via Terraform; produced Rocky Linux/Ubuntu VMDKs portable across VMware, Proxmox, and AWS EC2."
       ]
     },
     {
