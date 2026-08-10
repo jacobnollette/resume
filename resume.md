@@ -30,7 +30,7 @@ Platform and enterprise tooling engineer with 8+ years and a proven track record
 ## PROFESSIONAL EXPERIENCE
 
 ### Platform / DevOps Engineer — North Shore Automation
-*Los Angeles, CA (Remote) • 2022 (Jan) – Present*
+*Los Angeles, CA (Remote) • 2022 (Jan) – 2026 (Jan)*
 
 Fractional DevOps consultant with a track record of modernizing CI/CD and platform infrastructure for media and studio workflow clients — cutting vendor lock-in, manual ops toil, and deployment risk.
 
