@@ -623,13 +623,28 @@ body {
     padding: 0;
   }
 
-  .block {
+  /* Let whole sections (competencies, experience, etc.) flow across page
+     breaks — forcing an entire section to stay together (previously
+     `.block { break-inside: avoid }`) made sections taller than one page
+     get shoved onto the next page wholesale, leaving a large blank gap
+     behind and then still forcing an uncontrolled break inside anyway.
+     Instead, keep only the genuinely atomic pieces intact: a single job,
+     skill category, sub-headed group, bullet, or sub-note never splits
+     mid-item, and a heading always stays glued to the content after it. */
+  .job,
+  .project,
+  .edu,
+  .group,
+  .skill-row,
+  .hl,
+  .note {
     break-inside: avoid;
   }
 
-  .job,
-  .project {
-    break-inside: avoid;
+  .block-head,
+  .job-head,
+  .group-name {
+    break-after: avoid;
   }
 
   .resume-logo {
