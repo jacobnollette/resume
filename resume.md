@@ -54,10 +54,10 @@ Owned platform engineering, CI/CD, and enterprise tooling for a cloud-native Saa
 
 ---
 
-### Platform / DevOps Engineer — North Shore Automation
+### Platform / DevOps Engineer (Part-time) — North Shore Automation
 *Los Angeles, CA (Remote) • Jan 2022 – Jan 2026*
 
-Fractional DevOps consultant with a track record of modernizing CI/CD and platform infrastructure for media and studio workflow clients — cutting vendor lock-in, manual ops toil, and deployment risk.
+Fractional, part-time DevOps consultant with a track record of modernizing CI/CD and platform infrastructure for media and studio workflow clients — cutting vendor lock-in, manual ops toil, and deployment risk.
 
 - Eliminated vendor lock-in and improved artifact traceability: diagnosed SWE delivery bottlenecks, rewrote pipelines to be vendor-agnostic (GitLab and GitHub Actions), and led the company-wide migration to GitHub Actions — org-level repository and Actions administration — consolidating downstream repos into monorepos/monopipelines.
 - Removed manifest-level ops risk from deployments: built a CLI toolset for deploying studio/media workflow microservices with Docker Compose across compute and NAS nodes, backed by versioned CI artifacts (GitHub Actions), so deployment engineers install, upgrade, backup, and manage dependencies without touching raw manifests.

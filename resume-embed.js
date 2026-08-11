@@ -180,11 +180,11 @@ window.__RESUME__ = {
     },
     {
       "name": "North Shore Automation",
-      "position": "Platform / DevOps Engineer",
+      "position": "Platform / DevOps Engineer (Part-time)",
       "location": "Los Angeles, CA (Remote)",
       "startDate": "2022-01",
       "endDate": "2026-01",
-      "summary": "Fractional DevOps consultant with a track record of modernizing CI/CD and platform infrastructure for media and studio workflow clients — cutting vendor lock-in, manual ops toil, and deployment risk.",
+      "summary": "Fractional, part-time DevOps consultant with a track record of modernizing CI/CD and platform infrastructure for media and studio workflow clients — cutting vendor lock-in, manual ops toil, and deployment risk.",
       "highlights": [
         "Eliminated vendor lock-in and improved artifact traceability: diagnosed SWE delivery bottlenecks, rewrote pipelines to be vendor-agnostic (GitLab and GitHub Actions), and led the company-wide migration to GitHub Actions — org-level repository and Actions administration — consolidating downstream repos into monorepos/monopipelines.",
         "Removed manifest-level ops risk from deployments: built a CLI toolset for deploying studio/media workflow microservices with Docker Compose across compute and NAS nodes, backed by versioned CI artifacts (GitHub Actions), so deployment engineers install, upgrade, backup, and manage dependencies without touching raw manifests.",
