@@ -250,6 +250,15 @@
       "highlights": [
         "Stood up a WordPress hosting stack on Azure Nonprofit Cloud, designed the organization's visual identity system, and remediated a DDoS attack by tuning WAF to stabilize public-facing endpoints."
       ]
+    },
+    {
+      "name": "Clear Software for Good",
+      "position": "Creative Developer",
+      "location": "Minnesota",
+      "startDate": "2010-04",
+      "endDate": "2012-05",
+      "summary": "WordPress front-end developer collaborating with Ruby on Rails teams; operated Capistrano deployment pipelines; built interactive UI components and visual design assets.",
+      "highlights": []
     }
   ],
   "education": [

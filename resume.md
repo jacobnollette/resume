@@ -111,6 +111,13 @@ Introduced modern CI/DevOps practices at a Minneapolis agency, with a track reco
 
 ---
 
+### Creative Developer — Clear Software for Good
+*Minnesota • Apr 2010 – May 2012*
+
+WordPress front-end developer collaborating with Ruby on Rails teams; operated Capistrano deployment pipelines; built interactive UI components and visual design assets.
+
+---
+
 ## EDUCATION
 
 **B.F.A., Web & Screen Environments** — Minneapolis College of Art and Design (2020)
