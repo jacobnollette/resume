@@ -1,7 +1,7 @@
 # Jacob Nollette
 Minneapolis, MN • jacob@jacobnollette.com • 952-428-9199 • jacobnollette.com
 
-Platform and enterprise tooling engineer with 16+ years in technology — including 8+ years focused on platform and DevOps engineering — and a proven track record of turning slow, manual delivery into fast, secure, self-service platforms — GitHub, GitLab, Atlassian (Jira/Confluence/Bitbucket), Retool, JFrog Artifactory, and SonarQube, implemented and administered end to end. Track record: cut deployment time 96% (full days to 13 minutes) across 15+ microservices at TSI; recovered a production Ceph cluster from a failure-domain collision with zero data loss; eliminated manual dues collection for ~150 properties with a self-service member portal. Builds cloud security engineering into every platform delivered — automated policy gates, zero-trust network architecture, and IAM governance that reduces standing access risk. Directs and reviews multi-agent AI engineering workflows (Claude, Gemini, Copilot) in production, from task delegation through review to merge. Strong REST API, SQL, SSO/SAML, and Terraform skills. Minneapolis-based, available for hybrid on-site, immediately available.
+Platform and enterprise tooling engineer with 16+ years in technology — including 8+ years focused on platform and DevOps engineering — and a proven track record of turning slow, manual delivery into fast, secure, self-service platforms — GitHub, GitLab, Atlassian (Jira/Confluence/Bitbucket), Retool, JFrog Artifactory, and SonarQube, implemented and administered end to end. Track record: cut deployment time 96% (full days to 13 minutes) across 15+ microservices at TSI; recovered a production Ceph cluster from a failure-domain collision with zero data loss; eliminated manual dues collection for ~150 properties with a self-service member portal. Builds cloud security engineering into every platform delivered — automated policy gates, zero-trust network architecture, and IAM governance that reduces standing access risk. Orchestrates agentic software engineering at scale, mainly with Claude Code, Codex, and GitHub Copilot — building fully integrated skill systems and deploying spec-driven development to direct, review, and merge production-quality work from concurrent AI agents. Strong REST API, SQL, SSO/SAML, and Terraform skills. Minneapolis-based, available for hybrid on-site, immediately available.
 
 ---
 
@@ -13,11 +13,11 @@ Platform and enterprise tooling engineer with 16+ years in technology — includ
 
 **CI/CD & Developer Experience:** GitHub Actions, GitLab CI/CD, Jenkins (MPL Shared Library/Groovy), Docker, trunk-based development, parameterized pipelines, containerized build agents, artifact management (JFrog Artifactory), Packer VM builds.
 
-**Cloud & Infrastructure:** GCP (primary), AWS, Azure, Terraform (reusable, standardized secure deployment modules), CloudFormation, Kubernetes (GKE, EKS, KubeSpray/bare-metal), Proxmox, Hyper-V, DigitalOcean, Hetzner.
+**Cloud & Infrastructure:** GCP (primary), AWS, Azure, Terraform (reusable, standardized secure deployment modules), CloudFormation, Kubernetes (GKE, KubeSpray/bare-metal), Proxmox, Hyper-V, DigitalOcean, Hetzner.
 
 **Platform Engineering:** Internal developer platforms, Go CLI tooling, standardized dev environments, GitOps (ArgoCD), IaC-first deployments, VM appliance packaging (multi-hypervisor targets), self-service infrastructure patterns.
 
-**AI & Agents:** Multi-agent workflow leadership (task delegation, review, merge), Ollama (Open WebUI), n8n (RAG pipelines, multi-agent orchestration), Claude, Gemini, GitHub Copilot, Playwright/Crawl4AI web automation, Go-based webhook load testing, Pydantic-validated structured outputs, AI tooling evaluation & administration.
+**AI & Agents:** Multi-agent workflow leadership (task delegation, review, merge), Ollama (Open WebUI), n8n (RAG pipelines, multi-agent orchestration), Claude, Codex, GitHub Copilot, Playwright/Crawl4AI web automation, Go-based webhook load testing, Pydantic-validated structured outputs, AI tooling evaluation & administration.
 
 **Storage & Data:** Ceph (CRUSH rules, BlueStore/OSD tuning), ZFS (ARC/log/meta tuning), MinIO (S3/IAM), GCP Cloud SQL DR orchestration (MySQL, SQL Server), MySQL/Postgres/MSSQL, DR automation, tiered storage, real-time sync pipelines.
 
@@ -84,7 +84,7 @@ Introduced modern CI/DevOps practices at a Minneapolis agency, with a track reco
 
 **AI, Agents & Agentic Orchestration**
 
-- Directs and reviews multi-agent engineering workflows in production — delegating implementation work to concurrent Claude, Gemini, and Codex agents, then reviewing and merging their output to a production quality bar; work state persists in git-worktree-backed hooks so agents resume across sessions.
+- Directs and reviews multi-agent engineering workflows in production — delegating implementation work to concurrent Claude, Codex, and GitHub Copilot agents, then reviewing and merging their output to a production quality bar; work state persists in git-worktree-backed hooks so agents resume across sessions.
 - Built an agentic web scraper on Playwright (browser automation), Crawl4AI (pipeline orchestration), and Ollama (local LLM inference) for structured data extraction at scale; validated with Pydantic schemas.
 
 **Infrastructure & Platform**
