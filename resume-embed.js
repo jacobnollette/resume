@@ -201,7 +201,7 @@ window.__RESUME__ = {
       "summary": "Introduced modern CI/DevOps practices at a Minneapolis agency, with a track record of platform migrations that scaled cleanly — owned GitLab platform and AWS infrastructure for the company's full WordPress portfolio.",
       "highlights": [
         "Led the company's full portfolio onto self-hosted GitLab — migrated off Bitbucket Cloud (Bash automation), then scaled via object storage migration, instance right-sizing, and IOPS tuning as adoption grew portfolio-wide.",
-        "Standardized developer onboarding by authoring AWS CloudFormation templates that assemble \"build boxes\" from native services (CodeCommit, Secrets Manager, Session Manager, EC2, RDS, S3).",
+        "Built blue-green deployment infrastructure on AWS EC2 via declarative CloudFormation templates — standardized, repeatable Infrastructure-as-Code provisioning across production and development environments.",
         "Enabled zero-trust remote work (2020) by rolling out Duo MFA, Jamf MDM, and VPN."
       ]
     },
