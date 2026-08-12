@@ -15,7 +15,7 @@ Platform and enterprise tooling engineer with 16+ years in technology — includ
 
 **Cloud & Infrastructure:** GCP (primary), AWS, Azure, Terraform (reusable, standardized secure deployment modules), CloudFormation, Kubernetes (GKE, KubeSpray/bare-metal), Proxmox, Hyper-V, DigitalOcean, Hetzner.
 
-**Platform Engineering:** Internal developer platforms, Go CLI tooling, standardized dev environments, GitOps (ArgoCD), IaC-first deployments, VM appliance packaging (multi-hypervisor targets), self-service infrastructure patterns.
+**Platform Engineering:** Internal developer platforms, Go CLI tooling, standardized dev environments, GitOps-style, Git-synced deployments, IaC-first deployments, VM appliance packaging (multi-hypervisor targets), self-service infrastructure patterns.
 
 **AI & Agents:** Multi-agent workflow leadership (task delegation, review, merge), Ollama (Open WebUI), n8n (RAG pipelines, multi-agent orchestration), Claude, Codex, GitHub Copilot, Playwright/Crawl4AI web automation, Go-based webhook load testing, Pydantic-validated structured outputs, AI tooling evaluation & administration.
 

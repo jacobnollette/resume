@@ -83,7 +83,7 @@ window.__RESUME__ = {
         "Internal developer platforms",
         "Go CLI tooling",
         "Standardized dev environments",
-        "GitOps (ArgoCD)",
+        "GitOps-style, Git-synced deployments",
         "IaC-first deployments",
         "VM appliance packaging (multi-hypervisor targets)",
         "Self-service infrastructure patterns"
