@@ -623,15 +623,23 @@ body {
     padding: 0;
   }
 
-  /* Let whole sections (competencies, experience, etc.) flow across page
-     breaks — forcing an entire section to stay together (previously
-     `.block { break-inside: avoid }`) made sections taller than one page
-     get shoved onto the next page wholesale, leaving a large blank gap
-     behind and then still forcing an uncontrolled break inside anyway.
-     Instead, keep only the genuinely atomic pieces intact: a single job,
-     skill category, sub-headed group, bullet, or sub-note never splits
-     mid-item, and a heading always stays glued to the content after it. */
-  .job,
+  /* Let whole sections (competencies, experience, etc.) — and long
+     multi-group jobs within experience — flow across page breaks.
+     Forcing an entire section (or a whole oversized job) to stay
+     together (previously `.block { break-inside: avoid }`, and later
+     `.job { break-inside: avoid }`) made anything taller than the
+     remaining page get shoved onto the next page wholesale, leaving a
+     large blank gap behind — an unnatural-looking break even though no
+     content actually split. Instead, keep only the genuinely atomic
+     pieces intact: a skill category, sub-headed group, bullet, or
+     sub-note never splits mid-item, and a heading (or a job's opening
+     summary line) always stays glued to the content right after it —
+     but a long job CAN break between its sub-headed groups or bullets,
+     the same way the rest of the document flows. Only the section
+     heading and a job's own title/company/date line are glued forward
+     (a small, always-fits unit) — a job's summary sentence and its
+     bullets are left free to flow, so a long job never has to drag a
+     large glued chunk down to the next page in one jump. */
   .project,
   .edu,
   .group,
