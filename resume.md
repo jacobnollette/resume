@@ -98,6 +98,7 @@ Introduced modern CI/DevOps practices at a Minneapolis agency, with a track reco
 ### Webmaster & IT Specialist — Little Sand Lake Area Association
 *Dorset, MN (Volunteer) • Apr 2018 – Present*
 
+- Provides ongoing technology leadership consultation to the Board of Directors, executive team, and sub-committees — advising on technology strategy and the automation of business operations.
 - Designed and built a WordPress member portal (Gravity Forms/GravityKit + Stripe) handling both annual dues collection for ~150 properties and voluntary subscriptions that fund the lake's water-quality monitoring and inspection program.
 - Secured hyperscale nonprofit cloud grants; drove hosting costs near zero; implemented multi-cloud DR and real-time canary/availability monitoring.
 - Created a searchable, map-based GIS directory from county records; applied AI tooling to transcribe and archive quarterly board meetings.
