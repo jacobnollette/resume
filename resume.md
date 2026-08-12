@@ -13,7 +13,7 @@ Platform and enterprise tooling engineer with 16+ years in technology — includ
 
 **CI/CD & Developer Experience:** GitHub Actions, GitLab CI/CD, Jenkins (MPL Shared Library/Groovy), Docker, trunk-based development, parameterized pipelines, containerized build agents, artifact management (JFrog Artifactory), Packer VM builds.
 
-**Cloud & Infrastructure:** GCP (primary), AWS, Azure, Terraform (reusable, standardized secure deployment modules), CloudFormation, Kubernetes (GKE, EKS, KubeSpray/bare-metal), Proxmox, Hyper-V, DigitalOcean, Hetzner.
+**Cloud & Infrastructure:** GCP (primary), AWS, Azure, Terraform (reusable, standardized secure deployment modules), CloudFormation, Kubernetes (GKE, KubeSpray/bare-metal), Proxmox, Hyper-V, DigitalOcean, Hetzner.
 
 **Platform Engineering:** Internal developer platforms, Go CLI tooling, standardized dev environments, GitOps (ArgoCD), IaC-first deployments, VM appliance packaging (multi-hypervisor targets), self-service infrastructure patterns.
 

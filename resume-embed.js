@@ -70,7 +70,7 @@ window.__RESUME__ = {
         "Azure",
         "Terraform (reusable, standardized secure deployment modules)",
         "CloudFormation",
-        "Kubernetes (GKE, EKS, KubeSpray/bare-metal)",
+        "Kubernetes (GKE, KubeSpray/bare-metal)",
         "Proxmox",
         "Hyper-V",
         "DigitalOcean",
