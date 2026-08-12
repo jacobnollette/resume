@@ -231,14 +231,26 @@
     },
     {
       "name": "Little Sand Lake Area Association",
-      "position": "Webmaster & Tech Consultant",
-      "location": "Dorset, MN (Side project)",
+      "position": "Webmaster & IT Specialist",
+      "location": "Dorset, MN (Volunteer)",
       "startDate": "2018-04",
       "endDate": "",
       "highlights": [
-        "Designed and built a WordPress member portal with Gravity Forms/GravityKit + Stripe recurring subscriptions; eliminated manual annual dues collection for ~150 properties.",
+        "Designed and built a WordPress member portal (Gravity Forms/GravityKit + Stripe) handling both annual dues collection for ~150 properties and voluntary subscriptions that fund the lake's water-quality monitoring and inspection program.",
         "Secured hyperscale nonprofit cloud grants; drove hosting costs near zero; implemented multi-cloud DR and real-time canary/availability monitoring.",
-        "Created searchable, map-based GIS directory from county records; applied AI tooling to transcribe and archive quarterly board meetings."
+        "Created a searchable, map-based GIS directory from county records; applied AI tooling to transcribe and archive quarterly board meetings.",
+        "Produces the Association's annual live event — live sound and video engineering, live streaming, and YouTube channel management — plus recurring yearly content such as the annual boat parade video."
+      ]
+    },
+    {
+      "name": "Little Sand Bay Villas",
+      "position": "Vice President",
+      "location": "Northern Minnesota (Volunteer)",
+      "startDate": "2025",
+      "endDate": "",
+      "highlights": [
+        "Serves as Vice President of the HOA board for a lake community in northern Minnesota; administers the community Google Group and provides hands-on technology support to members, including help getting online.",
+        "Maintains physical infrastructure: patches the community's dirt road, handles light electrical work, and services the beach pump system."
       ]
     },
     {
