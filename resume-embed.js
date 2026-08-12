@@ -244,6 +244,17 @@ window.__RESUME__ = {
       ]
     },
     {
+      "name": "Little Sand Bay Villas",
+      "position": "Vice President",
+      "location": "Northern Minnesota (Volunteer)",
+      "startDate": "2025",
+      "endDate": "",
+      "highlights": [
+        "Serves as Vice President of the HOA board for a lake community in northern Minnesota; administers the community Google Group and provides hands-on technology support to members, including help getting online.",
+        "Maintains physical infrastructure: patches the community's dirt road, handles light electrical work, and services the beach pump system."
+      ]
+    },
+    {
       "name": "Steiger Heritage Club",
       "position": "Webmaster",
       "location": "Minnesota (Side project)",

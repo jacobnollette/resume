@@ -105,6 +105,14 @@ Introduced modern CI/DevOps practices at a Minneapolis agency, with a track reco
 
 ---
 
+### Vice President — Little Sand Bay Villas
+*Northern Minnesota (Volunteer) • 2025 – Present*
+
+- Serves as Vice President of the HOA board for a lake community in northern Minnesota; administers the community Google Group and provides hands-on technology support to members, including help getting online.
+- Maintains physical infrastructure: patches the community's dirt road, handles light electrical work, and services the beach pump system.
+
+---
+
 ### Webmaster — Steiger Heritage Club
 *Minnesota (Side project) • Aug 2021 – Present*
 
