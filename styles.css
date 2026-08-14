@@ -1,23 +1,13 @@
 :root {
-  --bg-cream: #f5f4ef;
-  --bg-paper: #fffefb;
-  --bg-ink: #12231c;
-  --text-body: #1f2725;
-  --text-muted: #5b6663;
-  --line: #d8ddd9;
-  --link: #0f5c51;
-  --accent: #e85d00;
-  --shadow: 0 22px 50px rgba(16, 32, 26, 0.14);
+  --bg-page: #e9e9e6;
+  --bg-paper: #ffffff;
+  --text-body: #1a1a1a;
+  --text-muted: #555;
+  --line: #d9d9d6;
+  --link: #1a1a1a;
+  --shadow: 0 14px 34px rgba(0, 0, 0, 0.12);
 
-  /* JSON token roles */
-  --key: #0f5c51;            /* object keys */
-  --key-section: #e85d00;    /* top-level section keys */
-  --punc: #9aaca2;           /* braces, brackets, colons, commas, quotes */
-  --rail: #e4e8e3;           /* indentation gutter */
-
-  --mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-  --sans: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
-  --serif: "Source Serif 4", Georgia, serif;
+  --sans: "Aptos", "Calibri", "Segoe UI", ui-sans-serif, system-ui, Helvetica, Arial, sans-serif;
 }
 
 *,
@@ -35,22 +25,19 @@ body {
 body {
   font-family: var(--sans);
   color: var(--text-body);
-  background: var(--bg-cream);
-  line-height: 1.5;
+  background: var(--bg-page);
+  line-height: 1.4;
 }
 
 .bg {
   position: fixed;
   inset: 0;
-  background:
-    radial-gradient(circle at 15% 10%, rgba(20, 95, 83, 0.1) 0%, rgba(20, 95, 83, 0) 36%),
-    radial-gradient(circle at 88% 90%, rgba(232, 93, 0, 0.06) 0%, rgba(232, 93, 0, 0) 32%),
-    linear-gradient(170deg, #f5f4ef 0%, #ecebe2 100%);
+  background: var(--bg-page);
   z-index: -1;
 }
 
 .page {
-  max-width: 860px;
+  max-width: 780px;
   margin: 2.2rem auto;
   padding: 0 1rem;
 }
@@ -58,10 +45,9 @@ body {
 .resume {
   position: relative;
   background: var(--bg-paper);
-  border: 1px solid rgba(18, 35, 28, 0.08);
+  border: 1px solid var(--line);
   box-shadow: var(--shadow);
-  border-radius: 16px;
-  padding: 2.5rem clamp(1.75rem, 5vw, 3.5rem);
+  padding: 2.4rem clamp(1.75rem, 5vw, 3.25rem);
   animation: fadeIn 420ms ease-out;
 }
 
@@ -70,11 +56,11 @@ body {
   position: absolute;
   top: 1.05rem;
   right: 1.15rem;
-  font-family: var(--mono);
+  font-family: var(--sans);
   font-size: 0.72rem;
   line-height: 1;
   color: var(--text-muted);
-  background: var(--bg-cream);
+  background: var(--bg-page);
   border: 1px solid var(--line);
   border-radius: 999px;
   padding: 0.38rem 0.75rem;
@@ -84,421 +70,193 @@ body {
 
 .print-tip:hover,
 .print-tip:focus-visible {
-  color: var(--accent);
-  border-color: var(--accent);
+  color: var(--text-body);
+  border-color: var(--text-body);
 }
 
 /* ---------------------------------------------------------------- *
- * Header: logo | headshot | name + contact object
+ * Header: centered name + title + contact line
  * ---------------------------------------------------------------- */
 .resume-header {
-  display: flex;
-  align-items: center;
-  gap: 1.25rem;
+  text-align: center;
   margin-bottom: 1.1rem;
-  padding-bottom: 1.1rem;
-  border-bottom: 1px solid var(--line);
-}
-
-#resume-logo-block,
-#resume-headshot-block {
-  flex-shrink: 0;
-}
-
-.resume-logo {
-  width: 116px;
-  height: auto;
-  display: block;
-}
-
-.resume-headshot {
-  border-radius: 50%;
-  border: 3px solid var(--bg-paper);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  width: 104px;
-  height: 104px;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  display: block;
-}
-
-.resume-header-info {
-  min-width: 0;
 }
 
 .resume-name {
-  font-family: var(--serif);
-  color: var(--bg-ink);
-  font-size: clamp(1.8rem, 4vw, 2.35rem);
-  line-height: 1.03;
-  letter-spacing: -0.02em;
-  margin: 0 0 0.2rem;
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 1.35rem;
+  line-height: 1.2;
+  margin: 0 0 0.3rem;
 }
 
 .resume-label {
-  font-family: var(--mono);
-  font-size: 0.86rem;
+  font-style: italic;
+  font-size: 1rem;
+  margin: 0 0 0.3rem;
+}
+
+.resume-contact,
+.resume-url {
+  font-size: 0.92rem;
+  margin: 0 0 0.15rem;
+}
+
+.resume-url a {
+  text-decoration: underline;
+}
+
+.sep {
+  margin: 0 0.15em;
   color: var(--text-muted);
-  margin: 0 0 0.55rem;
-  font-weight: 500;
-}
-
-.basics-obj {
-  font-family: var(--mono);
-  font-size: 0.8rem;
-  color: var(--text-body);
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  gap: 0.15rem 0.4rem;
-}
-
-.basics-kvs {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.1rem 0.95rem;
-}
-
-.kv {
-  white-space: nowrap;
-}
-
-.kv .key {
-  color: var(--key);
 }
 
 .val-link {
   color: var(--link);
   text-decoration: none;
-  border-bottom: 1px solid color-mix(in srgb, var(--link), transparent 60%);
 }
 
 .val-link:hover {
-  color: var(--accent);
-  border-bottom-color: var(--accent);
+  text-decoration: underline;
 }
 
 /* ---------------------------------------------------------------- *
- * JSON token primitives
- * ---------------------------------------------------------------- */
-.key {
-  font-family: var(--mono);
-  color: var(--key);
-  font-weight: 600;
-}
-
-.key::before,
-.key::after {
-  content: '"';
-  color: var(--punc);
-  font-weight: 400;
-}
-
-.str::before,
-.str::after {
-  content: '"';
-  color: var(--punc);
-  font-weight: 400;
-}
-
-.punc {
-  font-family: var(--mono);
-  color: var(--punc);
-  font-weight: 400;
-}
-
-.punc.at {
-  margin: 0 0.45em;
-}
-
-.punc.sep {
-  margin: 0 0.45em;
-}
-
-.punc.dash {
-  color: var(--accent);
-  font-weight: 600;
-  margin-right: 0.55em;
-}
-
-.punc.subdash {
-  color: var(--key);
-  margin-right: 0.4em;
-}
-
-.punc.comma {
-  margin-left: 0.02em;
-}
-
-/* Top-level document braces frame the whole object */
-.doc-brace {
-  display: block;
-  font-family: var(--mono);
-  font-size: 1.5rem;
-  line-height: 1;
-  color: color-mix(in srgb, var(--punc), transparent 25%);
-}
-
-.doc-open {
-  margin: 0.1rem 0 0.7rem;
-}
-
-.doc-close {
-  margin: 0.6rem 0 0;
-}
-
-/* ---------------------------------------------------------------- *
- * Blocks (top-level sections) with an indentation gutter
+ * Sections
  * ---------------------------------------------------------------- */
 .block {
-  margin: 0 0 1.4rem;
-  padding-left: 1.15rem;
-  border-left: 1px solid var(--rail);
+  margin: 0 0 1.15rem;
 }
 
 .block:last-of-type {
-  margin-bottom: 0.4rem;
+  margin-bottom: 0;
 }
 
 .block-head {
-  font-family: var(--mono);
-  font-size: 0.95rem;
-  margin-bottom: 0.55rem;
-}
-
-.block > .block-head > .key {
-  color: var(--key-section);
-  font-size: 1.04rem;
-  letter-spacing: 0.01em;
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 1rem;
+  text-align: center;
+  margin: 0 0 0.55rem;
 }
 
 .block-body {
-  padding-left: 0.1rem;
+  font-size: 0.95rem;
 }
 
-/* Summary -------------------------------------------------------- */
-.block-summary .summary-text {
-  font-size: 1rem;
-  line-height: 1.55;
-  margin: 0.1rem 0 0;
-  color: var(--text-body);
+/* Summary ---------------------------------------------------------- */
+.summary-list,
+.summary-text {
+  margin: 0;
+  padding: 0;
 }
 
-/* Competencies (skills) ----------------------------------------- */
+.summary-list {
+  list-style: disc;
+  padding-left: 1.3rem;
+}
+
+.summary-list li {
+  margin-bottom: 0.3rem;
+  line-height: 1.45;
+}
+
+.summary-text {
+  line-height: 1.5;
+}
+
+/* Core Technologies (skills) ---------------------------------------- */
 .skills {
   margin: 0;
 }
 
 .skill-row {
   display: grid;
-  grid-template-columns: 230px 1fr;
-  gap: 0.35rem 1rem;
-  padding: 0.5rem 0;
+  grid-template-columns: 190px 1fr;
+  gap: 0.15rem 1rem;
+  padding: 0.28rem 0;
   align-items: baseline;
-  border-bottom: 1px dotted var(--line);
 }
 
-.skill-row:last-child {
-  border-bottom: 0;
-}
-
-.skill-key {
-  font-family: var(--mono);
-  font-size: 0.86rem;
-  line-height: 1.4;
+.skill-name {
+  font-weight: 700;
 }
 
 .skill-vals {
+  line-height: 1.45;
+}
+
+/* Entry list shared by Experience + Education ------------------------ */
+.entry-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.job,
+.edu {
+  margin-bottom: 0.9rem;
+}
+
+.job:last-child,
+.edu:last-child {
+  margin-bottom: 0;
+}
+
+.entry-head {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   align-items: baseline;
-  gap: 0.25rem;
+  gap: 0.3rem 1rem;
+  font-weight: 700;
 }
 
-.kw-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.2rem 0.3rem;
+.entry-title {
+  min-width: 0;
 }
 
-.kw {
-  font-family: var(--mono);
-  font-size: 0.81rem;
-  color: var(--text-body);
-  line-height: 1.5;
+.entry-loc {
+  font-weight: 700;
 }
 
-/* Experience (work) --------------------------------------------- */
-.work-list,
-.project-list,
-.edu-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+.entry-dates {
+  font-weight: 700;
+  white-space: nowrap;
 }
 
-.job {
-  padding: 0.15rem 0 0.85rem;
+.entry-role {
+  font-style: italic;
+  margin: 0.1rem 0 0.15rem;
 }
 
-.job + .job {
-  border-top: 1px dotted var(--line);
-  padding-top: 0.95rem;
-}
-
-.job > .punc.brace,
-.project > .punc.brace,
-.edu > .punc.brace {
-  display: inline-block;
-  font-size: 0.95rem;
-}
-
-.job-head {
-  margin: 0.05rem 0 0.4rem;
-}
-
-.job-role {
-  font-family: var(--serif);
-  font-size: 1.14rem;
-  font-weight: 600;
-  line-height: 1.22;
-  color: var(--bg-ink);
-  margin: 0 0 0.15rem;
-}
-
-.job-company {
-  font-family: var(--sans);
-  font-weight: 600;
-  color: #143229;
-}
-
-.job-meta {
-  font-family: var(--mono);
-  font-size: 0.79rem;
-  color: var(--text-muted);
+.entry-summary {
+  font-style: italic;
+  margin: 0 0 0.3rem;
+  line-height: 1.45;
 }
 
 .highlights {
-  list-style: none;
-  margin: 0.3rem 0 0.4rem;
-  padding: 0;
-}
-
-.hl {
-  position: relative;
-  padding-left: 1.45rem;
-  margin-bottom: 0.42rem;
-  font-size: 0.95rem;
-  line-height: 1.5;
-}
-
-.hl > .punc.dash {
-  position: absolute;
-  left: 0;
-  top: 0;
-}
-
-/* Nested notes under a highlight */
-.notes {
-  list-style: none;
-  margin: 0.35rem 0 0.25rem;
-  padding: 0;
-}
-
-.note {
-  position: relative;
+  list-style: disc;
+  margin: 0.15rem 0 0;
   padding-left: 1.3rem;
-  margin: 0.22rem 0;
-  font-size: 0.875rem;
+}
+
+.highlights li {
+  margin-bottom: 0.28rem;
   line-height: 1.45;
-  color: var(--text-muted);
 }
 
-.note > .punc.subdash {
-  position: absolute;
-  left: 0.1rem;
-  top: 0;
+.highlights li:last-child {
+  margin-bottom: 0;
 }
 
-.note-key {
-  font-family: var(--mono);
-  color: var(--key);
-  font-weight: 600;
-  font-size: 0.8rem;
+/* Job-Related Activities and Training (volunteer) --------------------- */
+.volunteer-list li {
+  margin-bottom: 0.4rem;
 }
 
-.note-key::before,
-.note-key::after {
-  content: '"';
-  color: var(--punc);
-  font-weight: 400;
-}
-
-/* Sub-headed bullet groups within a role */
-.group {
-  margin: 0.45rem 0 0.55rem;
-}
-
-.group-name {
-  font-family: var(--mono);
-  font-size: 0.92rem;
-  font-weight: 600;
-  margin: 0.5rem 0 0.2rem;
-}
-
-.group-name .key {
-  color: var(--key);
-}
-
-/* Deep-dive projects -------------------------------------------- */
-.project {
-  padding: 0.15rem 0 0.7rem;
-}
-
-.project + .project {
-  border-top: 1px dotted var(--line);
-  padding-top: 0.7rem;
-}
-
-.project-name {
-  font-family: var(--serif);
-  font-size: 1.04rem;
-  font-weight: 600;
-  color: var(--bg-ink);
-  margin: 0.1rem 0 0.2rem;
-  line-height: 1.25;
-}
-
-.project-desc {
-  font-size: 0.92rem;
-  line-height: 1.5;
-  margin: 0;
-  color: var(--text-body);
-}
-
-/* Education ------------------------------------------------------ */
-.edu-degree {
-  font-family: var(--serif);
-  font-size: 1.04rem;
-  font-weight: 600;
-  color: var(--bg-ink);
-  margin: 0.1rem 0 0.12rem;
-}
-
-.edu-meta {
-  font-family: var(--mono);
-  font-size: 0.8rem;
-  color: var(--text-muted);
-  margin-bottom: 0.25rem;
-}
-
-.edu-summary {
-  font-size: 0.92rem;
-  line-height: 1.5;
-  margin: 0;
+.volunteer-list li:last-child {
+  margin-bottom: 0;
 }
 
 @keyframes fadeIn {
@@ -517,8 +275,7 @@ body {
  * ---------------------------------------------------------------- */
 .page-nav-link {
   display: block;
-  font-family: var(--mono);
-  font-size: 0.82rem;
+  font-size: 0.85rem;
   color: var(--text-muted);
   text-align: center;
   margin: 0 0 1.1rem;
@@ -526,35 +283,27 @@ body {
 
 .page-nav-link a {
   color: var(--link);
-  text-decoration: none;
-  border-bottom: 1px solid color-mix(in srgb, var(--link), transparent 60%);
-}
-
-.page-nav-link a:hover {
-  color: var(--accent);
-  border-bottom-color: var(--accent);
+  text-decoration: underline;
 }
 
 /* ---------------------------------------------------------------- *
  * Cover letter body — plain prose, same paper/typography as resume
  * ---------------------------------------------------------------- */
 .letter {
-  font-size: 1rem;
-  line-height: 1.65;
+  font-size: 0.95rem;
+  line-height: 1.55;
   color: var(--text-body);
 }
 
 .letter-date {
-  font-family: var(--mono);
-  font-size: 0.82rem;
+  font-size: 0.85rem;
   color: var(--text-muted);
   margin: 0 0 1.4rem;
 }
 
 .letter-greeting {
-  font-family: var(--serif);
-  font-size: 1.15rem;
-  color: var(--bg-ink);
+  font-weight: 700;
+  font-size: 1.02rem;
   margin: 0 0 1rem;
 }
 
@@ -569,10 +318,6 @@ body {
 
 .letter li {
   margin: 0 0 0.55rem;
-}
-
-.letter li strong {
-  color: var(--bg-ink);
 }
 
 .letter-signoff {
@@ -593,14 +338,10 @@ body {
   }
 
   .resume {
-    border-radius: 0;
     box-shadow: none;
-    border-left: 0;
-    border-right: 0;
     padding: 1.25rem 1.15rem 1.4rem;
   }
 
-  /* Chip flows above the centered header instead of pinning to a corner */
   .print-tip {
     position: static;
     display: block;
@@ -608,45 +349,15 @@ body {
     margin: 0 auto 0.9rem;
   }
 
-  .resume-header {
-    display: block;
-    text-align: center;
-  }
-
-  #resume-logo-block,
-  #resume-headshot-block,
-  .resume-header-info {
-    display: block;
-    margin-bottom: 0.75rem;
-  }
-
-  .resume-logo,
-  .resume-headshot {
-    margin: 0 auto;
-  }
-
-  .resume-logo {
-    width: 88px;
-  }
-
-  .resume-headshot {
-    width: 80px;
-    height: 80px;
-  }
-
-  .basics-obj,
-  .basics-kvs {
-    justify-content: center;
-  }
-
   .skill-row {
     grid-template-columns: 1fr;
-    gap: 0.15rem;
-    padding: 0.55rem 0;
+    gap: 0.05rem;
+    padding: 0.45rem 0;
   }
 
-  .skill-vals {
-    padding-left: 0.6rem;
+  .entry-head {
+    flex-direction: column;
+    gap: 0.05rem;
   }
 }
 
@@ -654,19 +365,9 @@ body {
  * Print / PDF export
  * ---------------------------------------------------------------- */
 @media print {
-  /* Print with locally-installed fonts instead of the Google Fonts webfonts.
-     The print/PDF pipeline re-embeds and re-subsets downloaded webfonts, and
-     that is where the email's "@" was dropping out as a missing-glyph box —
-     the character itself is a plain U+0040 and renders fine on screen. System
-     families carry every glyph through to the PDF, so print stays reliable
-     while the on-screen design keeps IBM Plex / Source Serif. */
   :root {
-    --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas,
-            "DejaVu Sans Mono", "Liberation Mono", "Courier New", monospace;
-    --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
-            Arial, "Liberation Sans", sans-serif;
-    --serif: Georgia, "Times New Roman", "Liberation Serif", Times, serif;
-    --punc: #8a948d;
+    --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Calibri, Roboto,
+            Helvetica, Arial, "Liberation Sans", sans-serif;
   }
 
   .print-tip {
@@ -694,54 +395,21 @@ body {
   .resume {
     box-shadow: none;
     border: 0;
-    border-radius: 0;
     padding: 0;
   }
 
-  /* Let whole sections (competencies, experience, etc.) — and long
-     multi-group jobs within experience — flow across page breaks.
-     Forcing an entire section (or a whole oversized job) to stay
-     together (previously `.block { break-inside: avoid }`, and later
-     `.job { break-inside: avoid }`) made anything taller than the
-     remaining page get shoved onto the next page wholesale, leaving a
-     large blank gap behind — an unnatural-looking break even though no
-     content actually split. Instead, keep only the genuinely atomic
-     pieces intact: a skill category, sub-headed group, bullet, or
-     sub-note never splits mid-item, and a heading (or a job's opening
-     summary line) always stays glued to the content right after it —
-     but a long job CAN break between its sub-headed groups or bullets,
-     the same way the rest of the document flows. Only the section
-     heading and a job's own title/company/date line are glued forward
-     (a small, always-fits unit) — a job's summary sentence and its
-     bullets are left free to flow, so a long job never has to drag a
-     large glued chunk down to the next page in one jump. */
-  .project,
+  .job,
   .edu,
-  .group,
-  .skill-row,
-  .hl,
-  .note {
+  .skill-row {
     break-inside: avoid;
   }
 
   .block-head,
-  .job-head,
-  .group-name {
+  .entry-head {
     break-after: avoid;
-  }
-
-  .resume-logo {
-    width: 84px;
-  }
-
-  .resume-headshot {
-    width: 78px;
-    height: 78px;
-    box-shadow: none;
   }
 
   .val-link {
     color: inherit;
-    border: 0;
   }
 }
