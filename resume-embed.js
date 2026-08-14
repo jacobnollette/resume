@@ -120,7 +120,11 @@ window.__RESUME__ = {
         "Cut deployment time 96% by rebuilding CI/CD for 15+ microservices with GitHub Actions, Jenkins, Docker, and Bash; consolidated 15 pipelines into a single trunk-based pipeline with a 13-minute end-to-end rollout.",
         "Built Jenkins shared-library pipelines with containerized, parameterized stages for build, test, scan, artifact, and deploy; added JFrog X-Ray and SonarQube SAST gates that block deployment on critical findings.",
         "Built a Go CLI that creates standardized Docker development shells with preconfigured environment variables and credentials, enabling local environments to mirror CI.",
-        "Implemented and administered GitHub, Jenkins, Atlassian, Retool, JFrog Artifactory, and SonarQube while supporting Kubernetes and cloud infrastructure."
+        "Took Retool from zero to production, including Git-synced configuration, CI/CD image baking, role-scoped permissions, access management, and tenant-onboarding runbooks.",
+        "Delivered secure Retool access to an air-gapped IoT monitoring network using parallel subnet design, VPN-gated egress, and strict ACLs.",
+        "Provisioned production GCP applications with Terraform, Cloud SQL, automated database snapshots, and disaster-recovery orchestration; built reusable Terraform modules for standardized Kubernetes deployments.",
+        "Led IAM governance across cloud vendors, implementing SSO/SAML and MFA and owning provisioning, access reviews, and terminations.",
+        "Administered Jira, Confluence, and Bitbucket, including disaster-recovery automation, tested restores, runbooks, and lifecycle maintenance."
       ]
     },
     {
@@ -131,12 +135,8 @@ window.__RESUME__ = {
       "endDate": "2026-01",
       "summary": "Fractional DevOps consultant modernizing CI/CD and platform infrastructure for media and studio workflow clients while reducing manual operations, vendor lock-in, and deployment risk.",
       "highlights": [
-        "Took Retool from zero to production, including Git-synced configuration, CI/CD image baking, role-scoped permissions, access management, and tenant-onboarding runbooks.",
-        "Delivered secure Retool access to an air-gapped IoT monitoring network using parallel subnet design, VPN-gated egress, and strict ACLs.",
-        "Provisioned production GCP applications with Terraform, Cloud SQL, automated database snapshots, and disaster-recovery orchestration; built reusable Terraform modules for standardized Kubernetes deployments.",
-        "Led IAM governance across cloud vendors, implementing SSO/SAML and MFA and owning provisioning, access reviews, and terminations.",
-        "Administered Jira, Confluence, and Bitbucket, including disaster-recovery automation, tested restores, runbooks, and lifecycle maintenance.",
         "Led migration to GitHub Actions and built CLI tooling that removed manifest-level deployment risk for studio/media microservices.",
+        "Hardened public-facing NGINX infrastructure against OWASP Top 10 exposure through rate limiting, strict TLS, and header sanitation.",
         "Delivered AWS-based digital asset management environments using Terraform and produced portable Rocky Linux/Ubuntu VMDKs for VMware, Proxmox, and AWS EC2."
       ]
     },
@@ -160,7 +160,6 @@ window.__RESUME__ = {
       "endDate": "",
       "summary": "20-year practice spanning client consulting and an ongoing R&D homelab focused on production-grade DevOps, AI/agent infrastructure, cloud security, and reliability engineering.",
       "highlights": [
-        "Hardened public-facing NGINX infrastructure against OWASP Top 10 exposure through rate limiting, strict TLS, and header sanitation.",
         "Directs and reviews multi-agent engineering workflows using Claude, Codex, and GitHub Copilot, including task delegation, review, and production merges.",
         "Built an agentic web scraper using Playwright, Crawl4AI, and Ollama for structured data extraction with Pydantic-validated outputs.",
         "Designed and operated a private-cloud homelab using Proxmox, Kubernetes, Ceph, and custom CRUSH rules; recovered a Ceph failure-domain collision with zero data loss."
