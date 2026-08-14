@@ -2,13 +2,15 @@
 
 ## Project Purpose
 This repository hosts a single-page GitHub Pages resume site for `resume.jacobnollette.com`.
-The resume content is modeled as **structured JSON** and rendered client-side as a
-typographically-typeset, JSON-styled document.
+The resume content is modeled as **structured JSON** and rendered client-side as a plain,
+traditional, single-column resume document (centered header, bold section headings, bullet
+lists) — intentionally matching a conventional ATS-friendly Word résumé layout rather than
+a stylized/decorative theme.
 
 ## Source of Truth
 - Resume **data**: `resume.json` — the single editable content file. Follows the
   [JSON Resume](https://jsonresume.org/schema/) standard (`basics`, `work`, `skills`,
-  `projects`, `education`) plus a few documented extensions (see below).
+  `education`, `volunteer`) plus a few documented extensions (see below).
 - Renderer: `resume.js` — pure `Resume.buildResumeHTML(data)` / `Resume.buildHeaderInfoHTML(basics)`
   functions that turn the JSON into HTML. No DOM dependency, so they are unit-testable in Node.
 - Site shell: `index.html` — fetches `resume.json` and injects rendered HTML. No content is
@@ -24,11 +26,14 @@ typographically-typeset, JSON-styled document.
 - Deployment workflow: `.github/workflows/pages.yml`
 
 ## resume.json extensions (beyond the JSON Resume standard)
-- `work[].x_groups[]` — `{ name, highlights[] }`. Use when a role's bullets are organized
-  under sub-headings (e.g. "CI/CD & Release Engineering"). Rendered in place of `work[].highlights`.
-- `work[].highlights[]` — each item is either a plain string **or** `{ text, notes[] }`,
-  where `notes[]` render as indented sub-bullets beneath the main highlight.
+- `basics.x_summaryBullets[]` — array of strings rendered as the Summary section's bullet
+  list, in place of `basics.summary` (which stays as a single-paragraph fallback and for
+  machine-readable/ATS consumers that only read the standard `summary` field).
+- `work[].highlights[]` — array of plain strings, one bullet each.
 - `education[].x_summary` — free-text supplemental description.
+- `volunteer[]` — standard JSON Resume array, rendered as the "Job-Related Activities and
+  Training" section. Each entry additionally supports `x_tag` — a short parenthetical label
+  next to the position (e.g. `"Volunteer"`, `"Side Project"`).
 - An empty-string `endDate` (`""`) denotes a present/ongoing role and renders as `Present`.
 
 ## Editing Rules
@@ -37,9 +42,11 @@ typographically-typeset, JSON-styled document.
   (only needed for `file://` double-click preview; the deployed site uses `fetch`).
 - Keep `resume.json` valid JSON (run `python3 -m json.tool resume.json` or equivalent).
 - Preserve ATS-friendly keywords in `basics.summary` and the `skills` keyword arrays.
-  Content renders inside semantic tags (h1–h4, p, ul/ol/li, dl); decorative JSON punctuation
-  is `aria-hidden`, so the page stays readable to ATS and screen readers.
+  Content renders inside semantic tags (h1–h4, p, ul/ol/li, dl), so the page stays readable
+  to ATS and screen readers.
 - Keep changes static-site compatible (no build system required).
+- `logo.png` and `headshot.png` are no longer referenced (the header is plain text-only,
+  matching a traditional resume layout) — left in the repo but unused.
 
 ## Deployment
 - GitHub Actions deploys on push to `main` via `.github/workflows/pages.yml` (uploads the whole
@@ -49,10 +56,10 @@ typographically-typeset, JSON-styled document.
 
 ## Quality Checks
 - Validate `resume.json` parses and renders after edits.
-- Optional Node smoke test: `node -e "const R=require('./resume.js');const d=require('./resume.json');if(!R.buildResumeHTML(d).includes('experience'))process.exit(1);console.log('ok')"`.
+- Optional Node smoke test: `node -e "const R=require('./resume.js');const d=require('./resume.json');if(!R.buildResumeHTML(d).includes('Professional Experience'))process.exit(1);console.log('ok')"`.
 - Keep layout readable on both desktop and mobile.
 - Ensure print output remains clean for PDF export.
-- `@media print` deliberately overrides `--mono`/`--sans`/`--serif` to locally-installed font
-  stacks. Downloaded webfonts get re-embedded and re-subset by the print pipeline, which dropped
-  the email's `@` as a missing-glyph box. Keep print on system fonts; screen keeps IBM Plex /
-  Source Serif.
+- `@media print` deliberately overrides `--sans` to a locally-installed system font stack.
+  Downloaded webfonts get re-embedded and re-subset by the print pipeline, which previously
+  dropped the email's `@` as a missing-glyph box under the old webfont-based theme. Keep print
+  on system fonts even though the current theme no longer loads webfonts on screen either.
