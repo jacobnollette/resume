@@ -19,11 +19,34 @@ a stylized/decorative theme.
   `basics.email`, `basics.phone`, `basics.url`, and `basics.profiles` client-side before
   rendering (`stripContact`). Marked `noindex`. Content edits still happen only in `resume.json`;
   keep this shell's boot script in sync with `index.html` when changing either.
+- Cover letter: `cover-letter/index.html` — standalone hand-written page (not driven by
+  `resume.json`); shares `styles.css`'s `.letter` prose classes.
+- Candidate Value Proposition brief: `cvp/index.html` — standalone hand-written page: a
+  positioning statement, labeled "value pillar" list, quantified achievement metrics, and an
+  ideal-fit summary. Uses the `.pillar-list`/`.metric-list` classes in `styles.css`.
+- Executive Impact Profile: `eip/index.html` — standalone hand-written page: a narrative
+  career throughline plus labeled "impact area" sections (each grounded in specific
+  `resume.json` achievements) and an operating-philosophy close. Uses the `.impact-area`
+  classes in `styles.css`.
 - Styling: `styles.css`
 - Offline fallback: `resume-embed.js` — AUTO-GENERATED from `resume.json` (`window.__RESUME__`).
   Lets the page work when opened directly from disk (`file://`), where `fetch()` is blocked.
   Regenerate with `node build-embed.js`. Never edit it by hand.
 - Deployment workflow: `.github/workflows/pages.yml`
+
+## Cross-page navigation
+`index.html`, `cover-letter/`, `cvp/`, and `eip/` each render a `.page-nav-link` row (under
+the header) linking to the other three pages. When adding or renaming a top-level page, update
+this row in all four files — it isn't generated.
+
+## CVP / EIP content policy
+Every claim in `cvp/index.html` and `eip/index.html` must trace back to a specific fact in
+`resume.json` (or its `x_summaryBullets`/highlights) — these are marketing-shaped documents,
+which makes fabricated or exaggerated claims easy to introduce by accident. Don't inflate
+seniority (e.g. don't imply an executive/management title Jacob didn't hold) — "Executive
+Impact Profile" is the requested document genre name, not a claim about org rank. When
+`resume.json` changes in a way that affects a claim used in either page (a metric, a bullet,
+an employer attribution), update the corresponding page in the same change.
 
 ## resume.json extensions (beyond the JSON Resume standard)
 - `basics.x_summaryBullets[]` — array of strings rendered as the Summary section's bullet

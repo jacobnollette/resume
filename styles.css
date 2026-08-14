@@ -286,6 +286,10 @@ body {
   text-decoration: underline;
 }
 
+.page-nav-link .nav-sep {
+  margin: 0 0.5em;
+}
+
 /* ---------------------------------------------------------------- *
  * Cover letter body — plain prose, same paper/typography as resume
  * ---------------------------------------------------------------- */
@@ -329,6 +333,118 @@ body {
 }
 
 /* ---------------------------------------------------------------- *
+ * CVP / EIP — value-pillar and impact-area documents. Shares .letter's
+ * prose sizing; adds a positioning statement, labeled pillar list, and
+ * narrative impact sections with their own bullet highlights.
+ * ---------------------------------------------------------------- */
+.doc-subtitle {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin: 0 0 1.3rem;
+}
+
+.positioning-statement {
+  font-size: 1.02rem;
+  font-style: italic;
+  line-height: 1.55;
+  margin: 0 0 1.5rem;
+}
+
+.doc-section {
+  margin: 0 0 1.4rem;
+}
+
+.doc-section:last-child {
+  margin-bottom: 0;
+}
+
+.doc-section-title {
+  font-weight: 700;
+  font-size: 1rem;
+  text-align: center;
+  margin: 0 0 0.7rem;
+  padding-top: 0.2rem;
+  border-top: 1px solid var(--line);
+}
+
+.doc-section:first-of-type .doc-section-title {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.pillar-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.pillar {
+  margin: 0 0 0.9rem;
+}
+
+.pillar:last-child {
+  margin-bottom: 0;
+}
+
+.pillar-title {
+  font-weight: 700;
+  margin: 0 0 0.15rem;
+}
+
+.pillar-desc {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.impact-area {
+  margin: 0 0 1.1rem;
+}
+
+.impact-area:last-child {
+  margin-bottom: 0;
+}
+
+.impact-area-title {
+  font-weight: 700;
+  font-style: italic;
+  margin: 0 0 0.3rem;
+}
+
+.impact-area p {
+  margin: 0 0 0.4rem;
+  line-height: 1.5;
+}
+
+.metric-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.6rem;
+  text-align: center;
+}
+
+.metric {
+  border: 1px solid var(--line);
+  padding: 0.7rem 0.5rem;
+}
+
+.metric-value {
+  display: block;
+  font-weight: 700;
+  font-size: 1.15rem;
+}
+
+.metric-label {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 0.15rem;
+}
+
+/* ---------------------------------------------------------------- *
  * Mobile
  * ---------------------------------------------------------------- */
 @media (max-width: 760px) {
@@ -358,6 +474,10 @@ body {
   .entry-head {
     flex-direction: column;
     gap: 0.05rem;
+  }
+
+  .metric-list {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -400,12 +520,17 @@ body {
 
   .job,
   .edu,
-  .skill-row {
+  .skill-row,
+  .pillar,
+  .impact-area,
+  .metric {
     break-inside: avoid;
   }
 
   .block-head,
-  .entry-head {
+  .entry-head,
+  .doc-section-title,
+  .impact-area-title {
     break-after: avoid;
   }
 
