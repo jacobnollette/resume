@@ -39,6 +39,30 @@ a stylized/decorative theme.
 the header) linking to the other three pages. When adding or renaming a top-level page, update
 this row in all four files — it isn't generated.
 
+## Platform mirrors (`/upwork/`, etc.)
+Some outreach channels need their own URL namespace and, per that platform's rules, must not
+expose direct contact credentials that let a client route around the platform's fees. Rather
+than hand-maintain duplicate HTML per platform, `build-platform-pages.js` generates
+`<platform-slug>/resume/`, `<platform-slug>/cover-letter/`, `<platform-slug>/cvp/`, and
+`<platform-slug>/eip/` from the real top-level source files, rewriting only what differs: asset
+path depth, `canonical`/`og:url`, in-namespace nav links, a `noindex` tag, and — when the
+platform config sets `stripContact: true` — the contact line (email/phone dropped, location
+kept, same as the `no-contact` strip).
+
+- Source of truth stays `index.html` / `cover-letter/` / `cvp/` / `eip/` / `resume.json`. Never
+  hand-edit files under a platform directory (e.g. `upwork/`) — they're marked
+  `AUTO-GENERATED` and get overwritten.
+- To add a new platform namespace, add an entry to the `PLATFORMS` array in
+  `build-platform-pages.js`, then run `node build-platform-pages.js` and commit the generated
+  output.
+- After editing any top-level source page or `resume.json`, re-run
+  `node build-platform-pages.js` so platform mirrors stay in sync, and commit the regenerated
+  files alongside the source change.
+- The standalone `no-contact/` page is intentionally **not** mirrored per-platform: for a
+  platform whose whole namespace already strips contact info (e.g. `upwork/`), a nested
+  `.../no-contact/` page would be identical to `.../resume/` — redundant. If a future platform
+  needs contact info kept, set `stripContact: false` for it instead.
+
 ## CVP / EIP content policy
 Every claim in `cvp/index.html` and `eip/index.html` must trace back to a specific fact in
 `resume.json` (or its `x_summaryBullets`/highlights) — these are marketing-shaped documents,
@@ -63,6 +87,9 @@ an employer attribution), update the corresponding page in the same change.
 - Edit resume content in `resume.json` only. Do not hardcode resume text in `index.html`.
 - After editing `resume.json`, run `node build-embed.js` to refresh `resume-embed.js`
   (only needed for `file://` double-click preview; the deployed site uses `fetch`).
+- After editing `resume.json` or any top-level source page (`index.html`, `cover-letter/`,
+  `cvp/`, `eip/`), run `node build-platform-pages.js` to refresh the platform mirrors (see
+  below) and commit the regenerated files.
 - Keep `resume.json` valid JSON (run `python3 -m json.tool resume.json` or equivalent).
 - Preserve ATS-friendly keywords in `basics.summary` and the `skills` keyword arrays.
   Content renders inside semantic tags (h1–h4, p, ul/ol/li, dl), so the page stays readable
