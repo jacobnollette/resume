@@ -166,7 +166,7 @@ window.__RESUME__ = {
       ]
     },
     {
-      "name": "Clear Software for Good",
+      "name": "Software for Good",
       "position": "Creative Developer",
       "location": "Minnesota",
       "startDate": "2010-04",
