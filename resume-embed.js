@@ -110,6 +110,20 @@ window.__RESUME__ = {
   ],
   "work": [
     {
+      "name": "Software Donkey",
+      "position": "Principal Trainer",
+      "location": "Minneapolis, MN (Remote)",
+      "startDate": "2026-08",
+      "endDate": "",
+      "summary": "Independent training practice helping solopreneurs and small teams build with AI and own the software they run \u2014 simple tools they can maintain themselves instead of renting a stack of subscriptions built for someone else's company.",
+      "highlights": [
+        "Teaches AI-assisted development as a daily working practice \u2014 how to scope a task, direct the tools, review what comes back, and ship it \u2014 so a one- or two-person shop can produce work that used to need a whole department.",
+        "Replaces sprawling SaaS subscriptions with simple self-owned alternatives: the client keeps the code, the data, and the keys, with no per-seat pricing and nothing that holds their business hostage at renewal time.",
+        "Builds the smallest thing that solves the problem and hands it over with plain-language documentation and hands-on training, so the client changes it themselves instead of waiting on a vendor.",
+        "Meets small teams where they are \u2014 no platform team, no dedicated ops, no budget for enterprise tooling \u2014 and leaves them with something they can actually run."
+      ]
+    },
+    {
       "name": "TSI Inc.",
       "position": "DevOps Engineer",
       "location": "Shoreview, MN",
