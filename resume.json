@@ -6,9 +6,9 @@
     "email": "jacob@jacobnollette.com",
     "phone": "952-428-9199",
     "url": "https://jacobnollette.com",
-    "summary": "Platform and enterprise tooling engineer with 16+ years in technology, including 8+ years focused on platform and DevOps engineering, building secure, self-service delivery platforms and modern developer experiences. End-to-end experience implementing and administering GitHub/GitHub Actions, GitLab, Atlassian, Retool, JFrog Artifactory, SonarQube, Kubernetes, Terraform, and cloud infrastructure across GCP, AWS, and Azure. Track record of measurable impact, including reducing deployment time 96% to 13 minutes across 15+ microservices, recovering a production Ceph cluster with zero data loss, and building agentic engineering workflows using Claude, Codex, and GitHub Copilot.",
+    "summary": "Platform and DevOps engineer with 8+ years building and operating production infrastructure, on a broader technology background spanning web, systems, and cloud work. End-to-end experience implementing and administering GitHub/GitHub Actions, GitLab, Atlassian, Retool, JFrog Artifactory, SonarQube, Kubernetes, Terraform, and cloud infrastructure across GCP, AWS, and Azure. Track record of measurable impact, including reducing deployment time 96% to 13 minutes across 15+ microservices, recovering a production Ceph cluster with zero data loss, and building agentic engineering workflows using Claude, Codex, and GitHub Copilot.",
     "x_summaryBullets": [
-      "Platform and enterprise tooling engineer with 16+ years in technology, including 8+ years focused on platform and DevOps engineering, building secure, self-service delivery platforms and modern developer experiences.",
+      "Platform and DevOps engineer with 8+ years building and operating production infrastructure, on a broader technology background spanning web, systems, and cloud work.",
       "End-to-end experience implementing and administering GitHub/GitHub Actions, GitLab, Atlassian, Retool, JFrog Artifactory, SonarQube, Kubernetes, Terraform, and cloud infrastructure across GCP, AWS, and Azure.",
       "Track record of measurable impact, including reducing deployment time 96% to 13 minutes across 15+ microservices, recovering a production Ceph cluster with zero data loss, and building agentic engineering workflows using Claude, Codex, and GitHub Copilot."
     ],
@@ -114,12 +114,12 @@
       "location": "Minneapolis, MN (Remote)",
       "startDate": "2026-08",
       "endDate": "",
-      "summary": "Independent training practice helping solopreneurs and small teams build with AI and own the software they run \u2014 simple tools they can maintain themselves instead of renting a stack of subscriptions built for someone else's company.",
+      "summary": "Independent training practice helping solopreneurs and small teams build with AI and own the software they run — simple tools they can maintain themselves instead of renting a stack of subscriptions built for someone else's company.",
       "highlights": [
-        "Teaches AI-assisted development as a daily working practice \u2014 how to scope a task, direct the tools, review what comes back, and ship it \u2014 so a one- or two-person shop can produce work that used to need a whole department.",
+        "Teaches AI-assisted development as a daily working practice — how to scope a task, direct the tools, review what comes back, and ship it — so a one- or two-person shop can produce work that used to need a whole department.",
         "Replaces sprawling SaaS subscriptions with simple self-owned alternatives: the client keeps the code, the data, and the keys, with no per-seat pricing and nothing that holds their business hostage at renewal time.",
         "Builds the smallest thing that solves the problem and hands it over with plain-language documentation and hands-on training, so the client changes it themselves instead of waiting on a vendor.",
-        "Meets small teams where they are \u2014 no platform team, no dedicated ops, no budget for enterprise tooling \u2014 and leaves them with something they can actually run."
+        "Meets small teams where they are — no platform team, no dedicated ops, no budget for enterprise tooling — and leaves them with something they can actually run."
       ]
     },
     {
@@ -130,27 +130,32 @@
       "endDate": "2026-03",
       "summary": "Owned platform engineering, CI/CD, enterprise tooling, Kubernetes infrastructure, and security-first deployment pipelines across four GCP projects for a cloud-native SaaS company.",
       "highlights": [
-        "Cut deployment time 96% by rebuilding CI/CD for 15+ microservices with GitHub Actions, Jenkins, Docker, and Bash; consolidated 15 pipelines into a single trunk-based pipeline with a 13-minute end-to-end rollout.",
-        "Built Jenkins shared-library pipelines with containerized, parameterized stages for build, test, scan, artifact, and deploy; added JFrog X-Ray and SonarQube SAST gates that block deployment on critical findings.",
+        "Cut deployment time 96% by rebuilding CI/CD across the full microservice estate as sole platform engineer, consolidating 15 separate pipelines into one trunk-based pipeline with a 13-minute end-to-end rollout.",
+        "Established policy-as-code deployment gates that block releases on critical security findings, built on reusable pipeline libraries with containerized, parameterized build stages.",
         "Built a Go CLI that creates standardized Docker development shells with preconfigured environment variables and credentials, enabling local environments to mirror CI.",
-        "Took Retool from zero to production, including Git-synced configuration, CI/CD image baking, role-scoped permissions, access management, and tenant-onboarding runbooks.",
-        "Delivered secure Retool access to an air-gapped IoT monitoring network using parallel subnet design, VPN-gated egress, and strict ACLs.",
+        "Delivered self-service internal tooling that let non-engineering teams query and act on operational data directly, removing engineering from routine request handling.",
+        "Architected the development environment structure so access governance was enforceable by the IT organization, defining environment separation and role-based permission models that IT could administer directly.",
+        "Delivered secure internal-tooling access to an air-gapped IoT monitoring network using parallel subnet design, VPN-gated egress, and strict ACLs.",
         "Provisioned production GCP applications with Terraform, Cloud SQL, automated database snapshots, and disaster-recovery orchestration; built reusable Terraform modules for standardized Kubernetes deployments.",
-        "Led IAM governance across cloud vendors, implementing SSO/SAML and MFA and owning provisioning, access reviews, and terminations.",
-        "Administered Jira, Confluence, and Bitbucket, including disaster-recovery automation, tested restores, runbooks, and lifecycle maintenance."
+        "Administered IAM permissions across multiple cloud accounts and partnered with IT to implement SAML federation, enforcing MFA on cloud access.",
+        "Established disaster recovery for the Atlassian toolchain, automating backups to cold storage and advising on multiple platform migrations.",
+        "Built JQL-based reporting and dashboards enabling product owners to self-serve delivery visibility.",
+        "Evaluated and audited Bitbucket plugin purchases, then authored the pipeline code that used them to extend CI capabilities in Jenkins."
       ]
     },
     {
       "name": "North Shore Automation",
       "position": "Platform / DevOps Engineer (Part-time)",
       "location": "Los Angeles, CA (Remote)",
-      "startDate": "2022-01",
+      "startDate": "2022-04",
       "endDate": "2026-01",
       "summary": "Fractional DevOps consultant modernizing CI/CD and platform infrastructure for media and studio workflow clients while reducing manual operations, vendor lock-in, and deployment risk.",
       "highlights": [
-        "Led migration to GitHub Actions and built CLI tooling that removed manifest-level deployment risk for studio/media microservices.",
-        "Hardened public-facing NGINX infrastructure against OWASP Top 10 exposure through rate limiting, strict TLS, and header sanitation.",
-        "Delivered AWS-based digital asset management environments using Terraform and produced portable Rocky Linux/Ubuntu VMDKs for VMware, Proxmox, and AWS EC2."
+        "Developed tooling and CI for a containerized appliance product, building the delivery pipeline in GitLab.",
+        "Provisioned and orchestrated AWS environments with Terraform to host the containerized application.",
+        "Co-led migration of the full CI/CD estate from GitLab to GitHub Actions.",
+        "Delivered AWS-based digital asset management environments and produced portable Rocky Linux/Ubuntu VMDKs for VMware, Proxmox, and AWS EC2.",
+        "Hardened public-facing NGINX infrastructure against OWASP Top 10 exposure through rate limiting, strict TLS, and header sanitation."
       ]
     },
     {
@@ -161,31 +166,40 @@
       "endDate": "2022-02",
       "summary": "Introduced modern CI/DevOps practices at a Minneapolis agency and owned GitLab platform and AWS infrastructure for the company's WordPress portfolio.",
       "highlights": [
+        "Built a unified automation layer that consolidated fleet maintenance across three heterogeneous hosting platforms, replacing per-platform manual processes with a single orchestration repository serving all client sites.",
         "Migrated the full portfolio from Bitbucket Cloud to self-hosted GitLab and scaled the platform through object-storage migration, instance right-sizing, and IOPS tuning.",
-        "Built blue-green deployment infrastructure on AWS EC2 using declarative CloudFormation templates and standardized IaC provisioning."
+        "Built blue-green deployment infrastructure on AWS EC2 using declarative CloudFormation templates and standardized IaC provisioning.",
+        "Progressed from manual VM provisioning to automating the full maintenance toolchain in Bash."
       ]
     },
     {
       "name": "jacobnollette.com LLC / Self-Hosting Lab",
       "position": "Principal",
       "location": "Minneapolis, MN",
-      "startDate": "2005-01",
+      "startDate": "2012-05",
       "endDate": "",
-      "summary": "20-year practice spanning client consulting and an ongoing R&D homelab focused on production-grade DevOps, AI/agent infrastructure, cloud security, and reliability engineering.",
+      "summary": "Continuously operated independent practice: client consulting spanning web, full-stack, and infrastructure work, alongside an ongoing R&D homelab focused on production-grade DevOps, AI/agent infrastructure, cloud security, and reliability engineering.",
       "highlights": [
         "Directs and reviews multi-agent engineering workflows using Claude, Codex, and GitHub Copilot, including task delegation, review, and production merges.",
         "Built an agentic web scraper using Playwright, Crawl4AI, and Ollama for structured data extraction with Pydantic-validated outputs.",
-        "Designed and operated a private-cloud homelab using Proxmox, Kubernetes, Ceph, and custom CRUSH rules; recovered a Ceph failure-domain collision with zero data loss."
+        "Designed and operates a private-cloud homelab: a self-hosted hypervisor fleet, Kubernetes cluster, and distributed storage backend running production-grade workloads.",
+        "Diagnosed and recovered a distributed storage cluster from a critical failure-domain fault with zero data loss, tuning the storage backend for improved tail latency.",
+        "Containerized a client's monolithic application with Docker Compose, giving their team a reproducible local development environment for the first time.",
+        "Grew into full-stack WordPress delivery, building custom plugins and structured content models with Advanced Custom Fields.",
+        "Delivered pixel-perfect WordPress front-ends and SEO-driven implementations for medical marketing clients, translating design comps into production sites."
       ]
     },
     {
       "name": "Clear Software for Good",
       "position": "Creative Developer",
-      "location": "Minnesota",
+      "location": "Minneapolis, MN",
       "startDate": "2010-04",
       "endDate": "2012-05",
-      "summary": "WordPress front-end developer collaborating with Ruby on Rails teams; operated Capistrano deployment pipelines and built interactive UI components and visual design assets.",
-      "highlights": []
+      "summary": "Front-end and creative development for WordPress and Ruby on Rails applications.",
+      "highlights": [
+        "Delivered front-end implementations and graphics-heavy interfaces for WordPress and Ruby on Rails applications, building interactive components and shared UI patterns.",
+        "Operated Capistrano-driven deployment pipelines and Git-based workflows — first exposure to automated deployment."
+      ]
     }
   ],
   "education": [
@@ -205,7 +219,7 @@
       "x_tag": "Volunteer",
       "startDate": "2018-04",
       "endDate": "",
-      "summary": "Provides technology leadership to the Board and executive team; built a WordPress member portal handling annual dues for ~150 properties; implemented nonprofit cloud grants, multi-cloud disaster recovery, and real-time availability monitoring."
+      "summary": "Built member subscription infrastructure for a lakeshore nonprofit, integrating Stripe with a WordPress front end to accept online dues for the first time; migrated the organization from one-off payments to recurring subscriptions, standing up a member database and onboarding the full membership (~150 properties) onto it. Also provides technology leadership to the Board and executive team, and implemented nonprofit cloud grants, multi-cloud disaster recovery, and real-time availability monitoring."
     },
     {
       "organization": "Little Sand Bay Villas",
@@ -214,20 +228,12 @@
       "startDate": "2025",
       "endDate": "",
       "summary": "Provides technology leadership, administers the community Google Group, and supports members with technology needs."
-    },
-    {
-      "organization": "Steiger Heritage Club",
-      "position": "Webmaster",
-      "x_tag": "Side Project",
-      "startDate": "2021-08",
-      "endDate": "",
-      "summary": "Stood up a WordPress hosting stack on Azure Nonprofit Cloud, designed the organization's visual identity system, and remediated a DDoS attack by tuning the WAF."
     }
   ],
   "meta": {
     "canonical": "https://resume.jacobnollette.com/resume.json",
-    "version": "3.0.0",
-    "lastModified": "2026-08-14",
+    "version": "3.1.0",
+    "lastModified": "2026-09-02",
     "theme": "traditional",
     "x_extensions": {
       "basics.x_summaryBullets": "Optional array of strings rendered as the Summary section's bullet list, in place of basics.summary (which stays as a single-paragraph fallback and for machine-readable/ATS consumers).",
