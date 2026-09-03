@@ -44,8 +44,9 @@
 
       <div class="resume-body">
         <div class="letter">
-          <p>Over a 16-year technology career — the last 8+ focused on platform and DevOps
-          engineering — I've repeatedly been the engineer a team hands its hardest
+          <p>Over 8+ years building and operating production infrastructure — on a broader
+          technology background spanning web, systems, and cloud work — I've repeatedly been
+          the engineer a team hands its hardest
           infrastructure and delivery problems to: modernizing CI/CD for a cloud-native SaaS
           company, taking enterprise tooling from zero to production, recovering a production
           storage cluster with zero data loss, and now directing multi-agent AI engineering
@@ -66,10 +67,12 @@
               in deployment time. I designed Jenkins shared-library pipelines with
               containerized, parameterized stages and built a Go CLI that gives every engineer
               a standardized, reproducible local development shell that mirrors CI exactly.</p>
-              <p>At North Shore Automation, I led the company-wide migration to GitHub Actions
-              and built CLI tooling that removed manifest-level deployment risk from
-              studio/media microservice deployments. At LuminFire, I migrated the company's
-              full WordPress portfolio from Bitbucket Cloud to self-hosted GitLab and built
+              <p>At North Shore Automation, I built tooling and CI for a containerized appliance
+              product, provisioned the AWS environments that hosted it with Terraform, and
+              co-led the migration of the full CI/CD estate from GitLab to GitHub Actions. At
+              LuminFire, I built a unified automation layer that consolidated fleet maintenance
+              across three heterogeneous hosting platforms, migrated the company's full
+              WordPress portfolio from Bitbucket Cloud to self-hosted GitLab, and built
               blue-green deployment infrastructure on AWS EC2.</p>
             </div>
 
@@ -77,8 +80,10 @@
               <p class="impact-area-title">Security &amp; Risk Reduction</p>
               <p>I build governance into the platform rather than layering it on afterward. At
               TSI, I added JFrog X-Ray and SonarQube SAST gates that block deployment on
-              critical findings, and led IAM governance across cloud vendors — SSO/SAML, MFA,
-              and the full access lifecycle of provisioning, reviews, and terminations. At
+              critical findings, administered IAM permissions across multiple cloud accounts, and
+              partnered with IT to implement SAML federation so MFA could be enforced on cloud
+              access. I also architected the development environment structure so access
+              governance was enforceable by the IT organization rather than held by me. At
               North Shore Automation, I closed OWASP Top 10 exposure on public-facing
               infrastructure by hardening NGINX load balancers with rate limiting, strict TLS,
               and header sanitation.</p>
@@ -91,10 +96,11 @@
               database-driven applications on GCP with automated snapshots and
               disaster-recovery orchestration, and administered the Atlassian ecosystem (Jira,
               Confluence, Bitbucket) with tested disaster-recovery restores. In my own
-              practice, I designed and operate a private-cloud homelab on Proxmox, Kubernetes,
-              and Ceph — and when an OSD/FSID collision put a production Ceph cluster at risk,
-              I diagnosed and corrected the failure domain, re-laid BlueStore, and recovered
-              the cluster with zero data loss.</p>
+              practice, I designed and operate a private-cloud homelab — a self-hosted hypervisor
+              fleet, Kubernetes cluster, and distributed storage backend — and when a critical
+              failure-domain fault put that storage cluster at risk, I diagnosed and corrected
+              the failure domain, rebuilt the storage backend, and recovered the cluster with
+              zero data loss.</p>
             </div>
 
             <div class="impact-area">
@@ -110,12 +116,13 @@
             <div class="impact-area">
               <p class="impact-area-title">Independent Technology Leadership</p>
               <p>Outside of paid roles, I provide ongoing technology leadership to two
-              Minnesota lake communities and a nonprofit heritage club. I built a WordPress
-              member portal that handles annual dues collection for ~150 properties, secured
-              nonprofit cloud grants that drove hosting costs near zero, implemented
-              multi-cloud disaster recovery and real-time availability monitoring, and
-              remediated a DDoS attack against a public-facing WordPress site by tuning its
-              WAF.</p>
+              Minnesota lake communities. I built the member subscription infrastructure for a
+              lakeshore nonprofit — integrating Stripe with a WordPress front end so it could
+              accept online dues for the first time — then migrated the organization from
+              one-off payments to recurring subscriptions, standing up a member database and
+              onboarding the full membership of ~150 properties onto it. I also secured
+              nonprofit cloud grants that drove hosting costs near zero and implemented
+              multi-cloud disaster recovery and real-time availability monitoring.</p>
             </div>
           </div>
 
