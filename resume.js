@@ -15,6 +15,9 @@
  *   - work[].highlights[]       : array of plain strings, one <li> each.
  *   - education[].x_summary     : free-text supplemental description.
  *   - volunteer[].x_tag         : parenthetical label next to the position.
+ *   - volunteer[].x_dates       : literal string overriding the computed
+ *     startDate–endDate range, for non-contiguous occurrences (e.g. a
+ *     recurring conference attended some years but not others).
  *   - empty endDate ""          : renders as "Present".
  */
 (function (root) {
@@ -49,7 +52,7 @@
   function dateRange(start, end) {
     var s = start ? fmtDate(start) : "";
     var e = fmtDate(end); // "" -> "Present"
-    if (s && e) return s + " – " + e; // en dash
+    if (s && e && s !== e) return s + " – " + e; // en dash
     return s || e;
   }
 
@@ -179,7 +182,7 @@
   function renderVolunteer(volunteer) {
     var items = volunteer.map(function (v) {
       var tag = v.x_tag ? " (" + v.x_tag + ")" : "";
-      var dates = dateRange(v.startDate, v.endDate);
+      var dates = v.x_dates || dateRange(v.startDate, v.endDate);
       return (
         "<li>" +
           '<strong>' + esc(v.organization) + "</strong>: " +
