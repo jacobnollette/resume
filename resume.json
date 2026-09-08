@@ -228,12 +228,26 @@
       "startDate": "2025",
       "endDate": "",
       "summary": "Provides technology leadership, administers the community Google Group, and supports members with technology needs."
+    },
+    {
+      "organization": "Wild West Hackin' Fest",
+      "position": "Attendee",
+      "x_tag": "Conference",
+      "x_dates": "2017, 2018, 2019, 2022",
+      "summary": "Security conference in Deadwood, SD; attended 2017-2019 (LuminFire) and 2022 (TSI)."
+    },
+    {
+      "organization": "KubeCon + CloudNativeCon North America",
+      "position": "Attendee",
+      "x_tag": "Conference",
+      "x_dates": "2022, 2024",
+      "summary": "Attended 2022 (Detroit, MI) and 2024 (Salt Lake City, UT), both while at TSI."
     }
   ],
   "meta": {
     "canonical": "https://resume.jacobnollette.com/resume.json",
     "version": "3.1.0",
-    "lastModified": "2026-09-02",
+    "lastModified": "2026-09-08",
     "theme": "traditional",
     "x_extensions": {
       "basics.x_summaryBullets": "Optional array of strings rendered as the Summary section's bullet list, in place of basics.summary (which stays as a single-paragraph fallback and for machine-readable/ATS consumers).",
