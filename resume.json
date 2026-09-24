@@ -6,11 +6,11 @@
     "email": "jacob@jacobnollette.com",
     "phone": "952-428-9199",
     "url": "https://jacobnollette.com",
-    "summary": "Platform and DevOps engineer with 8+ years building and operating production infrastructure, on a broader technology background spanning web, systems, and cloud work. End-to-end experience implementing and administering GitHub/GitHub Actions, GitLab, Atlassian, Retool, JFrog Artifactory, SonarQube, Kubernetes, Terraform, and cloud infrastructure across GCP, AWS, and Azure. Track record of measurable impact, including reducing deployment time 96% to 13 minutes across 15+ microservices, recovering a production Ceph cluster with zero data loss, and building agentic engineering workflows using Claude, Codex, and GitHub Copilot.",
+    "summary": "Platform and DevOps engineer with 8+ years building and operating production infrastructure, on a broader technology background spanning web, systems, and cloud work. End-to-end experience implementing and administering GitHub/GitHub Actions, GitLab, Atlassian, Retool, JFrog Artifactory, SonarQube, Kubernetes, Terraform, and cloud infrastructure across GCP, AWS, and Azure. Track record of measurable impact, including reducing deployment time 96% to 13 minutes across 15+ microservices, and currently operating a three-site, three-cluster private cloud with fleet-wide observability, software-defined networking and a production AI agent fleet.",
     "x_summaryBullets": [
       "Platform and DevOps engineer with 8+ years building and operating production infrastructure, on a broader technology background spanning web, systems, and cloud work.",
       "End-to-end experience implementing and administering GitHub/GitHub Actions, GitLab, Atlassian, Retool, JFrog Artifactory, SonarQube, Kubernetes, Terraform, and cloud infrastructure across GCP, AWS, and Azure.",
-      "Track record of measurable impact, including reducing deployment time 96% to 13 minutes across 15+ microservices, recovering a production Ceph cluster with zero data loss, and building agentic engineering workflows using Claude, Codex, and GitHub Copilot."
+      "Track record of measurable impact, including reducing deployment time 96% to 13 minutes across 15+ microservices, and currently operating a three-site, three-cluster private cloud with fleet-wide observability, software-defined networking and a production AI agent fleet."
     ],
     "location": {
       "city": "Minneapolis",
@@ -45,12 +45,16 @@
         "AWS",
         "Azure",
         "Terraform",
+        "Ansible",
         "CloudFormation",
         "Kubernetes",
+        "Argo CD/GitOps",
         "Proxmox",
+        "Ceph",
         "Hyper-V",
         "DigitalOcean",
-        "Hetzner"
+        "Hetzner",
+        "Tailscale/SD-WAN"
       ]
     },
     {
@@ -77,7 +81,11 @@
         "OWASP hardening",
         "SLOs",
         "structured alerting",
-        "disaster recovery"
+        "disaster recovery",
+        "Prometheus/Grafana",
+        "Graylog",
+        "Wazuh XDR",
+        "immutable offsite backups"
       ]
     },
     {
@@ -87,6 +95,8 @@
         "Codex",
         "GitHub Copilot",
         "Ollama",
+        "LiteLLM",
+        "MCP servers",
         "n8n",
         "Playwright",
         "Crawl4AI",
@@ -178,15 +188,17 @@
       "location": "Minneapolis, MN",
       "startDate": "2012-05",
       "endDate": "",
-      "summary": "Continuously operated independent practice: client consulting spanning web, full-stack, and infrastructure work, alongside an ongoing R&D homelab focused on production-grade DevOps, AI/agent infrastructure, cloud security, and reliability engineering.",
+      "summary": "Continuously operated independent practice: client consulting across web, full-stack and infrastructure work, alongside a production-grade private cloud run as ongoing R&D in platform engineering, AI/agent infrastructure, observability and reliability.",
       "highlights": [
-        "Directs and reviews multi-agent engineering workflows using Claude, Codex, and GitHub Copilot, including task delegation, review, and production merges.",
-        "Built an agentic web scraper using Playwright, Crawl4AI, and Ollama for structured data extraction with Pydantic-validated outputs.",
-        "Designed and operates a private-cloud homelab: a self-hosted hypervisor fleet, Kubernetes cluster, and distributed storage backend running production-grade workloads.",
-        "Diagnosed and recovered a distributed storage cluster from a critical failure-domain fault with zero data loss, tuning the storage backend for improved tail latency.",
-        "Containerized a client's monolithic application with Docker Compose, giving their team a reproducible local development environment for the first time.",
-        "Grew into full-stack WordPress delivery, building custom plugins and structured content models with Advanced Custom Fields.",
-        "Delivered pixel-perfect WordPress front-ends and SEO-driven implementations for medical marketing clients, translating design comps into production sites."
+        "Operate a three-site private cloud: a five-node hyperconverged Proxmox/Ceph cluster with a Kubernetes control plane, plus single-node clusters at two remote sites, all provisioned from code and managed through GitOps from one repository.",
+        "Built and operate a production AI agent fleet — six specialist agents with a shared store whose access control is enforced by Postgres row-level security rather than by prompts, verified against forged requests that bypass the application layer entirely.",
+        "Orchestrate a pool of containerized Chrome browsers in Kubernetes with web-based management consoles, giving agents and engineers authenticated browser sessions as shared infrastructure.",
+        "Designed fleet-wide observability: metrics, centralized logging and XDR across four sites, including a replacement SMART collector covering 58 physical disks after finding the standard one reports no health data at all for NVMe.",
+        "Designed software-defined network segmentation across three sites — infrastructure meshed over SD-WAN, people reaching it only over VPN, guest and third-party device classes isolated — declared as code and planned against every console.",
+        "Diagnosed and recovered a distributed storage cluster from a critical failure-domain fault with zero data loss, and later found five pools silently replicating within a single host; corrected placement rules and write quorum together.",
+        "Built database backup and recovery for every clustered service: per-application dump sidecars, immutable offsite copies under object lock, and automated monthly restore tests.",
+        "Direct and review multi-agent engineering workflows using Claude, Codex and GitHub Copilot, including task delegation, review and production merges.",
+        "Containerized a client's monolithic application with Docker Compose, giving their team a reproducible local development environment for the first time."
       ]
     },
     {
@@ -197,8 +209,7 @@
       "endDate": "2012-05",
       "summary": "Front-end and creative development for WordPress and Ruby on Rails applications.",
       "highlights": [
-        "Delivered front-end implementations and graphics-heavy interfaces for WordPress and Ruby on Rails applications, building interactive components and shared UI patterns.",
-        "Operated Capistrano-driven deployment pipelines and Git-based workflows — first exposure to automated deployment."
+        "Front-end and creative development for WordPress and Ruby on Rails applications, on Capistrano-driven deployment pipelines and Git-based workflows — first exposure to automated deployment."
       ]
     }
   ],
@@ -219,7 +230,7 @@
       "x_tag": "Volunteer",
       "startDate": "2018-04",
       "endDate": "",
-      "summary": "Built member subscription infrastructure for a lakeshore nonprofit, integrating Stripe with a WordPress front end to accept online dues for the first time; migrated the organization from one-off payments to recurring subscriptions, standing up a member database and onboarding the full membership (~150 properties) onto it. Also provides technology leadership to the Board and executive team, and implemented nonprofit cloud grants, multi-cloud disaster recovery, and real-time availability monitoring."
+      "summary": "Built member subscription infrastructure for a lakeshore nonprofit, integrating Stripe with a WordPress front end to accept online dues for the first time and moving ~150 properties from one-off payments onto recurring subscriptions with a member database. Also provides technology leadership to the Board, and implemented nonprofit cloud grants, multi-cloud disaster recovery and real-time availability monitoring."
     },
     {
       "organization": "Little Sand Bay Villas",
@@ -246,8 +257,8 @@
   ],
   "meta": {
     "canonical": "https://resume.jacobnollette.com/resume.json",
-    "version": "3.1.0",
-    "lastModified": "2026-09-08",
+    "version": "3.2.0",
+    "lastModified": "2026-09-24",
     "theme": "traditional",
     "x_extensions": {
       "basics.x_summaryBullets": "Optional array of strings rendered as the Summary section's bullet list, in place of basics.summary (which stays as a single-paragraph fallback and for machine-readable/ATS consumers).",
